@@ -590,18 +590,18 @@ MonoBehaviour:
   isWatered: 0
   isPlanted: 0
   currentPlantPrefab: {fileID: 0}
-  growingPlantPrefab: {fileID: 0}
   growedtPlantPrefab: {fileID: 0}
   powedSprite: {fileID: 6058310393375558862, guid: 36a4cbfedd9960c41a386ad98cd2ce13, type: 3}
   wateredSprite: {fileID: 5252235568834077351, guid: 178571925f141154482899428815f778, type: 3}
   Kuang: {fileID: 1706795304}
   playerInRange: 0
   KuangText: []
+  Bag: {fileID: 11400000, guid: 5df1c5e88a7d2314d909d74d63f221b5, type: 2}
   USE_Bag: {fileID: 11400000, guid: c6a84735ca77b2945b9c418687012a6f, type: 2}
+  WorkOne_Bag: {fileID: 11400000, guid: d413fac498ae95240843054c392d58e8, type: 2}
   daytext: {fileID: 0}
   plantStartTime: 0
   timeToGrow: 1
-  timeToMature: 2
   intFlag: 0
 --- !u!212 &137078569
 SpriteRenderer:
@@ -836,18 +836,18 @@ MonoBehaviour:
   isWatered: 0
   isPlanted: 0
   currentPlantPrefab: {fileID: 0}
-  growingPlantPrefab: {fileID: 0}
   growedtPlantPrefab: {fileID: 0}
   powedSprite: {fileID: 6058310393375558862, guid: 36a4cbfedd9960c41a386ad98cd2ce13, type: 3}
   wateredSprite: {fileID: 5252235568834077351, guid: 178571925f141154482899428815f778, type: 3}
   Kuang: {fileID: 1572829048}
   playerInRange: 0
   KuangText: []
+  Bag: {fileID: 11400000, guid: 5df1c5e88a7d2314d909d74d63f221b5, type: 2}
   USE_Bag: {fileID: 11400000, guid: c6a84735ca77b2945b9c418687012a6f, type: 2}
+  WorkOne_Bag: {fileID: 11400000, guid: d413fac498ae95240843054c392d58e8, type: 2}
   daytext: {fileID: 0}
   plantStartTime: 0
   timeToGrow: 1
-  timeToMature: 2
   intFlag: 0
 --- !u!212 &181209450
 SpriteRenderer:
@@ -999,18 +999,18 @@ MonoBehaviour:
   isWatered: 0
   isPlanted: 0
   currentPlantPrefab: {fileID: 0}
-  growingPlantPrefab: {fileID: 0}
   growedtPlantPrefab: {fileID: 0}
   powedSprite: {fileID: 6058310393375558862, guid: 36a4cbfedd9960c41a386ad98cd2ce13, type: 3}
   wateredSprite: {fileID: 5252235568834077351, guid: 178571925f141154482899428815f778, type: 3}
   Kuang: {fileID: 1273795049}
   playerInRange: 0
   KuangText: []
+  Bag: {fileID: 11400000, guid: 5df1c5e88a7d2314d909d74d63f221b5, type: 2}
   USE_Bag: {fileID: 11400000, guid: c6a84735ca77b2945b9c418687012a6f, type: 2}
+  WorkOne_Bag: {fileID: 11400000, guid: d413fac498ae95240843054c392d58e8, type: 2}
   daytext: {fileID: 0}
   plantStartTime: 0
   timeToGrow: 1
-  timeToMature: 2
   intFlag: 0
 --- !u!212 &208655402
 SpriteRenderer:
@@ -1393,18 +1393,18 @@ MonoBehaviour:
   isWatered: 0
   isPlanted: 0
   currentPlantPrefab: {fileID: 0}
-  growingPlantPrefab: {fileID: 0}
   growedtPlantPrefab: {fileID: 0}
   powedSprite: {fileID: 6058310393375558862, guid: 36a4cbfedd9960c41a386ad98cd2ce13, type: 3}
   wateredSprite: {fileID: 5252235568834077351, guid: 178571925f141154482899428815f778, type: 3}
   Kuang: {fileID: 1091140242}
   playerInRange: 0
   KuangText: []
+  Bag: {fileID: 11400000, guid: 5df1c5e88a7d2314d909d74d63f221b5, type: 2}
   USE_Bag: {fileID: 11400000, guid: c6a84735ca77b2945b9c418687012a6f, type: 2}
+  WorkOne_Bag: {fileID: 11400000, guid: d413fac498ae95240843054c392d58e8, type: 2}
   daytext: {fileID: 0}
   plantStartTime: 0
   timeToGrow: 1
-  timeToMature: 2
   intFlag: 0
 --- !u!212 &262608357
 SpriteRenderer:
@@ -1556,18 +1556,18 @@ MonoBehaviour:
   isWatered: 0
   isPlanted: 0
   currentPlantPrefab: {fileID: 0}
-  growingPlantPrefab: {fileID: 0}
   growedtPlantPrefab: {fileID: 0}
   powedSprite: {fileID: 6058310393375558862, guid: 36a4cbfedd9960c41a386ad98cd2ce13, type: 3}
   wateredSprite: {fileID: 5252235568834077351, guid: 178571925f141154482899428815f778, type: 3}
   Kuang: {fileID: 636667784}
   playerInRange: 0
   KuangText: []
+  Bag: {fileID: 11400000, guid: 5df1c5e88a7d2314d909d74d63f221b5, type: 2}
   USE_Bag: {fileID: 11400000, guid: c6a84735ca77b2945b9c418687012a6f, type: 2}
+  WorkOne_Bag: {fileID: 11400000, guid: d413fac498ae95240843054c392d58e8, type: 2}
   daytext: {fileID: 0}
   plantStartTime: 0
   timeToGrow: 1
-  timeToMature: 2
   intFlag: 0
 --- !u!212 &282233587
 SpriteRenderer:
@@ -1719,18 +1719,18 @@ MonoBehaviour:
   isWatered: 0
   isPlanted: 0
   currentPlantPrefab: {fileID: 0}
-  growingPlantPrefab: {fileID: 0}
   growedtPlantPrefab: {fileID: 0}
   powedSprite: {fileID: 6058310393375558862, guid: 36a4cbfedd9960c41a386ad98cd2ce13, type: 3}
   wateredSprite: {fileID: 5252235568834077351, guid: 178571925f141154482899428815f778, type: 3}
   Kuang: {fileID: 2114379758}
   playerInRange: 0
   KuangText: []
+  Bag: {fileID: 11400000, guid: 5df1c5e88a7d2314d909d74d63f221b5, type: 2}
   USE_Bag: {fileID: 11400000, guid: c6a84735ca77b2945b9c418687012a6f, type: 2}
+  WorkOne_Bag: {fileID: 11400000, guid: d413fac498ae95240843054c392d58e8, type: 2}
   daytext: {fileID: 0}
   plantStartTime: 0
   timeToGrow: 1
-  timeToMature: 2
   intFlag: 0
 --- !u!212 &291832340
 SpriteRenderer:
@@ -1965,18 +1965,18 @@ MonoBehaviour:
   isWatered: 0
   isPlanted: 0
   currentPlantPrefab: {fileID: 0}
-  growingPlantPrefab: {fileID: 0}
   growedtPlantPrefab: {fileID: 0}
   powedSprite: {fileID: 6058310393375558862, guid: 36a4cbfedd9960c41a386ad98cd2ce13, type: 3}
   wateredSprite: {fileID: 5252235568834077351, guid: 178571925f141154482899428815f778, type: 3}
   Kuang: {fileID: 316527237}
   playerInRange: 0
   KuangText: []
+  Bag: {fileID: 11400000, guid: 5df1c5e88a7d2314d909d74d63f221b5, type: 2}
   USE_Bag: {fileID: 11400000, guid: c6a84735ca77b2945b9c418687012a6f, type: 2}
+  WorkOne_Bag: {fileID: 11400000, guid: d413fac498ae95240843054c392d58e8, type: 2}
   daytext: {fileID: 0}
   plantStartTime: 0
   timeToGrow: 1
-  timeToMature: 2
   intFlag: 0
 --- !u!212 &347121319
 SpriteRenderer:
@@ -2272,7 +2272,7 @@ SpriteRenderer:
   m_Size: {x: 0.14, y: 0.28}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &399233849
@@ -2763,18 +2763,18 @@ MonoBehaviour:
   isWatered: 0
   isPlanted: 0
   currentPlantPrefab: {fileID: 0}
-  growingPlantPrefab: {fileID: 0}
   growedtPlantPrefab: {fileID: 0}
   powedSprite: {fileID: 6058310393375558862, guid: 36a4cbfedd9960c41a386ad98cd2ce13, type: 3}
   wateredSprite: {fileID: 5252235568834077351, guid: 178571925f141154482899428815f778, type: 3}
   Kuang: {fileID: 675737555}
   playerInRange: 0
   KuangText: []
+  Bag: {fileID: 11400000, guid: 5df1c5e88a7d2314d909d74d63f221b5, type: 2}
   USE_Bag: {fileID: 11400000, guid: c6a84735ca77b2945b9c418687012a6f, type: 2}
+  WorkOne_Bag: {fileID: 11400000, guid: d413fac498ae95240843054c392d58e8, type: 2}
   daytext: {fileID: 0}
   plantStartTime: 0
   timeToGrow: 1
-  timeToMature: 2
   intFlag: 0
 --- !u!212 &567610093
 SpriteRenderer:
@@ -2926,18 +2926,18 @@ MonoBehaviour:
   isWatered: 0
   isPlanted: 0
   currentPlantPrefab: {fileID: 0}
-  growingPlantPrefab: {fileID: 0}
   growedtPlantPrefab: {fileID: 0}
   powedSprite: {fileID: 6058310393375558862, guid: 36a4cbfedd9960c41a386ad98cd2ce13, type: 3}
   wateredSprite: {fileID: 5252235568834077351, guid: 178571925f141154482899428815f778, type: 3}
   Kuang: {fileID: 1487307594}
   playerInRange: 0
   KuangText: []
+  Bag: {fileID: 11400000, guid: 5df1c5e88a7d2314d909d74d63f221b5, type: 2}
   USE_Bag: {fileID: 11400000, guid: c6a84735ca77b2945b9c418687012a6f, type: 2}
+  WorkOne_Bag: {fileID: 11400000, guid: d413fac498ae95240843054c392d58e8, type: 2}
   daytext: {fileID: 0}
   plantStartTime: 0
   timeToGrow: 1
-  timeToMature: 2
   intFlag: 0
 --- !u!212 &604274269
 SpriteRenderer:
@@ -3172,18 +3172,18 @@ MonoBehaviour:
   isWatered: 0
   isPlanted: 0
   currentPlantPrefab: {fileID: 0}
-  growingPlantPrefab: {fileID: 0}
   growedtPlantPrefab: {fileID: 0}
   powedSprite: {fileID: 6058310393375558862, guid: 36a4cbfedd9960c41a386ad98cd2ce13, type: 3}
   wateredSprite: {fileID: 5252235568834077351, guid: 178571925f141154482899428815f778, type: 3}
   Kuang: {fileID: 1546009551}
   playerInRange: 0
   KuangText: []
+  Bag: {fileID: 11400000, guid: 5df1c5e88a7d2314d909d74d63f221b5, type: 2}
   USE_Bag: {fileID: 11400000, guid: c6a84735ca77b2945b9c418687012a6f, type: 2}
+  WorkOne_Bag: {fileID: 11400000, guid: d413fac498ae95240843054c392d58e8, type: 2}
   daytext: {fileID: 0}
   plantStartTime: 0
   timeToGrow: 1
-  timeToMature: 2
   intFlag: 0
 --- !u!212 &634123396
 SpriteRenderer:
@@ -3418,18 +3418,18 @@ MonoBehaviour:
   isWatered: 0
   isPlanted: 0
   currentPlantPrefab: {fileID: 0}
-  growingPlantPrefab: {fileID: 0}
   growedtPlantPrefab: {fileID: 0}
   powedSprite: {fileID: 6058310393375558862, guid: 36a4cbfedd9960c41a386ad98cd2ce13, type: 3}
   wateredSprite: {fileID: 5252235568834077351, guid: 178571925f141154482899428815f778, type: 3}
   Kuang: {fileID: 1440508344}
   playerInRange: 0
   KuangText: []
+  Bag: {fileID: 11400000, guid: 5df1c5e88a7d2314d909d74d63f221b5, type: 2}
   USE_Bag: {fileID: 11400000, guid: c6a84735ca77b2945b9c418687012a6f, type: 2}
+  WorkOne_Bag: {fileID: 11400000, guid: d413fac498ae95240843054c392d58e8, type: 2}
   daytext: {fileID: 0}
   plantStartTime: 0
   timeToGrow: 1
-  timeToMature: 2
   intFlag: 0
 --- !u!212 &672332160
 SpriteRenderer:
@@ -3664,18 +3664,18 @@ MonoBehaviour:
   isWatered: 0
   isPlanted: 0
   currentPlantPrefab: {fileID: 0}
-  growingPlantPrefab: {fileID: 0}
   growedtPlantPrefab: {fileID: 0}
   powedSprite: {fileID: 6058310393375558862, guid: 36a4cbfedd9960c41a386ad98cd2ce13, type: 3}
   wateredSprite: {fileID: 5252235568834077351, guid: 178571925f141154482899428815f778, type: 3}
   Kuang: {fileID: 1717377359}
   playerInRange: 0
   KuangText: []
+  Bag: {fileID: 11400000, guid: 5df1c5e88a7d2314d909d74d63f221b5, type: 2}
   USE_Bag: {fileID: 11400000, guid: c6a84735ca77b2945b9c418687012a6f, type: 2}
+  WorkOne_Bag: {fileID: 11400000, guid: d413fac498ae95240843054c392d58e8, type: 2}
   daytext: {fileID: 0}
   plantStartTime: 0
   timeToGrow: 1
-  timeToMature: 2
   intFlag: 0
 --- !u!212 &698407172
 SpriteRenderer:
@@ -3827,18 +3827,18 @@ MonoBehaviour:
   isWatered: 0
   isPlanted: 0
   currentPlantPrefab: {fileID: 0}
-  growingPlantPrefab: {fileID: 0}
   growedtPlantPrefab: {fileID: 0}
   powedSprite: {fileID: 6058310393375558862, guid: 36a4cbfedd9960c41a386ad98cd2ce13, type: 3}
   wateredSprite: {fileID: 5252235568834077351, guid: 178571925f141154482899428815f778, type: 3}
   Kuang: {fileID: 1679557100}
   playerInRange: 0
   KuangText: []
+  Bag: {fileID: 11400000, guid: 5df1c5e88a7d2314d909d74d63f221b5, type: 2}
   USE_Bag: {fileID: 11400000, guid: c6a84735ca77b2945b9c418687012a6f, type: 2}
+  WorkOne_Bag: {fileID: 11400000, guid: d413fac498ae95240843054c392d58e8, type: 2}
   daytext: {fileID: 0}
   plantStartTime: 0
   timeToGrow: 1
-  timeToMature: 2
   intFlag: 0
 --- !u!212 &744474894
 SpriteRenderer:
@@ -3928,18 +3928,18 @@ MonoBehaviour:
   isWatered: 0
   isPlanted: 0
   currentPlantPrefab: {fileID: 0}
-  growingPlantPrefab: {fileID: 0}
   growedtPlantPrefab: {fileID: 0}
   powedSprite: {fileID: 6058310393375558862, guid: 36a4cbfedd9960c41a386ad98cd2ce13, type: 3}
   wateredSprite: {fileID: 5252235568834077351, guid: 178571925f141154482899428815f778, type: 3}
   Kuang: {fileID: 1546815100}
   playerInRange: 0
   KuangText: []
+  Bag: {fileID: 11400000, guid: 5df1c5e88a7d2314d909d74d63f221b5, type: 2}
   USE_Bag: {fileID: 11400000, guid: c6a84735ca77b2945b9c418687012a6f, type: 2}
+  WorkOne_Bag: {fileID: 11400000, guid: d413fac498ae95240843054c392d58e8, type: 2}
   daytext: {fileID: 0}
   plantStartTime: 0
   timeToGrow: 1
-  timeToMature: 2
   intFlag: 0
 --- !u!212 &777940805
 SpriteRenderer:
@@ -4236,18 +4236,18 @@ MonoBehaviour:
   isWatered: 0
   isPlanted: 0
   currentPlantPrefab: {fileID: 0}
-  growingPlantPrefab: {fileID: 0}
   growedtPlantPrefab: {fileID: 0}
   powedSprite: {fileID: 6058310393375558862, guid: 36a4cbfedd9960c41a386ad98cd2ce13, type: 3}
   wateredSprite: {fileID: 5252235568834077351, guid: 178571925f141154482899428815f778, type: 3}
   Kuang: {fileID: 433705708}
   playerInRange: 0
   KuangText: []
+  Bag: {fileID: 11400000, guid: 5df1c5e88a7d2314d909d74d63f221b5, type: 2}
   USE_Bag: {fileID: 11400000, guid: c6a84735ca77b2945b9c418687012a6f, type: 2}
+  WorkOne_Bag: {fileID: 11400000, guid: d413fac498ae95240843054c392d58e8, type: 2}
   daytext: {fileID: 0}
   plantStartTime: 0
   timeToGrow: 1
-  timeToMature: 2
   intFlag: 0
 --- !u!212 &811550786
 SpriteRenderer:
@@ -4399,18 +4399,18 @@ MonoBehaviour:
   isWatered: 0
   isPlanted: 0
   currentPlantPrefab: {fileID: 0}
-  growingPlantPrefab: {fileID: 0}
   growedtPlantPrefab: {fileID: 0}
   powedSprite: {fileID: 6058310393375558862, guid: 36a4cbfedd9960c41a386ad98cd2ce13, type: 3}
   wateredSprite: {fileID: 5252235568834077351, guid: 178571925f141154482899428815f778, type: 3}
   Kuang: {fileID: 1249523593}
   playerInRange: 0
   KuangText: []
+  Bag: {fileID: 11400000, guid: 5df1c5e88a7d2314d909d74d63f221b5, type: 2}
   USE_Bag: {fileID: 11400000, guid: c6a84735ca77b2945b9c418687012a6f, type: 2}
+  WorkOne_Bag: {fileID: 11400000, guid: d413fac498ae95240843054c392d58e8, type: 2}
   daytext: {fileID: 0}
   plantStartTime: 0
   timeToGrow: 1
-  timeToMature: 2
   intFlag: 0
 --- !u!212 &877844033
 SpriteRenderer:
@@ -4562,18 +4562,18 @@ MonoBehaviour:
   isWatered: 0
   isPlanted: 0
   currentPlantPrefab: {fileID: 0}
-  growingPlantPrefab: {fileID: 0}
   growedtPlantPrefab: {fileID: 0}
   powedSprite: {fileID: 6058310393375558862, guid: 36a4cbfedd9960c41a386ad98cd2ce13, type: 3}
   wateredSprite: {fileID: 5252235568834077351, guid: 178571925f141154482899428815f778, type: 3}
   Kuang: {fileID: 1360811873}
   playerInRange: 0
   KuangText: []
+  Bag: {fileID: 11400000, guid: 5df1c5e88a7d2314d909d74d63f221b5, type: 2}
   USE_Bag: {fileID: 11400000, guid: c6a84735ca77b2945b9c418687012a6f, type: 2}
+  WorkOne_Bag: {fileID: 11400000, guid: d413fac498ae95240843054c392d58e8, type: 2}
   daytext: {fileID: 0}
   plantStartTime: 0
   timeToGrow: 1
-  timeToMature: 2
   intFlag: 0
 --- !u!212 &883937229
 SpriteRenderer:
@@ -4710,18 +4710,18 @@ MonoBehaviour:
   isWatered: 0
   isPlanted: 0
   currentPlantPrefab: {fileID: 0}
-  growingPlantPrefab: {fileID: 0}
   growedtPlantPrefab: {fileID: 0}
   powedSprite: {fileID: 6058310393375558862, guid: 36a4cbfedd9960c41a386ad98cd2ce13, type: 3}
   wateredSprite: {fileID: 5252235568834077351, guid: 178571925f141154482899428815f778, type: 3}
   Kuang: {fileID: 6250235}
   playerInRange: 0
   KuangText: []
+  Bag: {fileID: 11400000, guid: 5df1c5e88a7d2314d909d74d63f221b5, type: 2}
   USE_Bag: {fileID: 11400000, guid: c6a84735ca77b2945b9c418687012a6f, type: 2}
+  WorkOne_Bag: {fileID: 11400000, guid: d413fac498ae95240843054c392d58e8, type: 2}
   daytext: {fileID: 0}
   plantStartTime: 0
   timeToGrow: 1
-  timeToMature: 2
   intFlag: 0
 --- !u!212 &971939344
 SpriteRenderer:
@@ -7284,18 +7284,18 @@ MonoBehaviour:
   isWatered: 0
   isPlanted: 0
   currentPlantPrefab: {fileID: 0}
-  growingPlantPrefab: {fileID: 0}
   growedtPlantPrefab: {fileID: 0}
   powedSprite: {fileID: 6058310393375558862, guid: 36a4cbfedd9960c41a386ad98cd2ce13, type: 3}
   wateredSprite: {fileID: 5252235568834077351, guid: 178571925f141154482899428815f778, type: 3}
   Kuang: {fileID: 1233792446}
   playerInRange: 0
   KuangText: []
+  Bag: {fileID: 11400000, guid: 5df1c5e88a7d2314d909d74d63f221b5, type: 2}
   USE_Bag: {fileID: 11400000, guid: c6a84735ca77b2945b9c418687012a6f, type: 2}
+  WorkOne_Bag: {fileID: 11400000, guid: d413fac498ae95240843054c392d58e8, type: 2}
   daytext: {fileID: 0}
   plantStartTime: 0
   timeToGrow: 1
-  timeToMature: 2
   intFlag: 0
 --- !u!212 &1104220068
 SpriteRenderer:
@@ -7447,18 +7447,18 @@ MonoBehaviour:
   isWatered: 0
   isPlanted: 0
   currentPlantPrefab: {fileID: 0}
-  growingPlantPrefab: {fileID: 0}
   growedtPlantPrefab: {fileID: 0}
   powedSprite: {fileID: 6058310393375558862, guid: 36a4cbfedd9960c41a386ad98cd2ce13, type: 3}
   wateredSprite: {fileID: 5252235568834077351, guid: 178571925f141154482899428815f778, type: 3}
   Kuang: {fileID: 547833410}
   playerInRange: 0
   KuangText: []
+  Bag: {fileID: 11400000, guid: 5df1c5e88a7d2314d909d74d63f221b5, type: 2}
   USE_Bag: {fileID: 11400000, guid: c6a84735ca77b2945b9c418687012a6f, type: 2}
+  WorkOne_Bag: {fileID: 11400000, guid: d413fac498ae95240843054c392d58e8, type: 2}
   daytext: {fileID: 0}
   plantStartTime: 0
   timeToGrow: 1
-  timeToMature: 2
   intFlag: 0
 --- !u!212 &1115890408
 SpriteRenderer:
@@ -7610,18 +7610,18 @@ MonoBehaviour:
   isWatered: 0
   isPlanted: 0
   currentPlantPrefab: {fileID: 0}
-  growingPlantPrefab: {fileID: 0}
   growedtPlantPrefab: {fileID: 0}
   powedSprite: {fileID: 6058310393375558862, guid: 36a4cbfedd9960c41a386ad98cd2ce13, type: 3}
   wateredSprite: {fileID: 5252235568834077351, guid: 178571925f141154482899428815f778, type: 3}
   Kuang: {fileID: 610444903}
   playerInRange: 0
   KuangText: []
+  Bag: {fileID: 11400000, guid: 5df1c5e88a7d2314d909d74d63f221b5, type: 2}
   USE_Bag: {fileID: 11400000, guid: c6a84735ca77b2945b9c418687012a6f, type: 2}
+  WorkOne_Bag: {fileID: 11400000, guid: d413fac498ae95240843054c392d58e8, type: 2}
   daytext: {fileID: 0}
   plantStartTime: 0
   timeToGrow: 1
-  timeToMature: 2
   intFlag: 0
 --- !u!212 &1142484348
 SpriteRenderer:
@@ -7856,18 +7856,18 @@ MonoBehaviour:
   isWatered: 0
   isPlanted: 0
   currentPlantPrefab: {fileID: 0}
-  growingPlantPrefab: {fileID: 0}
   growedtPlantPrefab: {fileID: 0}
   powedSprite: {fileID: 6058310393375558862, guid: 36a4cbfedd9960c41a386ad98cd2ce13, type: 3}
   wateredSprite: {fileID: 5252235568834077351, guid: 178571925f141154482899428815f778, type: 3}
   Kuang: {fileID: 1947513556}
   playerInRange: 0
   KuangText: []
+  Bag: {fileID: 11400000, guid: 5df1c5e88a7d2314d909d74d63f221b5, type: 2}
   USE_Bag: {fileID: 11400000, guid: c6a84735ca77b2945b9c418687012a6f, type: 2}
+  WorkOne_Bag: {fileID: 11400000, guid: d413fac498ae95240843054c392d58e8, type: 2}
   daytext: {fileID: 0}
   plantStartTime: 0
   timeToGrow: 1
-  timeToMature: 2
   intFlag: 0
 --- !u!212 &1151098458
 SpriteRenderer:
@@ -8019,18 +8019,18 @@ MonoBehaviour:
   isWatered: 0
   isPlanted: 0
   currentPlantPrefab: {fileID: 0}
-  growingPlantPrefab: {fileID: 0}
   growedtPlantPrefab: {fileID: 0}
   powedSprite: {fileID: 6058310393375558862, guid: 36a4cbfedd9960c41a386ad98cd2ce13, type: 3}
   wateredSprite: {fileID: 5252235568834077351, guid: 178571925f141154482899428815f778, type: 3}
   Kuang: {fileID: 475872226}
   playerInRange: 0
   KuangText: []
+  Bag: {fileID: 11400000, guid: 5df1c5e88a7d2314d909d74d63f221b5, type: 2}
   USE_Bag: {fileID: 11400000, guid: c6a84735ca77b2945b9c418687012a6f, type: 2}
+  WorkOne_Bag: {fileID: 11400000, guid: d413fac498ae95240843054c392d58e8, type: 2}
   daytext: {fileID: 0}
   plantStartTime: 0
   timeToGrow: 1
-  timeToMature: 2
   intFlag: 0
 --- !u!212 &1171557062
 SpriteRenderer:
@@ -8265,18 +8265,18 @@ MonoBehaviour:
   isWatered: 0
   isPlanted: 0
   currentPlantPrefab: {fileID: 0}
-  growingPlantPrefab: {fileID: 0}
   growedtPlantPrefab: {fileID: 0}
   powedSprite: {fileID: 6058310393375558862, guid: 36a4cbfedd9960c41a386ad98cd2ce13, type: 3}
   wateredSprite: {fileID: 5252235568834077351, guid: 178571925f141154482899428815f778, type: 3}
   Kuang: {fileID: 1101499350}
   playerInRange: 0
   KuangText: []
+  Bag: {fileID: 11400000, guid: 5df1c5e88a7d2314d909d74d63f221b5, type: 2}
   USE_Bag: {fileID: 11400000, guid: c6a84735ca77b2945b9c418687012a6f, type: 2}
+  WorkOne_Bag: {fileID: 11400000, guid: d413fac498ae95240843054c392d58e8, type: 2}
   daytext: {fileID: 0}
   plantStartTime: 0
   timeToGrow: 1
-  timeToMature: 2
   intFlag: 0
 --- !u!212 &1241133444
 SpriteRenderer:
@@ -8428,18 +8428,18 @@ MonoBehaviour:
   isWatered: 0
   isPlanted: 0
   currentPlantPrefab: {fileID: 0}
-  growingPlantPrefab: {fileID: 0}
   growedtPlantPrefab: {fileID: 0}
   powedSprite: {fileID: 6058310393375558862, guid: 36a4cbfedd9960c41a386ad98cd2ce13, type: 3}
   wateredSprite: {fileID: 5252235568834077351, guid: 178571925f141154482899428815f778, type: 3}
   Kuang: {fileID: 520743721}
   playerInRange: 0
   KuangText: []
+  Bag: {fileID: 11400000, guid: 5df1c5e88a7d2314d909d74d63f221b5, type: 2}
   USE_Bag: {fileID: 11400000, guid: c6a84735ca77b2945b9c418687012a6f, type: 2}
+  WorkOne_Bag: {fileID: 11400000, guid: d413fac498ae95240843054c392d58e8, type: 2}
   daytext: {fileID: 0}
   plantStartTime: 0
   timeToGrow: 1
-  timeToMature: 2
   intFlag: 0
 --- !u!212 &1244459709
 SpriteRenderer:
@@ -10978,18 +10978,18 @@ MonoBehaviour:
   isWatered: 0
   isPlanted: 0
   currentPlantPrefab: {fileID: 0}
-  growingPlantPrefab: {fileID: 0}
   growedtPlantPrefab: {fileID: 0}
   powedSprite: {fileID: 6058310393375558862, guid: 36a4cbfedd9960c41a386ad98cd2ce13, type: 3}
   wateredSprite: {fileID: 5252235568834077351, guid: 178571925f141154482899428815f778, type: 3}
   Kuang: {fileID: 1437685862}
   playerInRange: 0
   KuangText: []
+  Bag: {fileID: 11400000, guid: 5df1c5e88a7d2314d909d74d63f221b5, type: 2}
   USE_Bag: {fileID: 11400000, guid: c6a84735ca77b2945b9c418687012a6f, type: 2}
+  WorkOne_Bag: {fileID: 11400000, guid: d413fac498ae95240843054c392d58e8, type: 2}
   daytext: {fileID: 0}
   plantStartTime: 0
   timeToGrow: 1
-  timeToMature: 2
   intFlag: 0
 --- !u!212 &1299555652
 SpriteRenderer:
@@ -12389,18 +12389,18 @@ MonoBehaviour:
   isWatered: 0
   isPlanted: 0
   currentPlantPrefab: {fileID: 0}
-  growingPlantPrefab: {fileID: 0}
   growedtPlantPrefab: {fileID: 0}
   powedSprite: {fileID: 6058310393375558862, guid: 36a4cbfedd9960c41a386ad98cd2ce13, type: 3}
   wateredSprite: {fileID: 5252235568834077351, guid: 178571925f141154482899428815f778, type: 3}
   Kuang: {fileID: 1088882092}
   playerInRange: 0
   KuangText: []
+  Bag: {fileID: 11400000, guid: 5df1c5e88a7d2314d909d74d63f221b5, type: 2}
   USE_Bag: {fileID: 11400000, guid: c6a84735ca77b2945b9c418687012a6f, type: 2}
+  WorkOne_Bag: {fileID: 11400000, guid: d413fac498ae95240843054c392d58e8, type: 2}
   daytext: {fileID: 0}
   plantStartTime: 0
   timeToGrow: 1
-  timeToMature: 2
   intFlag: 0
 --- !u!212 &1312418457
 SpriteRenderer:
@@ -15803,18 +15803,18 @@ MonoBehaviour:
   isWatered: 0
   isPlanted: 0
   currentPlantPrefab: {fileID: 0}
-  growingPlantPrefab: {fileID: 0}
   growedtPlantPrefab: {fileID: 0}
   powedSprite: {fileID: 6058310393375558862, guid: 36a4cbfedd9960c41a386ad98cd2ce13, type: 3}
   wateredSprite: {fileID: 5252235568834077351, guid: 178571925f141154482899428815f778, type: 3}
   Kuang: {fileID: 2040074243}
   playerInRange: 0
   KuangText: []
+  Bag: {fileID: 11400000, guid: 5df1c5e88a7d2314d909d74d63f221b5, type: 2}
   USE_Bag: {fileID: 11400000, guid: c6a84735ca77b2945b9c418687012a6f, type: 2}
+  WorkOne_Bag: {fileID: 11400000, guid: d413fac498ae95240843054c392d58e8, type: 2}
   daytext: {fileID: 0}
   plantStartTime: 0
   timeToGrow: 1
-  timeToMature: 2
   intFlag: 0
 --- !u!212 &1433483076
 SpriteRenderer:
@@ -16132,18 +16132,18 @@ MonoBehaviour:
   isWatered: 0
   isPlanted: 0
   currentPlantPrefab: {fileID: 0}
-  growingPlantPrefab: {fileID: 0}
   growedtPlantPrefab: {fileID: 0}
   powedSprite: {fileID: 6058310393375558862, guid: 36a4cbfedd9960c41a386ad98cd2ce13, type: 3}
   wateredSprite: {fileID: 5252235568834077351, guid: 178571925f141154482899428815f778, type: 3}
   Kuang: {fileID: 1148144502}
   playerInRange: 0
   KuangText: []
+  Bag: {fileID: 11400000, guid: 5df1c5e88a7d2314d909d74d63f221b5, type: 2}
   USE_Bag: {fileID: 11400000, guid: c6a84735ca77b2945b9c418687012a6f, type: 2}
+  WorkOne_Bag: {fileID: 11400000, guid: d413fac498ae95240843054c392d58e8, type: 2}
   daytext: {fileID: 0}
   plantStartTime: 0
   timeToGrow: 1
-  timeToMature: 2
   intFlag: 0
 --- !u!212 &1468152753
 SpriteRenderer:
@@ -16627,18 +16627,18 @@ MonoBehaviour:
   isWatered: 0
   isPlanted: 0
   currentPlantPrefab: {fileID: 0}
-  growingPlantPrefab: {fileID: 0}
   growedtPlantPrefab: {fileID: 0}
   powedSprite: {fileID: 6058310393375558862, guid: 36a4cbfedd9960c41a386ad98cd2ce13, type: 3}
   wateredSprite: {fileID: 5252235568834077351, guid: 178571925f141154482899428815f778, type: 3}
   Kuang: {fileID: 1325267521}
   playerInRange: 0
   KuangText: []
+  Bag: {fileID: 11400000, guid: 5df1c5e88a7d2314d909d74d63f221b5, type: 2}
   USE_Bag: {fileID: 11400000, guid: c6a84735ca77b2945b9c418687012a6f, type: 2}
+  WorkOne_Bag: {fileID: 11400000, guid: d413fac498ae95240843054c392d58e8, type: 2}
   daytext: {fileID: 0}
   plantStartTime: 0
   timeToGrow: 1
-  timeToMature: 2
   intFlag: 0
 --- !u!212 &1587160218
 SpriteRenderer:
@@ -19361,18 +19361,18 @@ MonoBehaviour:
   isWatered: 0
   isPlanted: 0
   currentPlantPrefab: {fileID: 0}
-  growingPlantPrefab: {fileID: 0}
   growedtPlantPrefab: {fileID: 0}
   powedSprite: {fileID: 6058310393375558862, guid: 36a4cbfedd9960c41a386ad98cd2ce13, type: 3}
   wateredSprite: {fileID: 5252235568834077351, guid: 178571925f141154482899428815f778, type: 3}
   Kuang: {fileID: 1771651753}
   playerInRange: 0
   KuangText: []
+  Bag: {fileID: 11400000, guid: 5df1c5e88a7d2314d909d74d63f221b5, type: 2}
   USE_Bag: {fileID: 11400000, guid: c6a84735ca77b2945b9c418687012a6f, type: 2}
+  WorkOne_Bag: {fileID: 11400000, guid: d413fac498ae95240843054c392d58e8, type: 2}
   daytext: {fileID: 0}
   plantStartTime: 0
   timeToGrow: 1
-  timeToMature: 2
   intFlag: 0
 --- !u!212 &1717278346
 SpriteRenderer:
@@ -19773,18 +19773,18 @@ MonoBehaviour:
   isWatered: 0
   isPlanted: 0
   currentPlantPrefab: {fileID: 0}
-  growingPlantPrefab: {fileID: 0}
   growedtPlantPrefab: {fileID: 0}
   powedSprite: {fileID: 6058310393375558862, guid: 36a4cbfedd9960c41a386ad98cd2ce13, type: 3}
   wateredSprite: {fileID: 5252235568834077351, guid: 178571925f141154482899428815f778, type: 3}
   Kuang: {fileID: 16053947}
   playerInRange: 0
   KuangText: []
+  Bag: {fileID: 11400000, guid: 5df1c5e88a7d2314d909d74d63f221b5, type: 2}
   USE_Bag: {fileID: 11400000, guid: c6a84735ca77b2945b9c418687012a6f, type: 2}
+  WorkOne_Bag: {fileID: 11400000, guid: d413fac498ae95240843054c392d58e8, type: 2}
   daytext: {fileID: 0}
   plantStartTime: 0
   timeToGrow: 1
-  timeToMature: 2
   intFlag: 0
 --- !u!212 &1766370373
 SpriteRenderer:
@@ -20019,18 +20019,18 @@ MonoBehaviour:
   isWatered: 0
   isPlanted: 0
   currentPlantPrefab: {fileID: 0}
-  growingPlantPrefab: {fileID: 0}
   growedtPlantPrefab: {fileID: 0}
   powedSprite: {fileID: 6058310393375558862, guid: 36a4cbfedd9960c41a386ad98cd2ce13, type: 3}
   wateredSprite: {fileID: 5252235568834077351, guid: 178571925f141154482899428815f778, type: 3}
   Kuang: {fileID: 1734460982}
   playerInRange: 0
   KuangText: []
+  Bag: {fileID: 11400000, guid: 5df1c5e88a7d2314d909d74d63f221b5, type: 2}
   USE_Bag: {fileID: 11400000, guid: c6a84735ca77b2945b9c418687012a6f, type: 2}
+  WorkOne_Bag: {fileID: 11400000, guid: d413fac498ae95240843054c392d58e8, type: 2}
   daytext: {fileID: 0}
   plantStartTime: 0
   timeToGrow: 1
-  timeToMature: 2
   intFlag: 0
 --- !u!212 &1784005897
 SpriteRenderer:
@@ -20182,18 +20182,18 @@ MonoBehaviour:
   isWatered: 0
   isPlanted: 0
   currentPlantPrefab: {fileID: 0}
-  growingPlantPrefab: {fileID: 0}
   growedtPlantPrefab: {fileID: 0}
   powedSprite: {fileID: 6058310393375558862, guid: 36a4cbfedd9960c41a386ad98cd2ce13, type: 3}
   wateredSprite: {fileID: 5252235568834077351, guid: 178571925f141154482899428815f778, type: 3}
   Kuang: {fileID: 76338201}
   playerInRange: 0
   KuangText: []
+  Bag: {fileID: 11400000, guid: 5df1c5e88a7d2314d909d74d63f221b5, type: 2}
   USE_Bag: {fileID: 11400000, guid: c6a84735ca77b2945b9c418687012a6f, type: 2}
+  WorkOne_Bag: {fileID: 11400000, guid: d413fac498ae95240843054c392d58e8, type: 2}
   daytext: {fileID: 0}
   plantStartTime: 0
   timeToGrow: 1
-  timeToMature: 2
   intFlag: 0
 --- !u!212 &1844060610
 SpriteRenderer:
@@ -20424,18 +20424,18 @@ MonoBehaviour:
   isWatered: 0
   isPlanted: 0
   currentPlantPrefab: {fileID: 0}
-  growingPlantPrefab: {fileID: 0}
   growedtPlantPrefab: {fileID: 0}
   powedSprite: {fileID: 6058310393375558862, guid: 36a4cbfedd9960c41a386ad98cd2ce13, type: 3}
   wateredSprite: {fileID: 5252235568834077351, guid: 178571925f141154482899428815f778, type: 3}
   Kuang: {fileID: 1648696864}
   playerInRange: 0
   KuangText: []
+  Bag: {fileID: 11400000, guid: 5df1c5e88a7d2314d909d74d63f221b5, type: 2}
   USE_Bag: {fileID: 11400000, guid: c6a84735ca77b2945b9c418687012a6f, type: 2}
+  WorkOne_Bag: {fileID: 11400000, guid: d413fac498ae95240843054c392d58e8, type: 2}
   daytext: {fileID: 0}
   plantStartTime: 0
   timeToGrow: 1
-  timeToMature: 2
   intFlag: 0
 --- !u!212 &1912654100
 SpriteRenderer:
@@ -20670,18 +20670,18 @@ MonoBehaviour:
   isWatered: 0
   isPlanted: 0
   currentPlantPrefab: {fileID: 0}
-  growingPlantPrefab: {fileID: 0}
   growedtPlantPrefab: {fileID: 0}
   powedSprite: {fileID: 6058310393375558862, guid: 36a4cbfedd9960c41a386ad98cd2ce13, type: 3}
   wateredSprite: {fileID: 5252235568834077351, guid: 178571925f141154482899428815f778, type: 3}
   Kuang: {fileID: 1724081649}
   playerInRange: 0
   KuangText: []
+  Bag: {fileID: 11400000, guid: 5df1c5e88a7d2314d909d74d63f221b5, type: 2}
   USE_Bag: {fileID: 11400000, guid: c6a84735ca77b2945b9c418687012a6f, type: 2}
+  WorkOne_Bag: {fileID: 11400000, guid: d413fac498ae95240843054c392d58e8, type: 2}
   daytext: {fileID: 0}
   plantStartTime: 0
   timeToGrow: 1
-  timeToMature: 2
   intFlag: 0
 --- !u!212 &1965295686
 SpriteRenderer:
@@ -20904,18 +20904,18 @@ MonoBehaviour:
   isWatered: 0
   isPlanted: 0
   currentPlantPrefab: {fileID: 0}
-  growingPlantPrefab: {fileID: 0}
   growedtPlantPrefab: {fileID: 0}
   powedSprite: {fileID: 6058310393375558862, guid: 36a4cbfedd9960c41a386ad98cd2ce13, type: 3}
   wateredSprite: {fileID: 5252235568834077351, guid: 178571925f141154482899428815f778, type: 3}
   Kuang: {fileID: 1352102833}
   playerInRange: 0
   KuangText: []
+  Bag: {fileID: 11400000, guid: 5df1c5e88a7d2314d909d74d63f221b5, type: 2}
   USE_Bag: {fileID: 11400000, guid: c6a84735ca77b2945b9c418687012a6f, type: 2}
+  WorkOne_Bag: {fileID: 11400000, guid: d413fac498ae95240843054c392d58e8, type: 2}
   daytext: {fileID: 0}
   plantStartTime: 0
   timeToGrow: 1
-  timeToMature: 2
   intFlag: 0
 --- !u!212 &1994859415
 SpriteRenderer:
@@ -21200,18 +21200,18 @@ MonoBehaviour:
   isWatered: 0
   isPlanted: 0
   currentPlantPrefab: {fileID: 0}
-  growingPlantPrefab: {fileID: 0}
   growedtPlantPrefab: {fileID: 0}
   powedSprite: {fileID: 6058310393375558862, guid: 36a4cbfedd9960c41a386ad98cd2ce13, type: 3}
   wateredSprite: {fileID: 5252235568834077351, guid: 178571925f141154482899428815f778, type: 3}
   Kuang: {fileID: 795901582}
   playerInRange: 0
   KuangText: []
+  Bag: {fileID: 11400000, guid: 5df1c5e88a7d2314d909d74d63f221b5, type: 2}
   USE_Bag: {fileID: 11400000, guid: c6a84735ca77b2945b9c418687012a6f, type: 2}
+  WorkOne_Bag: {fileID: 11400000, guid: d413fac498ae95240843054c392d58e8, type: 2}
   daytext: {fileID: 0}
   plantStartTime: 0
   timeToGrow: 1
-  timeToMature: 2
   intFlag: 0
 --- !u!212 &2028613112
 SpriteRenderer:
@@ -21493,18 +21493,18 @@ MonoBehaviour:
   isWatered: 0
   isPlanted: 0
   currentPlantPrefab: {fileID: 0}
-  growingPlantPrefab: {fileID: 0}
   growedtPlantPrefab: {fileID: 0}
   powedSprite: {fileID: 6058310393375558862, guid: 36a4cbfedd9960c41a386ad98cd2ce13, type: 3}
   wateredSprite: {fileID: 5252235568834077351, guid: 178571925f141154482899428815f778, type: 3}
   Kuang: {fileID: 369503934}
   playerInRange: 0
   KuangText: []
+  Bag: {fileID: 11400000, guid: 5df1c5e88a7d2314d909d74d63f221b5, type: 2}
   USE_Bag: {fileID: 11400000, guid: c6a84735ca77b2945b9c418687012a6f, type: 2}
+  WorkOne_Bag: {fileID: 11400000, guid: d413fac498ae95240843054c392d58e8, type: 2}
   daytext: {fileID: 0}
   plantStartTime: 0
   timeToGrow: 1
-  timeToMature: 2
   intFlag: 0
 --- !u!212 &2065891970
 SpriteRenderer:
@@ -21822,18 +21822,18 @@ MonoBehaviour:
   isWatered: 0
   isPlanted: 0
   currentPlantPrefab: {fileID: 0}
-  growingPlantPrefab: {fileID: 0}
   growedtPlantPrefab: {fileID: 0}
   powedSprite: {fileID: 6058310393375558862, guid: 36a4cbfedd9960c41a386ad98cd2ce13, type: 3}
   wateredSprite: {fileID: 5252235568834077351, guid: 178571925f141154482899428815f778, type: 3}
   Kuang: {fileID: 174732145}
   playerInRange: 0
   KuangText: []
+  Bag: {fileID: 11400000, guid: 5df1c5e88a7d2314d909d74d63f221b5, type: 2}
   USE_Bag: {fileID: 11400000, guid: c6a84735ca77b2945b9c418687012a6f, type: 2}
+  WorkOne_Bag: {fileID: 11400000, guid: d413fac498ae95240843054c392d58e8, type: 2}
   daytext: {fileID: 0}
   plantStartTime: 0
   timeToGrow: 1
-  timeToMature: 2
   intFlag: 0
 --- !u!212 &2115487582
 SpriteRenderer:
@@ -21985,18 +21985,18 @@ MonoBehaviour:
   isWatered: 0
   isPlanted: 0
   currentPlantPrefab: {fileID: 0}
-  growingPlantPrefab: {fileID: 0}
   growedtPlantPrefab: {fileID: 0}
   powedSprite: {fileID: 6058310393375558862, guid: 36a4cbfedd9960c41a386ad98cd2ce13, type: 3}
   wateredSprite: {fileID: 5252235568834077351, guid: 178571925f141154482899428815f778, type: 3}
   Kuang: {fileID: 2099946758}
   playerInRange: 0
   KuangText: []
+  Bag: {fileID: 11400000, guid: 5df1c5e88a7d2314d909d74d63f221b5, type: 2}
   USE_Bag: {fileID: 11400000, guid: c6a84735ca77b2945b9c418687012a6f, type: 2}
+  WorkOne_Bag: {fileID: 11400000, guid: d413fac498ae95240843054c392d58e8, type: 2}
   daytext: {fileID: 0}
   plantStartTime: 0
   timeToGrow: 1
-  timeToMature: 2
   intFlag: 0
 --- !u!212 &2141249424
 SpriteRenderer:

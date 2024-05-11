@@ -36,7 +36,6 @@ public class Item : ScriptableObject
     public string itemName;//物品名字
     public ItemType itemType;//物品类型
     public GameObject prefab;//种子的预制体
-    public GameObject growing;//半成长的预制体
     public GameObject growed;//成熟的预制体
     public Sprite itemImage;//图片
     public int itemHeld;//物品的数量

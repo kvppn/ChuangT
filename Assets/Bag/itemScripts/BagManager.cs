@@ -262,6 +262,4 @@ public class BagManager : MonoBehaviour
             CreateNewSaleItem(instance.SaleBag.itemList[i]);
         }
     }
-
-
 }

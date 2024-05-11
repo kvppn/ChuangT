@@ -10,7 +10,6 @@ public class tile : MonoBehaviour
                                    //public GameObject seedPrefab; // 种子预制体
     //public GameObject maturePlantPrefab; // 成熟的植物预制体
     public GameObject currentPlantPrefab; // 当前种植的植物预制体
-    //public GameObject growingPlantPrefab; // 当前种植的植物预制体
     public GameObject growedtPlantPrefab; // 当前种植的植物成熟预制体
     public Sprite powedSprite; // 浇水后的图片
     public Sprite wateredSprite; // 浇水后的图片
@@ -18,7 +17,9 @@ public class tile : MonoBehaviour
     public bool playerInRange = false;//主角是否在npc的碰撞范围内
 
     public GameObject[] KuangText;
+    public bag Bag;
     public bag USE_Bag;//按下1-9按钮，对应的物品
+    public bag WorkOne_Bag;
     int KuangNum = 0;//按下的数字对应哪个框
 
     public static int flag = 1;//代表第一次耕种
@@ -26,7 +27,6 @@ public class tile : MonoBehaviour
     public Text daytext;//引用天数
     public  int plantStartTime = 0;//植物被播种开始的时间
     public int timeToGrow=1;//半成长的天数
-    //public int timeToMature=2;//
     public static int daysPassed=0;//经过的天数
 
     private Animator animator;//人物的动画
@@ -200,10 +200,11 @@ public class tile : MonoBehaviour
                     growedtPlantPrefab = item.growed;//成熟状态
 
                     SaveData(); // 保存数据
-                    item.itemHeld -= 1;
+                    //item.itemHeld -= 1;
                     //bloodText.text = (int.Parse(bloodText.text) - grow).ToString();//消耗了精力值
-                    BagManager.RefreshItem();
-                    BagManager.RefreshUSEItem();
+                    /*BagManager.RefreshItem();
+                    BagManager.RefreshUSEItem();*/
+                    DescreaseTheItem(item);
                   
                 }
             }
@@ -247,10 +248,11 @@ public class tile : MonoBehaviour
                     
                     Instantiate(item.prefab, gameObject.transform.position, Quaternion.identity).transform.parent = transform;
                     SaveData(); // 保存数据
-                    item.itemHeld -= 1;
-                    //bloodText.text = (int.Parse(bloodText.text) - grow).ToString();//消耗了精力值
-                    BagManager.RefreshItem();
-                    BagManager.RefreshUSEItem();
+                                //item.itemHeld -= 1;
+                                //bloodText.text = (int.Parse(bloodText.text) - grow).ToString();//消耗了精力值
+                    /* BagManager.RefreshItem();
+                     BagManager.RefreshUSEItem();*/
+                    DescreaseTheItem(item);
 
                 }
             }
@@ -263,6 +265,22 @@ public class tile : MonoBehaviour
                 SaveData(); // 保存数据
             }
         }
+    }
+    public void DescreaseTheItem(Item thisItem)
+    {
+
+        thisItem.itemHeld -= 1;
+        if (thisItem.itemHeld <= 0)
+        {
+            //等于0的时候销毁
+            Bag.itemList.Remove(thisItem);
+            USE_Bag.itemList.Remove(thisItem);
+            WorkOne_Bag.itemList.Remove(thisItem);
+        }
+        BagManager.RefreshItem();
+        BagManager.RefreshUSEItem();
+        BagManager.RefreshWorkOneItemXY();
+    
     }
     private void SaveData()
     {

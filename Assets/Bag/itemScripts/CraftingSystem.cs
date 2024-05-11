@@ -560,7 +560,6 @@ public class CraftingSystem : MonoBehaviour
     public void DescreaseTheItem(Item thisItem, Dictionary<string, Item> bagItems)
     {
        
-    
             bagItems[thisItem.itemName].itemHeld -= 1;
         if (bagItems[thisItem.itemName].itemHeld <= 0)
         {
