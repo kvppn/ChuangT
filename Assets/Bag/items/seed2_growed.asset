@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60fcbf00ada4e084ba64ccaab4f1e018, type: 3}
+  m_Name: seed2_growed
+  m_EditorClassIdentifier: 
+  itemName: 
+  prefab: {fileID: 0}
+  growing: {fileID: 0}
+  growed: {fileID: 0}
+  itemImage: {fileID: 3885201297826454048, guid: 8cc71ca4b91e2144db9633ab1dfb9eee, type: 3}
+  itemHeld: 1
+  itemInfo: 
+  equip: 0
+  grow: 0

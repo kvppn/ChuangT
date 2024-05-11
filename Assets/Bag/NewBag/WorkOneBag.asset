@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a0bc983f2768f94899d737bc207e4c1, type: 3}
+  m_Name: WorkOneBag
+  m_EditorClassIdentifier: 
+  itemList:
+  - {fileID: 11400000, guid: 9d97a5da1f83b6b4d938380734c931d3, type: 2}
+  - {fileID: 11400000, guid: 2aae286465561784aaca0163f0652c1a, type: 2}
+  - {fileID: 11400000, guid: 4a9fee19c8174674baa8b6288f884145, type: 2}
+  - {fileID: 11400000, guid: 74e86d0adc26cc64293b831b8f8b29e3, type: 2}
+  - {fileID: 11400000, guid: 61ccfef3d82e74d48a9f148a3ccc7871, type: 2}
+  - {fileID: 11400000, guid: 54d17ff05a564a14c8258b432dffa61c, type: 2}
+  - {fileID: 11400000, guid: 3a48dfdd89136054b8ebcf0be0f8587a, type: 2}
+  - {fileID: 11400000, guid: 4349a6fd3a39a3042aa5fdc64c6df0b0, type: 2}

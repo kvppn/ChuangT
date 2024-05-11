@@ -1,0 +1,84 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - player
+  - blood
+  - grid
+  - tilemap
+  - Enemy
+  - money
+  - NPCBar
+  - seed_1
+  - playerSpawn_1
+  - NPCTotal
+  - black
+  - watermap
+  - NPC_Bar
+  - selectScene
+  - kuang
+  - daytext
+  - action
+  - workOne
+  - workCraftingCanvas
+  - saleInfo
+  - saleCanvas
+  - workTwoCanvas
+  - store
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - CMvcan1
+  - ZhiWu
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: instance
+    uniqueID: 3723637701
+    locked: 0
+  - name: tilemap
+    uniqueID: 2906721831
+    locked: 0
+  - name: tilemaptest
+    uniqueID: 1303466573
+    locked: 0
+  - name: NPC
+    uniqueID: 1332579493
+    locked: 0
+  - name: player
+    uniqueID: 2717600107
+    locked: 0
+  - name: ZhiWu
+    uniqueID: 2117844651
+    locked: 0
