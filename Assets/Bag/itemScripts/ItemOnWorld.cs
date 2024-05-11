@@ -8,7 +8,6 @@ public class ItemOnWorld : MonoBehaviour
     public bag Mybag;//属于哪个背包
     public bag USE_Bag;
     public bag WorkOneBag;
-    //public bag SaleBag;
     public bool playerInRange = false;//主角是否在npc的碰撞范围内
     // Start is called before the first frame update
     public void OnTriggerEnter2D(Collider2D other)
@@ -45,8 +44,6 @@ public class ItemOnWorld : MonoBehaviour
             Mybag.itemList.Add(thisItem);//这个物品添加到这个包里面
             USE_Bag.itemList.Add(thisItem);//这个物品添加到这个包里面
             WorkOneBag.itemList.Add(thisItem);//这个物品添加到这个包里面
-            //SaleBag.itemList.Add(thisItem);
-            //BagManager.CreateNewItem(thisItem);
         }
         else
         {
@@ -55,6 +52,5 @@ public class ItemOnWorld : MonoBehaviour
         BagManager.RefreshItem();
         BagManager.RefreshUSEItem();
         BagManager.RefreshWorkOneItem();
-        //BagManager.RefreshSaleItem();
     }
 }

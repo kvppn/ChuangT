@@ -79,396 +79,557 @@ public class saleStoreCon : MonoBehaviour
   
     public void Button_1()
     {
-        moneyController.ChangeMoney(int.Parse(Money_1.text));
-        //MoneyTotal.text = (int.Parse(MoneyTotal.text) - int.Parse(Money_1.text)).ToString();
-        if (!Mybag.itemList.Contains(thisItem1))
+        if (moneyController.money - int.Parse(Money_1.text) >= 0)
         {
-            Mybag.itemList.Add(thisItem1);//这个物品添加到这个包里面
-            USE_Bag.itemList.Add(thisItem1);//这个物品添加到这个包里面
-            WorkOneBag.itemList.Add(thisItem1);//这个物品添加到这个包里面
+            moneyController.ChangeMoney(int.Parse(Money_1.text));
+            //MoneyTotal.text = (int.Parse(MoneyTotal.text) - int.Parse(Money_1.text)).ToString();
+            if (!Mybag.itemList.Contains(thisItem1))
+            {
+                Mybag.itemList.Add(thisItem1);//这个物品添加到这个包里面
+                USE_Bag.itemList.Add(thisItem1);//这个物品添加到这个包里面
+                WorkOneBag.itemList.Add(thisItem1);//这个物品添加到这个包里面
+            }
+            else
+            {
+                thisItem1.itemHeld += 1;
+            }
+            BagManager.RefreshItem();
+            BagManager.RefreshUSEItem();
+            BagManager.RefreshWorkOneItem();
         }
         else
         {
-            thisItem1.itemHeld += 1;
+            Debug.Log("没有足够的金钱");
         }
-        BagManager.RefreshItem();
-        BagManager.RefreshUSEItem();
-        BagManager.RefreshWorkOneItem();
     }
     public void Button_2()
     {
-        moneyController.ChangeMoney(int.Parse(Money_2.text));
-        //MoneyTotal.text = (int.Parse(MoneyTotal.text) - int.Parse(Money_2.text)).ToString();
-        if (!Mybag.itemList.Contains(thisItem2))
+        if (moneyController.money - int.Parse(Money_2.text) >= 0)
         {
-            Mybag.itemList.Add(thisItem2);//这个物品添加到这个包里面
-            USE_Bag.itemList.Add(thisItem2);//这个物品添加到这个包里面
-            WorkOneBag.itemList.Add(thisItem2);//这个物品添加到这个包里面
-            //BagManager.CreateNewItem(thisItem);
+            moneyController.ChangeMoney(int.Parse(Money_2.text));
+            //MoneyTotal.text = (int.Parse(MoneyTotal.text) - int.Parse(Money_2.text)).ToString();
+            if (!Mybag.itemList.Contains(thisItem2))
+            {
+                Mybag.itemList.Add(thisItem2);//这个物品添加到这个包里面
+                USE_Bag.itemList.Add(thisItem2);//这个物品添加到这个包里面
+                WorkOneBag.itemList.Add(thisItem2);//这个物品添加到这个包里面
+                                                   //BagManager.CreateNewItem(thisItem);
+            }
+            else
+            {
+                thisItem2.itemHeld += 1;
+            }
+            BagManager.RefreshItem();
+            BagManager.RefreshUSEItem();
+            BagManager.RefreshWorkOneItem();
         }
         else
         {
-            thisItem2.itemHeld += 1;
+            Debug.Log("没有足够的金钱");
         }
-        BagManager.RefreshItem();
-        BagManager.RefreshUSEItem();
-        BagManager.RefreshWorkOneItem();
     }
     public void Button_3()
     {
-        moneyController.ChangeMoney(int.Parse(Money_3.text));
-        if (!Mybag.itemList.Contains(thisItem3))
+        if (moneyController.money - int.Parse(Money_3.text) >= 0)
         {
-            Mybag.itemList.Add(thisItem3);//这个物品添加到这个包里面
-            USE_Bag.itemList.Add(thisItem3);//这个物品添加到这个包里面
-            WorkOneBag.itemList.Add(thisItem3);//这个物品添加到这个包里面
+            moneyController.ChangeMoney(int.Parse(Money_3.text));
+            if (!Mybag.itemList.Contains(thisItem3))
+            {
+                Mybag.itemList.Add(thisItem3);//这个物品添加到这个包里面
+                USE_Bag.itemList.Add(thisItem3);//这个物品添加到这个包里面
+                WorkOneBag.itemList.Add(thisItem3);//这个物品添加到这个包里面
+            }
+            else
+            {
+                thisItem3.itemHeld += 1;
+            }
+            BagManager.RefreshItem();
+            BagManager.RefreshUSEItem();
+            BagManager.RefreshWorkOneItem();
         }
         else
         {
-            thisItem3.itemHeld += 1;
+            Debug.Log("没有足够的金钱");
         }
-        BagManager.RefreshItem();
-        BagManager.RefreshUSEItem();
-        BagManager.RefreshWorkOneItem();
     }
     public void Button_4()
     {
-        moneyController.ChangeMoney(int.Parse(Money_4.text));
-        if (!Mybag.itemList.Contains(thisItem4))
+        if (moneyController.money - int.Parse(Money_4.text) >= 0)
         {
-            Mybag.itemList.Add(thisItem4);//这个物品添加到这个包里面
-            USE_Bag.itemList.Add(thisItem4);//这个物品添加到这个包里面
-            WorkOneBag.itemList.Add(thisItem4);//这个物品添加到这个包里面
+            moneyController.ChangeMoney(int.Parse(Money_4.text));
+            if (!Mybag.itemList.Contains(thisItem4))
+            {
+                Mybag.itemList.Add(thisItem4);//这个物品添加到这个包里面
+                USE_Bag.itemList.Add(thisItem4);//这个物品添加到这个包里面
+                WorkOneBag.itemList.Add(thisItem4);//这个物品添加到这个包里面
+            }
+            else
+            {
+                thisItem4.itemHeld += 1;
+            }
+            BagManager.RefreshItem();
+            BagManager.RefreshUSEItem();
+            BagManager.RefreshWorkOneItem();
         }
         else
         {
-            thisItem4.itemHeld += 1;
+            Debug.Log("没有足够的金钱");
         }
-        BagManager.RefreshItem();
-        BagManager.RefreshUSEItem();
-        BagManager.RefreshWorkOneItem();
     }
     public void Button_5()
     {
-        moneyController.ChangeMoney(int.Parse(Money_5.text));
-        if (!Mybag.itemList.Contains(thisItem5))
+        if (moneyController.money - int.Parse(Money_5.text) >= 0)
         {
-            Mybag.itemList.Add(thisItem5);//这个物品添加到这个包里面
-            USE_Bag.itemList.Add(thisItem5);//这个物品添加到这个包里面
-            WorkOneBag.itemList.Add(thisItem5);//这个物品添加到这个包里面
+            moneyController.ChangeMoney(int.Parse(Money_5.text));
+            if (!Mybag.itemList.Contains(thisItem5))
+            {
+                Mybag.itemList.Add(thisItem5);//这个物品添加到这个包里面
+                USE_Bag.itemList.Add(thisItem5);//这个物品添加到这个包里面
+                WorkOneBag.itemList.Add(thisItem5);//这个物品添加到这个包里面
+            }
+            else
+            {
+                thisItem5.itemHeld += 1;
+            }
+            BagManager.RefreshItem();
+            BagManager.RefreshUSEItem();
+            BagManager.RefreshWorkOneItem();
         }
         else
         {
-            thisItem5.itemHeld += 1;
+            Debug.Log("没有足够的金钱");
         }
-        BagManager.RefreshItem();
-        BagManager.RefreshUSEItem();
-        BagManager.RefreshWorkOneItem();
     }
     public void Button_6()
     {
-        moneyController.ChangeMoney(int.Parse(Money_6.text));
-        if (!Mybag.itemList.Contains(thisItem6))
+        if (moneyController.money - int.Parse(Money_6.text) >= 0)
         {
-            Mybag.itemList.Add(thisItem6);//这个物品添加到这个包里面
-            USE_Bag.itemList.Add(thisItem6);//这个物品添加到这个包里面
-            WorkOneBag.itemList.Add(thisItem6);//这个物品添加到这个包里面
+            moneyController.ChangeMoney(int.Parse(Money_6.text));
+            if (!Mybag.itemList.Contains(thisItem6))
+            {
+                Mybag.itemList.Add(thisItem6);//这个物品添加到这个包里面
+                USE_Bag.itemList.Add(thisItem6);//这个物品添加到这个包里面
+                WorkOneBag.itemList.Add(thisItem6);//这个物品添加到这个包里面
+            }
+            else
+            {
+                thisItem6.itemHeld += 1;
+            }
+            BagManager.RefreshItem();
+            BagManager.RefreshUSEItem();
+            BagManager.RefreshWorkOneItem();
         }
         else
         {
-            thisItem6.itemHeld += 1;
+            Debug.Log("没有足够的金钱");
         }
-        BagManager.RefreshItem();
-        BagManager.RefreshUSEItem();
-        BagManager.RefreshWorkOneItem();
     }
     public void Button_7()
     {
-        moneyController.ChangeMoney(int.Parse(Money_7.text));
-        if (!Mybag.itemList.Contains(thisItem7))
+        if (moneyController.money - int.Parse(Money_7.text) >= 0)
         {
-            Mybag.itemList.Add(thisItem7);//这个物品添加到这个包里面
-            USE_Bag.itemList.Add(thisItem7);//这个物品添加到这个包里面
-            WorkOneBag.itemList.Add(thisItem7);//这个物品添加到这个包里面
+            moneyController.ChangeMoney(int.Parse(Money_7.text));
+            if (!Mybag.itemList.Contains(thisItem7))
+            {
+                Mybag.itemList.Add(thisItem7);//这个物品添加到这个包里面
+                USE_Bag.itemList.Add(thisItem7);//这个物品添加到这个包里面
+                WorkOneBag.itemList.Add(thisItem7);//这个物品添加到这个包里面
+            }
+            else
+            {
+                thisItem7.itemHeld += 1;
+            }
+            BagManager.RefreshItem();
+            BagManager.RefreshUSEItem();
+            BagManager.RefreshWorkOneItem();
         }
         else
         {
-            thisItem7.itemHeld += 1;
+            Debug.Log("没有足够的金钱");
         }
-        BagManager.RefreshItem();
-        BagManager.RefreshUSEItem();
-        BagManager.RefreshWorkOneItem();
     }
     public void Button_8()
     {
-        moneyController.ChangeMoney(int.Parse(Money_8.text));
-        if (!Mybag.itemList.Contains(thisItem8))
+        if (moneyController.money - int.Parse(Money_8.text) >= 0)
         {
-            Mybag.itemList.Add(thisItem8);//这个物品添加到这个包里面
-            USE_Bag.itemList.Add(thisItem8);//这个物品添加到这个包里面
-            WorkOneBag.itemList.Add(thisItem8);//这个物品添加到这个包里面
+            moneyController.ChangeMoney(int.Parse(Money_8.text));
+            if (!Mybag.itemList.Contains(thisItem8))
+            {
+                Mybag.itemList.Add(thisItem8);//这个物品添加到这个包里面
+                USE_Bag.itemList.Add(thisItem8);//这个物品添加到这个包里面
+                WorkOneBag.itemList.Add(thisItem8);//这个物品添加到这个包里面
+            }
+            else
+            {
+                thisItem8.itemHeld += 1;
+            }
+            BagManager.RefreshItem();
+            BagManager.RefreshUSEItem();
+            BagManager.RefreshWorkOneItem();
         }
         else
         {
-            thisItem8.itemHeld += 1;
+            Debug.Log("没有足够的金钱");
         }
-        BagManager.RefreshItem();
-        BagManager.RefreshUSEItem();
-        BagManager.RefreshWorkOneItem();
     }
     public void Button_9()
     {
-        moneyController.ChangeMoney(int.Parse(Money_9.text));
-        if (!Mybag.itemList.Contains(thisItem9))
+        if (moneyController.money - int.Parse(Money_9.text) >= 0)
         {
-            Mybag.itemList.Add(thisItem9);//这个物品添加到这个包里面
-            USE_Bag.itemList.Add(thisItem9);//这个物品添加到这个包里面
-            WorkOneBag.itemList.Add(thisItem9);//这个物品添加到这个包里面
+            moneyController.ChangeMoney(int.Parse(Money_9.text));
+            if (!Mybag.itemList.Contains(thisItem9))
+            {
+                Mybag.itemList.Add(thisItem9);//这个物品添加到这个包里面
+                USE_Bag.itemList.Add(thisItem9);//这个物品添加到这个包里面
+                WorkOneBag.itemList.Add(thisItem9);//这个物品添加到这个包里面
+            }
+            else
+            {
+                thisItem9.itemHeld += 1;
+            }
+            BagManager.RefreshItem();
+            BagManager.RefreshUSEItem();
+            BagManager.RefreshWorkOneItem();
         }
         else
         {
-            thisItem9.itemHeld += 1;
+            Debug.Log("没有足够的金钱");
         }
-        BagManager.RefreshItem();
-        BagManager.RefreshUSEItem();
-        BagManager.RefreshWorkOneItem();
     }
     public void Button_10()
     {
-        moneyController.ChangeMoney(int.Parse(Money_10.text));
-        if (!Mybag.itemList.Contains(thisItem10))
+        if (moneyController.money - int.Parse(Money_10.text) >= 0)
         {
-            Mybag.itemList.Add(thisItem10);//这个物品添加到这个包里面
-            USE_Bag.itemList.Add(thisItem10);//这个物品添加到这个包里面
-            WorkOneBag.itemList.Add(thisItem10);//这个物品添加到这个包里面
+            moneyController.ChangeMoney(int.Parse(Money_10.text));
+            if (!Mybag.itemList.Contains(thisItem10))
+            {
+                Mybag.itemList.Add(thisItem10);//这个物品添加到这个包里面
+                USE_Bag.itemList.Add(thisItem10);//这个物品添加到这个包里面
+                WorkOneBag.itemList.Add(thisItem10);//这个物品添加到这个包里面
+            }
+            else
+            {
+                thisItem10.itemHeld += 1;
+            }
+            BagManager.RefreshItem();
+            BagManager.RefreshUSEItem();
+            BagManager.RefreshWorkOneItem();
         }
         else
         {
-            thisItem10.itemHeld += 1;
+            Debug.Log("没有足够的金钱");
         }
-        BagManager.RefreshItem();
-        BagManager.RefreshUSEItem();
-        BagManager.RefreshWorkOneItem();
     }
     public void Button_11()
     {
-        moneyController.ChangeMoney(int.Parse(Money_11.text));
-        if (!Mybag.itemList.Contains(thisItem11))
+        if (moneyController.money - int.Parse(Money_11.text) >= 0)
         {
-            Mybag.itemList.Add(thisItem11);//这个物品添加到这个包里面
-            USE_Bag.itemList.Add(thisItem11);//这个物品添加到这个包里面
-            WorkOneBag.itemList.Add(thisItem11);//这个物品添加到这个包里面
+            moneyController.ChangeMoney(int.Parse(Money_11.text));
+            if (!Mybag.itemList.Contains(thisItem11))
+            {
+                Mybag.itemList.Add(thisItem11);//这个物品添加到这个包里面
+                USE_Bag.itemList.Add(thisItem11);//这个物品添加到这个包里面
+                WorkOneBag.itemList.Add(thisItem11);//这个物品添加到这个包里面
+            }
+            else
+            {
+                thisItem11.itemHeld += 1;
+            }
+            BagManager.RefreshItem();
+            BagManager.RefreshUSEItem();
+            BagManager.RefreshWorkOneItem();
         }
         else
         {
-            thisItem11.itemHeld += 1;
+            Debug.Log("没有足够的金钱");
         }
-        BagManager.RefreshItem();
-        BagManager.RefreshUSEItem();
-        BagManager.RefreshWorkOneItem();
     }
     public void Button_12()
     {
-        moneyController.ChangeMoney(int.Parse(Money_12.text));
-        if (!Mybag.itemList.Contains(thisItem12))
+        if (moneyController.money - int.Parse(Money_12.text) >= 0)
         {
-            Mybag.itemList.Add(thisItem12);//这个物品添加到这个包里面
-            USE_Bag.itemList.Add(thisItem12);//这个物品添加到这个包里面
-            WorkOneBag.itemList.Add(thisItem12);//这个物品添加到这个包里面
+            moneyController.ChangeMoney(int.Parse(Money_12.text));
+            if (!Mybag.itemList.Contains(thisItem12))
+            {
+                Mybag.itemList.Add(thisItem12);//这个物品添加到这个包里面
+                USE_Bag.itemList.Add(thisItem12);//这个物品添加到这个包里面
+                WorkOneBag.itemList.Add(thisItem12);//这个物品添加到这个包里面
+            }
+            else
+            {
+                thisItem12.itemHeld += 1;
+            }
+            BagManager.RefreshItem();
+            BagManager.RefreshUSEItem();
+            BagManager.RefreshWorkOneItem();
         }
         else
         {
-            thisItem12.itemHeld += 1;
+            Debug.Log("没有足够的金钱");
         }
-        BagManager.RefreshItem();
-        BagManager.RefreshUSEItem();
-        BagManager.RefreshWorkOneItem();
     }
     public void Button_13()
     {
-        moneyController.ChangeMoney(int.Parse(Money_13.text));
-        if (!Mybag.itemList.Contains(thisItem13))
+        if (moneyController.money - int.Parse(Money_13.text) >= 0)
         {
-            Mybag.itemList.Add(thisItem13);//这个物品添加到这个包里面
-            USE_Bag.itemList.Add(thisItem13);//这个物品添加到这个包里面
-            WorkOneBag.itemList.Add(thisItem13);//这个物品添加到这个包里面
+            moneyController.ChangeMoney(int.Parse(Money_13.text));
+            if (!Mybag.itemList.Contains(thisItem13))
+            {
+                Mybag.itemList.Add(thisItem13);//这个物品添加到这个包里面
+                USE_Bag.itemList.Add(thisItem13);//这个物品添加到这个包里面
+                WorkOneBag.itemList.Add(thisItem13);//这个物品添加到这个包里面
+            }
+            else
+            {
+                thisItem13.itemHeld += 1;
+            }
+            BagManager.RefreshItem();
+            BagManager.RefreshUSEItem();
+            BagManager.RefreshWorkOneItem();
         }
         else
         {
-            thisItem13.itemHeld += 1;
+            Debug.Log("没有足够的金钱");
         }
-        BagManager.RefreshItem();
-        BagManager.RefreshUSEItem();
-        BagManager.RefreshWorkOneItem();
     }
     public void Button_14()
     {
-        moneyController.ChangeMoney(int.Parse(Money_14.text));
-        if (!Mybag.itemList.Contains(thisItem14))
+        if (moneyController.money - int.Parse(Money_14.text) >= 0)
         {
-            Mybag.itemList.Add(thisItem14);//这个物品添加到这个包里面
-            USE_Bag.itemList.Add(thisItem14);//这个物品添加到这个包里面
-            WorkOneBag.itemList.Add(thisItem14);//这个物品添加到这个包里面
+            moneyController.ChangeMoney(int.Parse(Money_14.text));
+            if (!Mybag.itemList.Contains(thisItem14))
+            {
+                Mybag.itemList.Add(thisItem14);//这个物品添加到这个包里面
+                USE_Bag.itemList.Add(thisItem14);//这个物品添加到这个包里面
+                WorkOneBag.itemList.Add(thisItem14);//这个物品添加到这个包里面
+            }
+            else
+            {
+                thisItem14.itemHeld += 1;
+            }
+            BagManager.RefreshItem();
+            BagManager.RefreshUSEItem();
+            BagManager.RefreshWorkOneItem();
         }
         else
         {
-            thisItem14.itemHeld += 1;
+            Debug.Log("没有足够的金钱");
         }
-        BagManager.RefreshItem();
-        BagManager.RefreshUSEItem();
-        BagManager.RefreshWorkOneItem();
     }
     public void Button_15()
     {
-        moneyController.ChangeMoney(int.Parse(Money_15.text));
-        if (!Mybag.itemList.Contains(thisItem15))
+        if (moneyController.money - int.Parse(Money_15.text) >= 0)
         {
-            Mybag.itemList.Add(thisItem15);//这个物品添加到这个包里面
-            USE_Bag.itemList.Add(thisItem15);//这个物品添加到这个包里面
-            WorkOneBag.itemList.Add(thisItem15);//这个物品添加到这个包里面
+            moneyController.ChangeMoney(int.Parse(Money_15.text));
+            if (!Mybag.itemList.Contains(thisItem15))
+            {
+                Mybag.itemList.Add(thisItem15);//这个物品添加到这个包里面
+                USE_Bag.itemList.Add(thisItem15);//这个物品添加到这个包里面
+                WorkOneBag.itemList.Add(thisItem15);//这个物品添加到这个包里面
+            }
+            else
+            {
+                thisItem15.itemHeld += 1;
+            }
+            BagManager.RefreshItem();
+            BagManager.RefreshUSEItem();
+            BagManager.RefreshWorkOneItem();
         }
         else
         {
-            thisItem15.itemHeld += 1;
+            Debug.Log("没有足够的金钱");
         }
-        BagManager.RefreshItem();
-        BagManager.RefreshUSEItem();
-        BagManager.RefreshWorkOneItem();
     }
     public void Button_16()
     {
-        moneyController.ChangeMoney(int.Parse(Money_16.text));
-        if (!Mybag.itemList.Contains(thisItem16))
+        if (moneyController.money - int.Parse(Money_16.text) >= 0)
         {
-            Mybag.itemList.Add(thisItem16);//这个物品添加到这个包里面
-            USE_Bag.itemList.Add(thisItem16);//这个物品添加到这个包里面
-            WorkOneBag.itemList.Add(thisItem16);//这个物品添加到这个包里面
+            moneyController.ChangeMoney(int.Parse(Money_16.text));
+            if (!Mybag.itemList.Contains(thisItem16))
+            {
+                Mybag.itemList.Add(thisItem16);//这个物品添加到这个包里面
+                USE_Bag.itemList.Add(thisItem16);//这个物品添加到这个包里面
+                WorkOneBag.itemList.Add(thisItem16);//这个物品添加到这个包里面
+            }
+            else
+            {
+                thisItem16.itemHeld += 1;
+            }
+            BagManager.RefreshItem();
+            BagManager.RefreshUSEItem();
+            BagManager.RefreshWorkOneItem();
         }
         else
         {
-            thisItem16.itemHeld += 1;
+            Debug.Log("没有足够的金钱");
         }
-        BagManager.RefreshItem();
-        BagManager.RefreshUSEItem();
-        BagManager.RefreshWorkOneItem();
     }
     public void Button_17()
     {
-        moneyController.ChangeMoney(int.Parse(Money_17.text));
-        if (!Mybag.itemList.Contains(thisItem17))
+        if (moneyController.money - int.Parse(Money_17.text) >= 0)
         {
-            Mybag.itemList.Add(thisItem17);//这个物品添加到这个包里面
-            USE_Bag.itemList.Add(thisItem17);//这个物品添加到这个包里面
-            WorkOneBag.itemList.Add(thisItem17);//这个物品添加到这个包里面
+            moneyController.ChangeMoney(int.Parse(Money_17.text));
+            if (!Mybag.itemList.Contains(thisItem17))
+            {
+                Mybag.itemList.Add(thisItem17);//这个物品添加到这个包里面
+                USE_Bag.itemList.Add(thisItem17);//这个物品添加到这个包里面
+                WorkOneBag.itemList.Add(thisItem17);//这个物品添加到这个包里面
+            }
+            else
+            {
+                thisItem17.itemHeld += 1;
+            }
+            BagManager.RefreshItem();
+            BagManager.RefreshUSEItem();
+            BagManager.RefreshWorkOneItem();
         }
         else
         {
-            thisItem17.itemHeld += 1;
+            Debug.Log("没有足够的金钱");
         }
-        BagManager.RefreshItem();
-        BagManager.RefreshUSEItem();
-        BagManager.RefreshWorkOneItem();
     }
     public void Button_18()
     {
-        moneyController.ChangeMoney(int.Parse(Money_18.text));
-        if (!Mybag.itemList.Contains(thisItem18))
+        if (moneyController.money - int.Parse(Money_18.text) >= 0)
         {
-            Mybag.itemList.Add(thisItem18);//这个物品添加到这个包里面
-            USE_Bag.itemList.Add(thisItem18);//这个物品添加到这个包里面
-            WorkOneBag.itemList.Add(thisItem18);//这个物品添加到这个包里面
+            moneyController.ChangeMoney(int.Parse(Money_18.text));
+            if (!Mybag.itemList.Contains(thisItem18))
+            {
+                Mybag.itemList.Add(thisItem18);//这个物品添加到这个包里面
+                USE_Bag.itemList.Add(thisItem18);//这个物品添加到这个包里面
+                WorkOneBag.itemList.Add(thisItem18);//这个物品添加到这个包里面
+            }
+            else
+            {
+                thisItem18.itemHeld += 1;
+            }
+            BagManager.RefreshItem();
+            BagManager.RefreshUSEItem();
+            BagManager.RefreshWorkOneItem();
         }
         else
         {
-            thisItem18.itemHeld += 1;
+            Debug.Log("没有足够的金钱");
         }
-        BagManager.RefreshItem();
-        BagManager.RefreshUSEItem();
-        BagManager.RefreshWorkOneItem();
     }
     public void Button_19()
     {
-        moneyController.ChangeMoney(int.Parse(Money_19.text));
-        if (!Mybag.itemList.Contains(thisItem19))
+        if (moneyController.money - int.Parse(Money_19.text) >= 0)
         {
-            Mybag.itemList.Add(thisItem19);//这个物品添加到这个包里面
-            USE_Bag.itemList.Add(thisItem19);//这个物品添加到这个包里面
-            WorkOneBag.itemList.Add(thisItem19);//这个物品添加到这个包里面
+            moneyController.ChangeMoney(int.Parse(Money_19.text));
+            if (!Mybag.itemList.Contains(thisItem19))
+            {
+                Mybag.itemList.Add(thisItem19);//这个物品添加到这个包里面
+                USE_Bag.itemList.Add(thisItem19);//这个物品添加到这个包里面
+                WorkOneBag.itemList.Add(thisItem19);//这个物品添加到这个包里面
+            }
+            else
+            {
+                thisItem19.itemHeld += 1;
+            }
+            BagManager.RefreshItem();
+            BagManager.RefreshUSEItem();
+            BagManager.RefreshWorkOneItem();
         }
         else
         {
-            thisItem19.itemHeld += 1;
+            Debug.Log("没有足够的金钱");
         }
-        BagManager.RefreshItem();
-        BagManager.RefreshUSEItem();
-        BagManager.RefreshWorkOneItem();
     }
     public void Button_20()
     {
-        moneyController.ChangeMoney(int.Parse(Money_20.text));
-        if (!Mybag.itemList.Contains(thisItem20))
+        if (moneyController.money - int.Parse(Money_20.text) >= 0)
         {
-            Mybag.itemList.Add(thisItem20);//这个物品添加到这个包里面
-            USE_Bag.itemList.Add(thisItem20);//这个物品添加到这个包里面
-            WorkOneBag.itemList.Add(thisItem20);//这个物品添加到这个包里面
+            moneyController.ChangeMoney(int.Parse(Money_20.text));
+            if (!Mybag.itemList.Contains(thisItem20))
+            {
+                Mybag.itemList.Add(thisItem20);//这个物品添加到这个包里面
+                USE_Bag.itemList.Add(thisItem20);//这个物品添加到这个包里面
+                WorkOneBag.itemList.Add(thisItem20);//这个物品添加到这个包里面
+            }
+            else
+            {
+                thisItem20.itemHeld += 1;
+            }
+            BagManager.RefreshItem();
+            BagManager.RefreshUSEItem();
+            BagManager.RefreshWorkOneItem();
         }
         else
         {
-            thisItem20.itemHeld += 1;
+            Debug.Log("没有足够的金钱");
         }
-        BagManager.RefreshItem();
-        BagManager.RefreshUSEItem();
-        BagManager.RefreshWorkOneItem();
     }
     public void Button_21()
     {
-        moneyController.ChangeMoney(int.Parse(Money_21.text));
-        if (!Mybag.itemList.Contains(thisItem21))
+        if (moneyController.money - int.Parse(Money_21.text) >= 0)
         {
-            Mybag.itemList.Add(thisItem21);//这个物品添加到这个包里面
-            USE_Bag.itemList.Add(thisItem21);//这个物品添加到这个包里面
-            WorkOneBag.itemList.Add(thisItem21);//这个物品添加到这个包里面
+            moneyController.ChangeMoney(int.Parse(Money_21.text));
+            if (!Mybag.itemList.Contains(thisItem21))
+            {
+                Mybag.itemList.Add(thisItem21);//这个物品添加到这个包里面
+                USE_Bag.itemList.Add(thisItem21);//这个物品添加到这个包里面
+                WorkOneBag.itemList.Add(thisItem21);//这个物品添加到这个包里面
+            }
+            else
+            {
+                thisItem21.itemHeld += 1;
+            }
+            BagManager.RefreshItem();
+            BagManager.RefreshUSEItem();
+            BagManager.RefreshWorkOneItem();
         }
         else
         {
-            thisItem21.itemHeld += 1;
+            Debug.Log("没有足够的金钱");
         }
-        BagManager.RefreshItem();
-        BagManager.RefreshUSEItem();
-        BagManager.RefreshWorkOneItem();
     }
     public void Button_22()
     {
-        moneyController.ChangeMoney(int.Parse(Money_22.text));
-        if (!Mybag.itemList.Contains(thisItem22))
+        if (moneyController.money - int.Parse(Money_22.text) >= 0)
         {
-            Mybag.itemList.Add(thisItem22);//这个物品添加到这个包里面
-            USE_Bag.itemList.Add(thisItem22);//这个物品添加到这个包里面
-            WorkOneBag.itemList.Add(thisItem22);//这个物品添加到这个包里面
+            moneyController.ChangeMoney(int.Parse(Money_22.text));
+            if (!Mybag.itemList.Contains(thisItem22))
+            {
+                Mybag.itemList.Add(thisItem22);//这个物品添加到这个包里面
+                USE_Bag.itemList.Add(thisItem22);//这个物品添加到这个包里面
+                WorkOneBag.itemList.Add(thisItem22);//这个物品添加到这个包里面
+            }
+            else
+            {
+                thisItem22.itemHeld += 1;
+            }
+            BagManager.RefreshItem();
+            BagManager.RefreshUSEItem();
+            BagManager.RefreshWorkOneItem();
         }
         else
         {
-            thisItem22.itemHeld += 1;
+            Debug.Log("没有足够的金钱");
         }
-        BagManager.RefreshItem();
-        BagManager.RefreshUSEItem();
-        BagManager.RefreshWorkOneItem();
     }
     public void Button_23()
     {
-        moneyController.ChangeMoney(int.Parse(Money_23.text));
-        if (!Mybag.itemList.Contains(thisItem23))
+        if (moneyController.money - int.Parse(Money_23.text) >= 0)
         {
-            Mybag.itemList.Add(thisItem23);//这个物品添加到这个包里面
-            USE_Bag.itemList.Add(thisItem23);//这个物品添加到这个包里面
-            WorkOneBag.itemList.Add(thisItem23);//这个物品添加到这个包里面
+            moneyController.ChangeMoney(int.Parse(Money_23.text));
+            if (!Mybag.itemList.Contains(thisItem23))
+            {
+                Mybag.itemList.Add(thisItem23);//这个物品添加到这个包里面
+                USE_Bag.itemList.Add(thisItem23);//这个物品添加到这个包里面
+                WorkOneBag.itemList.Add(thisItem23);//这个物品添加到这个包里面
+            }
+            else
+            {
+                thisItem23.itemHeld += 1;
+            }
+            BagManager.RefreshItem();
+            BagManager.RefreshUSEItem();
+            BagManager.RefreshWorkOneItem();
         }
         else
         {
-            thisItem23.itemHeld += 1;
+            Debug.Log("没有足够的金钱");
         }
-        BagManager.RefreshItem();
-        BagManager.RefreshUSEItem();
-        BagManager.RefreshWorkOneItem();
     }
 }

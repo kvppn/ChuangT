@@ -56,90 +56,125 @@ public class BarStoreController : MonoBehaviour
     }
     public void Button_1()
     {
-        moneyController.ChangeMoney(int.Parse(Money_1.text));
-  
-        if (!Mybag.itemList.Contains(thisItem1))
+        if (moneyController.money - int.Parse(Money_1.text) >= 0)
         {
-            Mybag.itemList.Add(thisItem1);//这个物品添加到这个包里面
-            USE_Bag.itemList.Add(thisItem1);//这个物品添加到这个包里面
-            WorkOneBag.itemList.Add(thisItem1);//这个物品添加到这个包里面
+            moneyController.ChangeMoney(int.Parse(Money_1.text));
+
+            if (!Mybag.itemList.Contains(thisItem1))
+            {
+                Mybag.itemList.Add(thisItem1);//这个物品添加到这个包里面
+                USE_Bag.itemList.Add(thisItem1);//这个物品添加到这个包里面
+                WorkOneBag.itemList.Add(thisItem1);//这个物品添加到这个包里面
+            }
+            else
+            {
+                thisItem1.itemHeld += 1;
+            }
+            BagManager.RefreshItem();
+            BagManager.RefreshUSEItem();
+            BagManager.RefreshWorkOneItem();
         }
         else
         {
-            thisItem1.itemHeld += 1;
+            Debug.Log("没有足够的金钱");
         }
-        BagManager.RefreshItem();
-        BagManager.RefreshUSEItem();
-        BagManager.RefreshWorkOneItem();
     }
     public void Button_2()
     {
-        moneyController.ChangeMoney(int.Parse(Money_2.text));
-
-        if (!Mybag.itemList.Contains(thisItem2))
+        if (moneyController.money - int.Parse(Money_2.text) >= 0)
         {
-            Mybag.itemList.Add(thisItem2);//这个物品添加到这个包里面
-            USE_Bag.itemList.Add(thisItem2);//这个物品添加到这个包里面
-            WorkOneBag.itemList.Add(thisItem2);//这个物品添加到这个包里面
-       
+            moneyController.ChangeMoney(int.Parse(Money_2.text));
+
+            if (!Mybag.itemList.Contains(thisItem2))
+            {
+                Mybag.itemList.Add(thisItem2);//这个物品添加到这个包里面
+                USE_Bag.itemList.Add(thisItem2);//这个物品添加到这个包里面
+                WorkOneBag.itemList.Add(thisItem2);//这个物品添加到这个包里面
+
+            }
+            else
+            {
+                thisItem2.itemHeld += 1;
+            }
+            BagManager.RefreshItem();
+            BagManager.RefreshUSEItem();
+            BagManager.RefreshWorkOneItem();
         }
         else
         {
-            thisItem2.itemHeld += 1;
+            Debug.Log("没有足够的金钱");
         }
-        BagManager.RefreshItem();
-        BagManager.RefreshUSEItem();
-        BagManager.RefreshWorkOneItem();
     }
     public void Button_3()
     {
-        moneyController.ChangeMoney(int.Parse(Money_3.text));
-        if (!Mybag.itemList.Contains(thisItem3))
+        if (moneyController.money - int.Parse(Money_3.text) >= 0)
         {
-            Mybag.itemList.Add(thisItem3);//这个物品添加到这个包里面
-            USE_Bag.itemList.Add(thisItem3);//这个物品添加到这个包里面
-            WorkOneBag.itemList.Add(thisItem3);//这个物品添加到这个包里面
+            moneyController.ChangeMoney(int.Parse(Money_3.text));
+            if (!Mybag.itemList.Contains(thisItem3))
+            {
+                Mybag.itemList.Add(thisItem3);//这个物品添加到这个包里面
+                USE_Bag.itemList.Add(thisItem3);//这个物品添加到这个包里面
+                WorkOneBag.itemList.Add(thisItem3);//这个物品添加到这个包里面
+            }
+            else
+            {
+                thisItem3.itemHeld += 1;
+            }
+            BagManager.RefreshItem();
+            BagManager.RefreshUSEItem();
+            BagManager.RefreshWorkOneItem();
         }
         else
         {
-            thisItem3.itemHeld += 1;
+            Debug.Log("没有足够的金钱");
         }
-        BagManager.RefreshItem();
-        BagManager.RefreshUSEItem();
-        BagManager.RefreshWorkOneItem();
     }
     public void Button_4()
     {
-        moneyController.ChangeMoney(int.Parse(Money_4.text));
-        if (!Mybag.itemList.Contains(thisItem4))
+        if (moneyController.money - int.Parse(Money_4.text) >= 0)
         {
-            Mybag.itemList.Add(thisItem4);//这个物品添加到这个包里面
-            USE_Bag.itemList.Add(thisItem4);//这个物品添加到这个包里面
-            WorkOneBag.itemList.Add(thisItem4);//这个物品添加到这个包里面
+            moneyController.ChangeMoney(int.Parse(Money_4.text));
+            if (!Mybag.itemList.Contains(thisItem4))
+            {
+                Mybag.itemList.Add(thisItem4);//这个物品添加到这个包里面
+                USE_Bag.itemList.Add(thisItem4);//这个物品添加到这个包里面
+                WorkOneBag.itemList.Add(thisItem4);//这个物品添加到这个包里面
+            }
+            else
+            {
+                thisItem4.itemHeld += 1;
+            }
+            BagManager.RefreshItem();
+            BagManager.RefreshUSEItem();
+            BagManager.RefreshWorkOneItem();
         }
         else
         {
-            thisItem4.itemHeld += 1;
+            Debug.Log("没有足够的金钱");
         }
-        BagManager.RefreshItem();
-        BagManager.RefreshUSEItem();
-        BagManager.RefreshWorkOneItem();
     }
     public void Button_5()
     {
-        moneyController.ChangeMoney(int.Parse(Money_5.text));
-        if (!Mybag.itemList.Contains(thisItem5))
+        if (moneyController.money - int.Parse(Money_5.text) >= 0)
         {
-            Mybag.itemList.Add(thisItem5);//这个物品添加到这个包里面
-            USE_Bag.itemList.Add(thisItem5);//这个物品添加到这个包里面
-            WorkOneBag.itemList.Add(thisItem5);//这个物品添加到这个包里面
+            moneyController.ChangeMoney(int.Parse(Money_5.text));
+            if (!Mybag.itemList.Contains(thisItem5))
+            {
+                Mybag.itemList.Add(thisItem5);//这个物品添加到这个包里面
+                USE_Bag.itemList.Add(thisItem5);//这个物品添加到这个包里面
+                WorkOneBag.itemList.Add(thisItem5);//这个物品添加到这个包里面
+            }
+            else
+            {
+                thisItem5.itemHeld += 1;
+            }
+            BagManager.RefreshItem();
+            BagManager.RefreshUSEItem();
+            BagManager.RefreshWorkOneItem();
         }
         else
         {
-            thisItem5.itemHeld += 1;
+            Debug.Log("没有足够的金钱");
         }
-        BagManager.RefreshItem();
-        BagManager.RefreshUSEItem();
-        BagManager.RefreshWorkOneItem();
     }
 }

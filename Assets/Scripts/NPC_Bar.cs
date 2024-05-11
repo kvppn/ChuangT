@@ -46,11 +46,7 @@ public class NPC_Bar : MonoBehaviour
         Scene otherScene = SceneManager.GetSceneByName("Player");
         flowchart = GameObject.Find("Flowchart").GetComponent<Flowchart>();
         flowchart2 = GameObject.Find("Flowchart2").GetComponent<Flowchart>();
-       /* GameObject NPCbarObject = GameObject.FindGameObjectWithTag("NPCBar");
-        if (NPCbarObject != null)
-        {
-            NPCbar = NPCbarObject.GetComponent<Canvas>();
-        }*/
+     
         GameObject blackObject = GameObject.FindGameObjectWithTag("black");
         if (blackObject != null)
         {
@@ -129,7 +125,6 @@ public class NPC_Bar : MonoBehaviour
            
            if (hit.collider != null && hit.collider == gameObject.GetComponent<Collider2D>() && playerInRange == true)
             {
-                //NPCbar.enabled = true;
                 foreach (GameObject obj in otherScene.GetRootGameObjects())
                 {
                     // 找到你要激活的GameObject
@@ -178,7 +173,7 @@ public class NPC_Bar : MonoBehaviour
             yield return null;
         }
         yield return new WaitForSeconds(1f);
-        SceneManager.LoadScene("firstLevel");
+        SceneManager.LoadScene("store");
         SceneManager.LoadScene("Player", LoadSceneMode.Additive);
         SceneManager.sceneLoaded += OnSceneLoadedhome;
 
@@ -188,9 +183,8 @@ public class NPC_Bar : MonoBehaviour
         PlayerPrefs.SetInt("intKey", 1);//可以开始计时了
         if (scene.buildIndex == 0)
         {
-            Debug.Log("0000022");
             GameObject player = GameObject.FindGameObjectWithTag("player");
-            player.transform.position = new Vector3(-7f, 0.6f, 0);
+            player.transform.position = new Vector3(-1.04f, 0.07f, 0);
 
             SceneManager.sceneLoaded -= OnSceneLoadedhome;
         }
@@ -226,42 +220,4 @@ public class NPC_Bar : MonoBehaviour
               Diaing = 4;//第二段对话结束
           }
       }
-    /*public void Say()
-    {
-        if (!flowchart.HasExecutingBlocks() && flowchart.HasBlock(ChatName))
-        {
-            flowchart.ExecuteBlock(ChatName);
-            Diaing = 1; // Dialogue started
-        }
-    }
-
-    public void SayDescription()
-    {
-        if (!flowchart.HasExecutingBlocks() && flowchart.HasBlock(description))
-        {
-            flowchart.ExecuteBlock(description);
-            Diaing = 1; // Dialogue started
-        }
-    }
-
-    public void SayAfterOpen()
-    {
-        if (!flowchart.HasExecutingBlocks() && flowchart.HasBlock(afteropen))
-        {
-            flowchart.ExecuteBlock(afteropen);
-            Diaing = 2; // Dialogue ended
-        }
-    }
-
-    public void SayEve()
-    {
-        Debug.Log("sayEve的执行");
-        if (!flowchart2.HasExecutingBlocks() && flowchart2.HasBlock(ChatNameEve))
-        {
-            flowchart2.ExecuteBlock(ChatNameEve);
-            Debug.Log("diaing=4");
-            Diaing = 4; // Dialogue ended
-            //StartCoroutine(BlackAgain());
-        }
-    }*/
 }
