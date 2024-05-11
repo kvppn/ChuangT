@@ -52,8 +52,10 @@ public class Blood : MonoBehaviour
         {
             bloodSlider.fillRect.GetComponent<Image>().color = new Color(1,0,0,0);
             //精力条为0有个动画，之后xxxx传送到
-            SceneManager.LoadScene("firstLevel");
+            SceneManager.LoadScene("bar");
             SceneManager.LoadScene("Player", LoadSceneMode.Additive);
+            SceneManager.sceneLoaded += OnSceneLoadedhome;
+
             bloodText.text = 100.ToString();
         }
         if (bloodSlider.value < SpeedCut&&flag==1)
@@ -62,12 +64,29 @@ public class Blood : MonoBehaviour
             flag = 2;
         }
     }
+    private void OnSceneLoadedhome(Scene scene, LoadSceneMode mode)
+    {
+        if (scene.buildIndex == 0)
+        {
+            GameObject player = GameObject.FindGameObjectWithTag("player");
+            player.transform.position = new Vector3(-1.04f, 0.07f, 0);
+            SceneManager.sceneLoaded -= OnSceneLoadedhome;
+        }
+    }
     //血量减少的代码，储存数据
     public void decreseBlood(int amount)
     {
         int blood;
         blood = int.Parse(bloodText.text);
         blood -= amount;
+        PlayerPrefs.SetInt("BloodY", blood); // 更新PlayerPrefs中的值
+        bloodText.text = blood.ToString(); // 更新UI显示
+    }
+    public void increseBlood(int amount)
+    {
+        int blood;
+        blood = int.Parse(bloodText.text);
+        blood += amount;
         PlayerPrefs.SetInt("BloodY", blood); // 更新PlayerPrefs中的值
         bloodText.text = blood.ToString(); // 更新UI显示
     }

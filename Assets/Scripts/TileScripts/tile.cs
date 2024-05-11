@@ -32,13 +32,15 @@ public class tile : MonoBehaviour
     private Animator animator;//人物的动画
 
     public int intFlag;
+
+    public Blood bloody;
     void Start()
     { 
         string objectIdentifier = gameObject.name;
         daytext = (GameObject.FindGameObjectWithTag("daytext")).GetComponent<Text>();
         KuangText = GameObject.FindGameObjectsWithTag("kuang");
         animator = GameObject.FindGameObjectWithTag("player").GetComponent<Animator>();
- 
+        bloody= GameObject.FindGameObjectWithTag("bloody").GetComponent<Blood>();
         if (PlayerPrefs.GetInt("DataInitialized"+ objectIdentifier) ==0)//判断耕地是否初始)
         {
             InitializeData();
@@ -175,6 +177,7 @@ public class tile : MonoBehaviour
         if (!isPlowed)
         {
             // 耕种
+            bloody.decreseBlood(5);
             isPlowed = true;
             animator.SetTrigger("isAction");
             GetComponent<SpriteRenderer>().sprite = powedSprite;
@@ -185,10 +188,10 @@ public class tile : MonoBehaviour
             Item item = USE_Bag.itemList[KuangNum];
             if (!isPlanted)
             {
-                Debug.Log("genzhonggenzhong");
                 //如果没有种植则种植
                 if (item.grow == true)
                 {
+                    bloody.decreseBlood(5);
                     //计算种植时间
                     plantStartTime = int.Parse(daytext.text);
                     //
@@ -210,6 +213,7 @@ public class tile : MonoBehaviour
             }
             else
             {
+                bloody.decreseBlood(5);
                 //如果种植了，则浇水
                 isWatered = true;
                 animator.SetTrigger("isAction");
@@ -225,6 +229,7 @@ public class tile : MonoBehaviour
     {
         if (!isPlowed)
         {
+            bloody.decreseBlood(5);
             // 耕种
             isPlowed = true;
             animator.SetTrigger("isAction");
@@ -239,6 +244,7 @@ public class tile : MonoBehaviour
                 //如果没有种植则种植
                 if (item.grow == true)
                 {
+                    bloody.decreseBlood(5);
                     //计算种植时间
                     plantStartTime = int.Parse(daytext.text);
                     isPlanted = true;
@@ -258,6 +264,7 @@ public class tile : MonoBehaviour
             }
             else if(isPlanted&&!isWatered)
             {
+                bloody.decreseBlood(5);
                 //如果种植了，则浇水
                 isWatered = true;
                 animator.SetTrigger("isAction");
