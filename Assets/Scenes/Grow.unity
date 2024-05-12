@@ -603,6 +603,7 @@ MonoBehaviour:
   plantStartTime: 0
   timeToGrow: 1
   intFlag: 0
+  bloody: {fileID: 0}
 --- !u!212 &137078569
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -849,6 +850,7 @@ MonoBehaviour:
   plantStartTime: 0
   timeToGrow: 1
   intFlag: 0
+  bloody: {fileID: 0}
 --- !u!212 &181209450
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1012,6 +1014,7 @@ MonoBehaviour:
   plantStartTime: 0
   timeToGrow: 1
   intFlag: 0
+  bloody: {fileID: 0}
 --- !u!212 &208655402
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1406,6 +1409,7 @@ MonoBehaviour:
   plantStartTime: 0
   timeToGrow: 1
   intFlag: 0
+  bloody: {fileID: 0}
 --- !u!212 &262608357
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1569,6 +1573,7 @@ MonoBehaviour:
   plantStartTime: 0
   timeToGrow: 1
   intFlag: 0
+  bloody: {fileID: 0}
 --- !u!212 &282233587
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1732,6 +1737,7 @@ MonoBehaviour:
   plantStartTime: 0
   timeToGrow: 1
   intFlag: 0
+  bloody: {fileID: 0}
 --- !u!212 &291832340
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1978,6 +1984,7 @@ MonoBehaviour:
   plantStartTime: 0
   timeToGrow: 1
   intFlag: 0
+  bloody: {fileID: 0}
 --- !u!212 &347121319
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2776,6 +2783,7 @@ MonoBehaviour:
   plantStartTime: 0
   timeToGrow: 1
   intFlag: 0
+  bloody: {fileID: 0}
 --- !u!212 &567610093
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2939,6 +2947,7 @@ MonoBehaviour:
   plantStartTime: 0
   timeToGrow: 1
   intFlag: 0
+  bloody: {fileID: 0}
 --- !u!212 &604274269
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3185,6 +3194,7 @@ MonoBehaviour:
   plantStartTime: 0
   timeToGrow: 1
   intFlag: 0
+  bloody: {fileID: 0}
 --- !u!212 &634123396
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3431,6 +3441,7 @@ MonoBehaviour:
   plantStartTime: 0
   timeToGrow: 1
   intFlag: 0
+  bloody: {fileID: 0}
 --- !u!212 &672332160
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3677,6 +3688,7 @@ MonoBehaviour:
   plantStartTime: 0
   timeToGrow: 1
   intFlag: 0
+  bloody: {fileID: 0}
 --- !u!212 &698407172
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3840,6 +3852,7 @@ MonoBehaviour:
   plantStartTime: 0
   timeToGrow: 1
   intFlag: 0
+  bloody: {fileID: 0}
 --- !u!212 &744474894
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3941,6 +3954,7 @@ MonoBehaviour:
   plantStartTime: 0
   timeToGrow: 1
   intFlag: 0
+  bloody: {fileID: 0}
 --- !u!212 &777940805
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4249,6 +4263,7 @@ MonoBehaviour:
   plantStartTime: 0
   timeToGrow: 1
   intFlag: 0
+  bloody: {fileID: 0}
 --- !u!212 &811550786
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4412,6 +4427,7 @@ MonoBehaviour:
   plantStartTime: 0
   timeToGrow: 1
   intFlag: 0
+  bloody: {fileID: 0}
 --- !u!212 &877844033
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4575,6 +4591,7 @@ MonoBehaviour:
   plantStartTime: 0
   timeToGrow: 1
   intFlag: 0
+  bloody: {fileID: 0}
 --- !u!212 &883937229
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4723,6 +4740,7 @@ MonoBehaviour:
   plantStartTime: 0
   timeToGrow: 1
   intFlag: 0
+  bloody: {fileID: 0}
 --- !u!212 &971939344
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7297,6 +7315,7 @@ MonoBehaviour:
   plantStartTime: 0
   timeToGrow: 1
   intFlag: 0
+  bloody: {fileID: 0}
 --- !u!212 &1104220068
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7460,6 +7479,7 @@ MonoBehaviour:
   plantStartTime: 0
   timeToGrow: 1
   intFlag: 0
+  bloody: {fileID: 0}
 --- !u!212 &1115890408
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7623,6 +7643,7 @@ MonoBehaviour:
   plantStartTime: 0
   timeToGrow: 1
   intFlag: 0
+  bloody: {fileID: 0}
 --- !u!212 &1142484348
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7869,6 +7890,7 @@ MonoBehaviour:
   plantStartTime: 0
   timeToGrow: 1
   intFlag: 0
+  bloody: {fileID: 0}
 --- !u!212 &1151098458
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -8032,6 +8054,7 @@ MonoBehaviour:
   plantStartTime: 0
   timeToGrow: 1
   intFlag: 0
+  bloody: {fileID: 0}
 --- !u!212 &1171557062
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -8278,6 +8301,7 @@ MonoBehaviour:
   plantStartTime: 0
   timeToGrow: 1
   intFlag: 0
+  bloody: {fileID: 0}
 --- !u!212 &1241133444
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -8441,6 +8465,7 @@ MonoBehaviour:
   plantStartTime: 0
   timeToGrow: 1
   intFlag: 0
+  bloody: {fileID: 0}
 --- !u!212 &1244459709
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -10991,6 +11016,7 @@ MonoBehaviour:
   plantStartTime: 0
   timeToGrow: 1
   intFlag: 0
+  bloody: {fileID: 0}
 --- !u!212 &1299555652
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -12402,6 +12428,7 @@ MonoBehaviour:
   plantStartTime: 0
   timeToGrow: 1
   intFlag: 0
+  bloody: {fileID: 0}
 --- !u!212 &1312418457
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -15816,6 +15843,7 @@ MonoBehaviour:
   plantStartTime: 0
   timeToGrow: 1
   intFlag: 0
+  bloody: {fileID: 0}
 --- !u!212 &1433483076
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -16145,6 +16173,7 @@ MonoBehaviour:
   plantStartTime: 0
   timeToGrow: 1
   intFlag: 0
+  bloody: {fileID: 0}
 --- !u!212 &1468152753
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -16640,6 +16669,7 @@ MonoBehaviour:
   plantStartTime: 0
   timeToGrow: 1
   intFlag: 0
+  bloody: {fileID: 0}
 --- !u!212 &1587160218
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -19374,6 +19404,7 @@ MonoBehaviour:
   plantStartTime: 0
   timeToGrow: 1
   intFlag: 0
+  bloody: {fileID: 0}
 --- !u!212 &1717278346
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -19786,6 +19817,7 @@ MonoBehaviour:
   plantStartTime: 0
   timeToGrow: 1
   intFlag: 0
+  bloody: {fileID: 0}
 --- !u!212 &1766370373
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -20032,6 +20064,7 @@ MonoBehaviour:
   plantStartTime: 0
   timeToGrow: 1
   intFlag: 0
+  bloody: {fileID: 0}
 --- !u!212 &1784005897
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -20195,6 +20228,7 @@ MonoBehaviour:
   plantStartTime: 0
   timeToGrow: 1
   intFlag: 0
+  bloody: {fileID: 0}
 --- !u!212 &1844060610
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -20437,6 +20471,7 @@ MonoBehaviour:
   plantStartTime: 0
   timeToGrow: 1
   intFlag: 0
+  bloody: {fileID: 0}
 --- !u!212 &1912654100
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -20683,6 +20718,7 @@ MonoBehaviour:
   plantStartTime: 0
   timeToGrow: 1
   intFlag: 0
+  bloody: {fileID: 0}
 --- !u!212 &1965295686
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -20917,6 +20953,7 @@ MonoBehaviour:
   plantStartTime: 0
   timeToGrow: 1
   intFlag: 0
+  bloody: {fileID: 0}
 --- !u!212 &1994859415
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -21213,6 +21250,7 @@ MonoBehaviour:
   plantStartTime: 0
   timeToGrow: 1
   intFlag: 0
+  bloody: {fileID: 0}
 --- !u!212 &2028613112
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -21506,6 +21544,7 @@ MonoBehaviour:
   plantStartTime: 0
   timeToGrow: 1
   intFlag: 0
+  bloody: {fileID: 0}
 --- !u!212 &2065891970
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -21835,6 +21874,7 @@ MonoBehaviour:
   plantStartTime: 0
   timeToGrow: 1
   intFlag: 0
+  bloody: {fileID: 0}
 --- !u!212 &2115487582
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -21998,6 +22038,7 @@ MonoBehaviour:
   plantStartTime: 0
   timeToGrow: 1
   intFlag: 0
+  bloody: {fileID: 0}
 --- !u!212 &2141249424
 SpriteRenderer:
   m_ObjectHideFlags: 0

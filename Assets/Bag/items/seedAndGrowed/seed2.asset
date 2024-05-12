@@ -14,9 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: "\u5DF4\u65AF\u68C9\u79CD\u5B50 "
   itemType: 0
-  prefab: {fileID: 5979941229089517216, guid: 70e86291ac029714587031ac29ec76f1, type: 3}
-  growing: {fileID: 0}
-  growed: {fileID: 8793727731211466085, guid: fcbcdb26704474044a8637c1bc4080d0, type: 3}
+  prefab: {fileID: 2692773069283055554, guid: 3a3cd0d56e0626640915fc61d6d2ec7c, type: 3}
+  growed: {fileID: 8534505912434357462, guid: 9b551c286b0bd8c4688a4c1b73c9028e, type: 3}
   itemImage: {fileID: -8438834961763562419, guid: c1cde189186e8f54fb30b49aa5892d64, type: 3}
   itemHeld: 1
   itemInfo: 
