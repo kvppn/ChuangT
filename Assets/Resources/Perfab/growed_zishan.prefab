@@ -98,7 +98,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 363812a9480dca34587fd68fbbe6ca7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  thisItem: {fileID: 11400000, guid: 100cf0dc1eb14bd44ac0e8426c4c16f5, type: 2}
+  thisItem: {fileID: 11400000, guid: 4a9fee19c8174674baa8b6288f884145, type: 2}
   Mybag: {fileID: 11400000, guid: 5df1c5e88a7d2314d909d74d63f221b5, type: 2}
   USE_Bag: {fileID: 11400000, guid: c6a84735ca77b2945b9c418687012a6f, type: 2}
   WorkOneBag: {fileID: 11400000, guid: d413fac498ae95240843054c392d58e8, type: 2}

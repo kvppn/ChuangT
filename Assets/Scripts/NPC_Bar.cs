@@ -173,7 +173,7 @@ public class NPC_Bar : MonoBehaviour
             yield return null;
         }
         yield return new WaitForSeconds(1f);
-        SceneManager.LoadScene("store");
+        SceneManager.LoadScene("bar");
         SceneManager.LoadScene("Player", LoadSceneMode.Additive);
         SceneManager.sceneLoaded += OnSceneLoadedhome;
 
