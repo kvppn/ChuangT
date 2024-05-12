@@ -551,15 +551,10 @@ public class CraftingSystem : MonoBehaviour
                 Destroy(CraftingGrid.transform.GetChild(i).gameObject);
             }
             CraftingBag.itemList.Clear();
-
-
-
-
         }
     }
     public void DescreaseTheItem(Item thisItem, Dictionary<string, Item> bagItems)
     {
-       
             bagItems[thisItem.itemName].itemHeld -= 1;
         if (bagItems[thisItem.itemName].itemHeld <= 0)
         {
@@ -575,7 +570,6 @@ public class CraftingSystem : MonoBehaviour
     }
     public void AddTheItem(Item thisItem, Dictionary<string, Item> bagItems)
     {
-
         if (bagItems.ContainsKey(thisItem.itemName))
             bagItems[thisItem.itemName].itemHeld += 1;
         else
@@ -624,6 +618,7 @@ public class CraftingSystem : MonoBehaviour
             }
             BagManager.RefreshItem();
             BagManager.RefreshUSEItem();
+            BagManager.RefreshSaleItem();
             if (isWorkOne)
                 BagManager.RefreshWorkOneItemXY();
             else

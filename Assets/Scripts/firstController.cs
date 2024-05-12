@@ -17,9 +17,9 @@ public class firstController : MonoBehaviour
         PlayerPrefs.SetInt("intFlag", 3);
         for (int i = 0; i<=40;i++) {
             PlayerPrefs.SetInt("DataInitialized" + "tile_"+i.ToString(), 0);//判断耕地是否初始
-            
+            PlayerPrefs.SetInt("StartTime" + "tile_" + i.ToString(), 0);//储存开始的天数
         }
-       
+
     }
 
     // Update is called once per frame

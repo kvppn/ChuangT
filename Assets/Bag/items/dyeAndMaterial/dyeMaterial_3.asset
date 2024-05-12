@@ -14,9 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: "\u80E1\u841D\u535C"
   itemType: 3
-  prefab: {fileID: 0}
-  growing: {fileID: 0}
-  growed: {fileID: 0}
+  prefab: {fileID: 8148195528319523224, guid: 69ff14d010e7c3c49b6d22e27e49958a, type: 3}
+  growed: {fileID: 3831624131212239850, guid: 399e1e7c73a67e34295f18ffd352f498, type: 3}
   itemImage: {fileID: -2190625179268057718, guid: c1cde189186e8f54fb30b49aa5892d64, type: 3}
   itemHeld: 90
   itemInfo: 

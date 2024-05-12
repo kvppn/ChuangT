@@ -27,7 +27,7 @@ public class tile : MonoBehaviour
     public Text daytext;//引用天数
     public  int plantStartTime = 0;//植物被播种开始的时间
     public int timeToGrow=1;//半成长的天数
-    public static int daysPassed=0;//经过的天数
+    //public static int daysPassed=0;//经过的天数
 
     private Animator animator;//人物的动画
 
@@ -86,7 +86,7 @@ public class tile : MonoBehaviour
         Debug.Log("时间过去了"+ (int.Parse(daytext.text) - plantStartTime));
         
         // 计算种植时间经过的天数
-        daysPassed = int.Parse(daytext.text) - plantStartTime;
+        //daysPassed = int.Parse(daytext.text) - plantStartTime;
         //右键操作
         if (Input.GetMouseButtonDown(1) )
         {
@@ -170,6 +170,7 @@ public class tile : MonoBehaviour
     }
     public void MouseDown0()
     {
+        string objectIdentifier = gameObject.name;
         if (isPlanted == true)
         {
             Debug.Log("genzhonggenzhong");
@@ -194,6 +195,7 @@ public class tile : MonoBehaviour
                     bloody.decreseBlood(5);
                     //计算种植时间
                     plantStartTime = int.Parse(daytext.text);
+                    PlayerPrefs.SetInt("StartTime" + objectIdentifier, plantStartTime);//储存开始的天数
                     //
                     isPlanted = true;
                     animator.SetTrigger("isAction");
@@ -227,6 +229,7 @@ public class tile : MonoBehaviour
  
     public void MouseDown()
     {
+        string objectIdentifier = gameObject.name;
         if (!isPlowed)
         {
             bloody.decreseBlood(5);
@@ -247,6 +250,7 @@ public class tile : MonoBehaviour
                     bloody.decreseBlood(5);
                     //计算种植时间
                     plantStartTime = int.Parse(daytext.text);
+                    PlayerPrefs.SetInt("StartTime" + objectIdentifier, plantStartTime);//储存开始的天数
                     isPlanted = true;
                     animator.SetTrigger("isAction");
                     currentPlantPrefab = item.prefab; // 设置当前种植的植物预制体
@@ -303,6 +307,7 @@ public class tile : MonoBehaviour
     }
     private void LoadData()
     {
+        string objectIdentifier = gameObject.name;
         // 加载地块状态信息
         isPlowed = PlayerPrefs.GetInt("Tile_" + transform.position.x.ToString() + "_" + transform.position.y.ToString() + "_Plowed", 0) == 1;
         isPlanted = PlayerPrefs.GetInt("Tile_" + transform.position.x.ToString() + "_" + transform.position.y.ToString() + "_Planted", 0) == 1;
@@ -314,7 +319,7 @@ public class tile : MonoBehaviour
         // 计算种植时间经过的天数
         //daysPassed = int.Parse(daytext.text) - plantStartTime;
         // 根据加载的状态更新地块外观
-        Debug.Log("加载时间过去了" + daysPassed);
+        //Debug.Log("加载时间过去了" + daysPassed);
         if (isPlowed&&!isWatered)
         {
             GetComponent<SpriteRenderer>().sprite = powedSprite;
@@ -342,11 +347,11 @@ public class tile : MonoBehaviour
         {
             // 实例化种植的植物预制体（如果已经种植）
             
-            if ( daysPassed >= timeToGrow)
+            if (int.Parse(daytext.text)- PlayerPrefs.GetInt("StartTime" + objectIdentifier, plantStartTime) >= timeToGrow)
             {
                 Instantiate(growedtPlantPrefab, transform.position, Quaternion.identity).transform.parent = transform;
             }
-            else if (daysPassed < timeToGrow)
+            else if (int.Parse(daytext.text) - PlayerPrefs.GetInt("StartTime" + objectIdentifier, plantStartTime) < timeToGrow)
             {
                 Instantiate(currentPlantPrefab, transform.position, Quaternion.identity).transform.parent = transform;
             }
