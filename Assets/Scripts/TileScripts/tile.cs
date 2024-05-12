@@ -35,8 +35,9 @@ public class tile : MonoBehaviour
 
     public Blood bloody;
     void Start()
-    { 
-        string objectIdentifier = gameObject.name;
+    {
+        StartCoroutine(WaitForDayTextUpdate());
+        /*string objectIdentifier = gameObject.name;
         daytext = (GameObject.FindGameObjectWithTag("daytext")).GetComponent<Text>();
         KuangText = GameObject.FindGameObjectsWithTag("kuang");
         animator = GameObject.FindGameObjectWithTag("player").GetComponent<Animator>();
@@ -49,9 +50,28 @@ public class tile : MonoBehaviour
         else
         {
             LoadData();
+            Debug.Log("时间呢完成此次惆怅长岑长擦擦擦" + int.Parse(daytext.text));
+        }*/
+    }
+    IEnumerator WaitForDayTextUpdate()
+    {
+        yield return new WaitForSeconds(0.01f); // 等待0.1秒，可以根据需要调整
+        string objectIdentifier = gameObject.name;
+        daytext = (GameObject.FindGameObjectWithTag("daytext")).GetComponent<Text>();
+        KuangText = GameObject.FindGameObjectsWithTag("kuang");
+        animator = GameObject.FindGameObjectWithTag("player").GetComponent<Animator>();
+        bloody = GameObject.FindGameObjectWithTag("bloody").GetComponent<Blood>();
+        if (PlayerPrefs.GetInt("DataInitialized" + objectIdentifier) == 0)//判断耕地是否初始)
+        {
+            InitializeData();
+            PlayerPrefs.SetInt("DataInitialized" + objectIdentifier, 1);
+        }
+        else
+        {
+            LoadData();
         }
     }
-    public void OnTriggerEnter2D(Collider2D other)
+        public void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("player"))
         {
@@ -82,8 +102,9 @@ public class tile : MonoBehaviour
 
      void Update()
     {
+       
         intFlag = PlayerPrefs.GetInt("intFlag");
-        Debug.Log("时间过去了"+ (int.Parse(daytext.text) - plantStartTime));
+
         
         // 计算种植时间经过的天数
         //daysPassed = int.Parse(daytext.text) - plantStartTime;
@@ -346,7 +367,7 @@ public class tile : MonoBehaviour
         if (isPlanted)
         {
             // 实例化种植的植物预制体（如果已经种植）
-            
+            Debug.Log("我操你妈啊啊啊啊时间过去多少了" + int.Parse(daytext.text));
             if (int.Parse(daytext.text)- PlayerPrefs.GetInt("StartTime" + objectIdentifier, plantStartTime) >= timeToGrow)
             {
                 Instantiate(growedtPlantPrefab, transform.position, Quaternion.identity).transform.parent = transform;

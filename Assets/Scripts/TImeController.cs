@@ -18,7 +18,7 @@ public class TImeController : MonoBehaviour
 
         gameTime += Time.deltaTime; // 真实时间流逝
         dayText.text = day.ToString();
-        if (gameTime >= 45f) // 一天20小时
+        if (gameTime >= 10f) // 一天20小时
         {
             gameTime = 0f;
 
