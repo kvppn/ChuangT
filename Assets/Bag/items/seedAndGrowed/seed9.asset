@@ -20,11 +20,11 @@ MonoBehaviour:
   itemImage: {fileID: 5537507934200975585, guid: c1cde189186e8f54fb30b49aa5892d64, type: 3}
   itemHeld: 1
   itemInfo: 
-  money: 0
+  money: 52
   equip: 0
   grow: 1
   quality: 0
   itemSpeciality: 0
   specialityCount: 0
-  itemColor: 0
+  itemColor: 1
   fashion: 0

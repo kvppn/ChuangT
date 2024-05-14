@@ -13,17 +13,18 @@ MonoBehaviour:
   m_Name: seed7
   m_EditorClassIdentifier: 
   itemName: "\u971C\u6676\u83B2\u79CD\u5B50"
-  itemType: 0
-  prefab: {fileID: 3337689104278417013, guid: 22c8d3e395088b549aa018b3e1712a8b, type: 3}
-  growed: {fileID: 5873383691520644030, guid: 165f924053d21cb45ab5b98331d94111, type: 3}
+  itemType: 2
+  prefab: {fileID: 5979941229089517216, guid: 70e86291ac029714587031ac29ec76f1, type: 3}
+  growing: {fileID: 0}
+  growed: {fileID: 8793727731211466085, guid: fcbcdb26704474044a8637c1bc4080d0, type: 3}
   itemImage: {fileID: 902030397152847825, guid: c1cde189186e8f54fb30b49aa5892d64, type: 3}
-  itemHeld: 1
+  itemHeld: 0
   itemInfo: 
-  money: 20
+  money: 168
   equip: 0
   grow: 1
-  quality: 30
-  itemSpeciality: 0
+  quality: 198
+  itemSpeciality: 3
   specialityCount: 0
   itemColor: 0
   fashion: 0
