@@ -18,6 +18,14 @@ public class ItemOnWorld : MonoBehaviour
            
         }
     }
+    public void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.CompareTag("player"))
+        {
+            playerInRange = false;
+
+        }
+    }
     private void Update()
     {
         if (Input.GetMouseButtonDown(1)) // ¼ì²âÊó±êÓÒ¼üµã»÷

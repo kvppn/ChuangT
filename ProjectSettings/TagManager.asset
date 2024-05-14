@@ -28,6 +28,7 @@ TagManager:
   - workTwoCanvas
   - store
   - bloody
+  - select
   layers:
   - Default
   - TransparentFX
