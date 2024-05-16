@@ -29,6 +29,15 @@ public class TImeController : MonoBehaviour
             day++;
         }
     }
+    public void GoToSleep()
+    {
+        gameTime = 0;
+        dayText.text = day.ToString();
+        SceneManager.LoadScene("bar");
+        SceneManager.LoadScene("Player", LoadSceneMode.Additive);
+        SceneManager.sceneLoaded += OnSceneLoadedhome;
+        day++;
+    }
     bool IsSceneLoaded(string sceneName)
     {
         for (int i = 0; i < SceneManager.sceneCount; i++)
