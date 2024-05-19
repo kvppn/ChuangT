@@ -86,8 +86,16 @@ public class Blood : MonoBehaviour
     {
         int blood;
         blood = int.Parse(bloodText.text);
-        blood += amount;
-        PlayerPrefs.SetInt("BloodY", blood); // 更新PlayerPrefs中的值
+        if (blood + amount > 100)
+        {
+            blood = 100;
+            PlayerPrefs.SetInt("BloodY", blood); // 更新PlayerPrefs中的值
+        }
+        else if(blood + amount <= 100)
+        {
+            blood += amount;
+            PlayerPrefs.SetInt("BloodY", blood); // 更新PlayerPrefs中的值
+        }
         bloodText.text = blood.ToString(); // 更新UI显示
     }
 }

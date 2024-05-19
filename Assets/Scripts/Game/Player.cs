@@ -156,6 +156,7 @@ namespace YouChuangThree
                 ActivateGameObjectAtIndex(8);
                 Kuang = 8;
             }
+          
         }
         void ActivateGameObjectAtIndex(int index)
         {
