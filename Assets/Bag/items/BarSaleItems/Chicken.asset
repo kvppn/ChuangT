@@ -15,13 +15,12 @@ MonoBehaviour:
   itemName: "\u9E21"
   itemType: 0
   prefab: {fileID: 0}
-  growing: {fileID: 0}
   growed: {fileID: 0}
   itemImage: {fileID: -7112890186270754176, guid: c1cde189186e8f54fb30b49aa5892d64, type: 3}
   itemHeld: 1
   itemInfo: 
   money: 0
-  equip: 0
+  equip: 1
   grow: 0
   quality: 0
   itemSpeciality: 0

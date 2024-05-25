@@ -2,15 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+using Cinemachine;
 public class CraftingSystem : MonoBehaviour
 {
     public bool isWorkOne;
     public Item resultItem;//合成的物品
-    /*public Item resultFabric_1;//合成的布料
-    public Item resultFabric_2;
-    public Item resultFabric_3;
-    public Item resultFabric_4;*/
     public bag CraftingBag;//
 
   // public static CraftingSystem instance;
@@ -20,6 +16,7 @@ public class CraftingSystem : MonoBehaviour
     public bag WorkOneBag;
 
     public GameObject CraftingGrid;
+    public GameObject CraftingGrid2;
     public GameObject CraftingExit;//合成出口
     public CraftingSlot craftingSlotPrefab;
     public GameObject[] buttons;
@@ -47,6 +44,7 @@ public class CraftingSystem : MonoBehaviour
     }
     public void Exit()
     {
+        GameObject.FindGameObjectWithTag("player").GetComponent<playerWalk>().enabled = true;
         if (isWorkOne)
         {
             for (int i=0;i< CraftingBag.itemList.Count;i++)
@@ -62,7 +60,18 @@ public class CraftingSystem : MonoBehaviour
             {
                 AddTheItem(CraftingBag.itemList[i], BagManager.instance.WorkTwoBagItems);
             }
-         
+            GameObject Camera = GameObject.FindGameObjectWithTag("camera");
+            
+            Camera.GetComponent<CinemachineVirtualCamera>().m_Lens.OrthographicSize = 3.88f;//虚拟相机
+                                                                                            // 获取CinemachineVirtualCamera组件
+            CinemachineVirtualCamera virtualCamera = Camera.GetComponent<CinemachineVirtualCamera>();
+
+            // 获取当前的Follow组件
+            CinemachineTransposer transposer = virtualCamera.GetCinemachineComponent<CinemachineTransposer>();
+
+            // 修改follow offset
+            transposer.m_FollowOffset = new Vector3(-0.02f, 0.49f, -10);
+
         }
         for (int i = 0; i < CraftingGrid.transform.childCount; i++)
         {
@@ -84,7 +93,21 @@ public class CraftingSystem : MonoBehaviour
             if (isWorkOne)
                 DescreaseTheItem(thisItem, BagManager.instance.WorkOneBagItems);//背包物体的减少
             else
-                DescreaseTheItem(thisItem, BagManager.instance.WorkTwoBagItems);
+            {
+                if (CraftingBag.itemList.Count == 0 && thisItem.itemType == Item.ItemType.Fabric){//第一个被点击物品步，背包数量减少
+                    DescreaseTheItem(thisItem, BagManager.instance.WorkTwoBagItems);
+                 }
+                else if (CraftingBag.itemList.Count == 1 && thisItem.itemType == Item.ItemType.Thread)
+                {//第二个被点击物品步，背包数量减少
+                    DescreaseTheItem(thisItem, BagManager.instance.WorkTwoBagItems);
+                }
+                else if (CraftingBag.itemList.Count > 1)//其他情况
+                    DescreaseTheItem(thisItem, BagManager.instance.WorkTwoBagItems);
+                else
+                {
+                    Debug.Log("无法点击，不是原材料");
+                }
+            }
         }
         // 检查 CraftingGrid 是否存在
         if (CraftingGrid != null)
@@ -94,7 +117,22 @@ public class CraftingSystem : MonoBehaviour
             if (isWorkOne)
                 AddCraftingNewItem(thisItem, BagManager.instance.WorkOneBagItems);
             else
-                AddCraftingNewItem(thisItem, BagManager.instance.WorkTwoBagItems);
+            {
+                if (CraftingBag.itemList.Count == 0 && thisItem.itemType == Item.ItemType.Fabric)
+                {
+                    AddCraftingNewItem(thisItem, BagManager.instance.WorkTwoBagItems);//正在制作衣服
+                }
+                else if (CraftingBag.itemList.Count == 1 && thisItem.itemType == Item.ItemType.Thread)
+                {
+                    AddCraftingNewItem(thisItem, BagManager.instance.WorkTwoBagItems);//正在制作衣服
+                }
+                else if (CraftingBag.itemList.Count > 1)//其他情况
+                    AddCraftingNewItem(thisItem, BagManager.instance.WorkTwoBagItems);//正在制作衣服
+                else
+                {
+                    Debug.Log("这个地方必须放入指定物品！");
+                }
+            }
            
         }
         else
@@ -514,11 +552,11 @@ public class CraftingSystem : MonoBehaviour
                 if (CraftingBag.itemList[i].itemType == Item.ItemType.Decorate || CraftingBag.itemList[i].itemType == Item.ItemType.Dye)
                     fashion += CraftingBag.itemList[i].fashion;
 
-                if (CraftingBag.itemList[i].itemType == Item.ItemType.Fabric)
-                    isF = true;
+                if (CraftingBag.itemList[0].itemType == Item.ItemType.Fabric)
+                    isF = true;//第一个是布
 
-                if (CraftingBag.itemList[i].itemType == Item.ItemType.Thread)
-                    isT = true;
+                if (CraftingBag.itemList[1].itemType == Item.ItemType.Thread)
+                    isT = true;//第二个是线
             }
             result.itemHeld = 1;
             if (isF&&isT)
@@ -544,11 +582,18 @@ public class CraftingSystem : MonoBehaviour
                 print("不能合成");
                 return;
             }
+            //合成之后销毁
             for (int i = 0; i < CraftingGrid.transform.childCount; i++)
             {
                 if (CraftingGrid.transform.childCount == 0)
                     break;
                 Destroy(CraftingGrid.transform.GetChild(i).gameObject);
+            }
+            for (int i = 0; i < CraftingGrid2.transform.childCount; i++)
+            {
+                if (CraftingGrid2.transform.childCount == 0)
+                    break;
+                Destroy(CraftingGrid2.transform.GetChild(i).gameObject);
             }
             CraftingBag.itemList.Clear();
         }

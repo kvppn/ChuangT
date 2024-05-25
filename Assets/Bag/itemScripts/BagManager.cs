@@ -18,6 +18,7 @@ public class BagManager : MonoBehaviour
     public GameObject WorkTwoGrid;
     public GameObject CraftingGrid;
     public GameObject CraftingGrid2;
+    public GameObject CraftingGridTwo;
     public GameObject saleGrid;
     public Slot slotPrefab;
     public useSlot USEslotPrefab;
@@ -115,15 +116,23 @@ public class BagManager : MonoBehaviour
         CraftingSlot newItem;
         if (bagItems == instance.WorkOneBagItems)
         {
-             newItem = Instantiate(instance.CraftingslotPrefab, instance.CraftingGrid.transform.position, Quaternion.identity);
+            newItem = Instantiate(instance.CraftingslotPrefab, instance.CraftingGrid.transform.position, Quaternion.identity);
             newItem.gameObject.transform.SetParent(instance.CraftingGrid.transform);
         }
         else
         {
-             newItem = Instantiate(instance.CraftingslotPrefab, instance.CraftingGrid2.transform.position, Quaternion.identity);
-            newItem.gameObject.transform.SetParent(instance.CraftingGrid2.transform);
+            if (instance.CraftingGrid2.transform.childCount <= 3)
+            {
+                newItem = Instantiate(instance.CraftingslotPrefab, instance.CraftingGrid2.transform.position, Quaternion.identity);
+                newItem.gameObject.transform.SetParent(instance.CraftingGrid2.transform);
+            }
+            else
+            {
+                newItem = Instantiate(instance.CraftingslotPrefab, instance.CraftingGridTwo.transform.position, Quaternion.identity);
+                newItem.gameObject.transform.SetParent(instance.CraftingGridTwo.transform);
+            }
         }
-      
+    
         newItem.slotImage.sprite = item.itemImage;
         newItem.slotItem = item;
         newItem.slotNum.text = item.itemHeld.ToString();
@@ -240,6 +249,12 @@ public class BagManager : MonoBehaviour
                 if (instance.CraftingGrid2.transform.childCount == 0)
                     break;
                 Destroy(instance.CraftingGrid2.transform.GetChild(i).gameObject);
+            }
+            for (int i = 0; i < instance.CraftingGridTwo.transform.childCount; i++)
+            {
+                if (instance.CraftingGridTwo.transform.childCount == 0)
+                    break;
+                Destroy(instance.CraftingGridTwo.transform.GetChild(i).gameObject);
             }
         }
            

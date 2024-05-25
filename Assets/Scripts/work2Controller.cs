@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Cinemachine;
 public class work2Controller : MonoBehaviour
 {
     public bool playerInRange = false;//主角是否在npc的碰撞范围内
@@ -33,12 +34,21 @@ public class work2Controller : MonoBehaviour
         {
             Debug.Log("1");
             Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            int layerMask = 1 << LayerMask.NameToLayer("Default");
+            int layerMask = 1 << LayerMask.NameToLayer("WorkOne");
 
             RaycastHit2D hit = Physics2D.Raycast(mousePosition, Vector2.zero, Mathf.Infinity, layerMask);
 
             if (hit.collider != null && hit.collider == GetComponent<Collider2D>() && playerInRange == true)
             {
+
+                GameObject.FindGameObjectWithTag("player").GetComponent<playerWalk>().enabled = false;
+                GameObject Camera = GameObject.FindGameObjectWithTag("camera");
+                Camera.GetComponent<CinemachineVirtualCamera>().m_Lens.OrthographicSize = 5.3f;
+                CinemachineVirtualCamera virtualCamera = Camera.GetComponent<CinemachineVirtualCamera>();
+                // 获取当前的Follow组件
+                CinemachineTransposer transposer = virtualCamera.GetCinemachineComponent<CinemachineTransposer>();
+                // 修改follow offset
+                transposer.m_FollowOffset = new Vector3(-0.51f, -1.04f, -10);
                 foreach (GameObject obj in otherScene.GetRootGameObjects())
                 {
                     // 找到你要激活的GameObject

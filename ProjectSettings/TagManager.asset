@@ -30,6 +30,7 @@ TagManager:
   - bloody
   - select
   - gosleep
+  - camera
   layers:
   - Default
   - TransparentFX
@@ -39,7 +40,7 @@ TagManager:
   - UI
   - CMvcan1
   - ZhiWu
-  - 
+  - WorkOne
   - 
   - 
   - 

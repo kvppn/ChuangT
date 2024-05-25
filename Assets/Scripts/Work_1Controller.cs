@@ -36,12 +36,13 @@ public class Work_1Controller : MonoBehaviour
         {
             Debug.Log("1");
             Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            int layerMask = 1 << LayerMask.NameToLayer("Default");
+            int layerMask = 1 << LayerMask.NameToLayer("WorkOne");
 
             RaycastHit2D hit = Physics2D.Raycast(mousePosition, Vector2.zero, Mathf.Infinity, layerMask);
-
+            Debug.Log(hit.collider.name);
             if (hit.collider != null && hit.collider == GetComponent<Collider2D>() && playerInRange == true)
             {
+                GameObject.FindGameObjectWithTag("player").GetComponent<playerWalk>().enabled=false ;
                 foreach (GameObject obj in otherScene.GetRootGameObjects())
                 {
                     // 找到你要激活的GameObject
