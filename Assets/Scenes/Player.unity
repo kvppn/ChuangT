@@ -1826,11 +1826,14 @@ MonoBehaviour:
   CraftingGrid: {fileID: 1749040888}
   CraftingGrid2: {fileID: 0}
   CraftingExit: {fileID: 375706264}
+  CraftingPanel: {fileID: 0}
   craftingSlotPrefab: {fileID: 5565975035731312629, guid: 746e9824246a0134f8aefadcacdc0aaa, type: 3}
   buttons:
   - {fileID: 1507510424}
   - {fileID: 2069824411}
   - {fileID: 1325381951}
+  work2BG: {fileID: 0}
+  animator: {fileID: 0}
 --- !u!1 &121928146
 GameObject:
   m_ObjectHideFlags: 0
@@ -7630,7 +7633,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 9.56839, y: -0.7803215, z: -10}
+  m_LocalPosition: {x: 9.24, y: -2.31, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 982699842}
@@ -10161,7 +10164,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 761539424}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 11.12, y: -1.18, z: 0}
+  m_LocalPosition: {x: 9.95, y: -2.8, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children:
   - {fileID: 251383796}
@@ -11053,7 +11056,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 804861777}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11.32, y: -0.68999994, z: -10}
+  m_LocalPosition: {x: 10.15, y: -2.31, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 535893182}
@@ -14370,16 +14373,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1045895741}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1222883707}
-  m_RootOrder: 2
+  m_Father: {fileID: 1723721561}
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 460, y: 173}
+  m_AnchoredPosition: {x: 460.00055, y: -168.49258}
   m_SizeDelta: {x: 65.9297, y: 63.3582}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1045895743
@@ -16543,8 +16546,6 @@ RectTransform:
   m_Children:
   - {fileID: 96161220}
   - {fileID: 1723721561}
-  - {fileID: 1045895742}
-  - {fileID: 1874479721}
   m_Father: {fileID: 2060996072}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -16574,8 +16575,11 @@ MonoBehaviour:
   CraftingGrid: {fileID: 507093877}
   CraftingGrid2: {fileID: 1192999142}
   CraftingExit: {fileID: 1481508732}
+  CraftingPanel: {fileID: 1723721560}
   craftingSlotPrefab: {fileID: 5565975035731312629, guid: 746e9824246a0134f8aefadcacdc0aaa, type: 3}
   buttons: []
+  work2BG: {fileID: 0}
+  animator: {fileID: 0}
 --- !u!114 &1222883709
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20676,6 +20680,8 @@ RectTransform:
   - {fileID: 507093881}
   - {fileID: 1192999143}
   - {fileID: 1481508735}
+  - {fileID: 1874479721}
+  - {fileID: 1045895742}
   m_Father: {fileID: 1222883707}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -23204,17 +23210,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1874479720}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 800591679}
-  m_Father: {fileID: 1222883707}
-  m_RootOrder: 3
+  m_Father: {fileID: 1723721561}
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 198, y: 194}
+  m_AnchoredPosition: {x: 198.00055, y: -147.49258}
   m_SizeDelta: {x: 198.0284, y: 54.0179}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1874479722

@@ -31,6 +31,8 @@ TagManager:
   - select
   - gosleep
   - camera
+  - workTwoBG
+  - workinganimitor
   layers:
   - Default
   - TransparentFX

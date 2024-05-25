@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using Cinemachine;
+using UnityEngine.SceneManagement;
 public class CraftingSystem : MonoBehaviour
 {
     public bool isWorkOne;
@@ -18,8 +19,12 @@ public class CraftingSystem : MonoBehaviour
     public GameObject CraftingGrid;
     public GameObject CraftingGrid2;
     public GameObject CraftingExit;//合成出口
+    public GameObject CraftingPanel;
     public CraftingSlot craftingSlotPrefab;
     public GameObject[] buttons;
+
+    public GameObject work2BG;
+    public Animator animator;
 
     private void Awake()
     {
@@ -41,6 +46,18 @@ public class CraftingSystem : MonoBehaviour
     void Start()
     {
         //SetResultItem(ResultItem);
+    }
+    private void Update()
+    {
+        //Scene otherScene = SceneManager.GetSceneByName("ClothesStore");
+        //work2BG = GameObject.FindGameObjectWithTag("workTwoBG");
+        animator = GameObject.FindGameObjectWithTag("workinganimitor").GetComponent<Animator>();
+        // 检查动画是否播放完成
+        if (animator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1)
+        {
+            // 如果动画播放完成，停止动画
+            StopAnimation();
+        }
     }
     public void Exit()
     {
@@ -526,7 +543,7 @@ public class CraftingSystem : MonoBehaviour
     //点击按钮合成衣服
     public void Craft4()
     {
-
+       
         if (CraftingBag.itemList.Count == 5)
         {
 
@@ -569,12 +586,25 @@ public class CraftingSystem : MonoBehaviour
                 result.specialityCount = specialityCount;
                 result.fashion = fashion;
                 result.money = qulityTotal * 5 + specialityCount * 3 + fashion * 2;
-
-
+                //合成成功衣服衣服的动画播放
+                GameObject.FindGameObjectWithTag("player").SetActive(false);
+                CraftingPanel.SetActive(false);
+                Scene otherScene = SceneManager.GetSceneByName("ClothesStore");
+                foreach (GameObject obj in otherScene.GetRootGameObjects())
+                {
+                    // 找到你要激活的GameObject
+                    if (obj.CompareTag("workTwoBG"))
+                    {
+                        work2BG = obj;
+                        // 激活GameObject
+                        obj.SetActive(true);
+                        break;
+                    }
+                }
+                animator.enabled = true;
+                PlayAnimation("working_01");
                 AddNewItem(result, BagManager.instance.SaleBag);//衣服放哪个背包在这可以修改，目前放售卖背包
-
             }
-          
             else
             {
                 //合成失败
@@ -597,6 +627,20 @@ public class CraftingSystem : MonoBehaviour
             }
             CraftingBag.itemList.Clear();
         }
+    }
+    public void PlayAnimation(string animationName)
+    {
+        animator.Play(animationName);
+    }
+
+    // 停止当前正在播放的动画
+    public void StopAnimation()
+    {
+        work2BG.SetActive(false);
+        animator.enabled = false; // 禁用Animator组件以停止动画播放
+        CraftingPanel.SetActive(true);
+        GameObject.FindGameObjectWithTag("player").SetActive(true);
+        GameObject.FindGameObjectWithTag("player").transform.position = new Vector3(9.95f, -2.8f, 0);
     }
     public void DescreaseTheItem(Item thisItem, Dictionary<string, Item> bagItems)
     {
