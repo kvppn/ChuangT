@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
-public class SaleSlot : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler, IPointerExitHandler, IPointerMoveHandler
+public class SaleSlot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerMoveHandler
 {
     public Item slotItem;//格子中的物品
     public Image slotImage;//格子的图片
@@ -19,11 +19,11 @@ public class SaleSlot : MonoBehaviour, IPointerClickHandler, IPointerEnterHandle
     }
 
     // Update is called once per frame
-    void Update()
+ /*   void Update()
     {
         Saleinfo = GameObject.FindGameObjectWithTag("saleInfo").GetComponent<Text>();
         money = GameObject.FindGameObjectWithTag("money").GetComponent<MoneyController>();
-    }
+    }*/
     public void OnPointerEnter(PointerEventData eventData)
     {
         UIcontrollerr.instance_.uitextobj.position = new Vector3(Input.mousePosition.x + 60, Input.mousePosition.y - 50, 0);
@@ -42,7 +42,7 @@ public class SaleSlot : MonoBehaviour, IPointerClickHandler, IPointerEnterHandle
         UIcontrollerr.instance_.uitextobj.gameObject.SetActive(true);
         //UIcontrollerr.instance_.text.text = this.name;
     }
-    public void OnPointerClick(PointerEventData eventData)
+   /* public void OnPointerClick(PointerEventData eventData)
     {
         // 点击左键
         if (eventData.button == PointerEventData.InputButton.Left)
@@ -52,6 +52,6 @@ public class SaleSlot : MonoBehaviour, IPointerClickHandler, IPointerEnterHandle
             //按钮点击
             saleClothes.GetMoneyNum(slotItem.money);
         }
-    }
+    }*/
     
 }

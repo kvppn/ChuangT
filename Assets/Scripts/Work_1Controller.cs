@@ -39,7 +39,7 @@ public class Work_1Controller : MonoBehaviour
             int layerMask = 1 << LayerMask.NameToLayer("WorkOne");
 
             RaycastHit2D hit = Physics2D.Raycast(mousePosition, Vector2.zero, Mathf.Infinity, layerMask);
-            Debug.Log(hit.collider.name);
+            //Debug.Log(hit.collider.name);
             if (hit.collider != null && hit.collider == GetComponent<Collider2D>() && playerInRange == true)
             {
                 GameObject.FindGameObjectWithTag("player").GetComponent<playerWalk>().enabled=false ;

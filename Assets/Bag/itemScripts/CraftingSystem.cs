@@ -15,6 +15,7 @@ public class CraftingSystem : MonoBehaviour
     public bag Mybag;//属于哪个背包
     public bag USE_Bag;
     public bag WorkOneBag;
+    public bag saleBag;
 
     public GameObject CraftingGrid;
     public GameObject CraftingGrid2;
@@ -591,9 +592,23 @@ public class CraftingSystem : MonoBehaviour
                 result.specialityCount = specialityCount;
                 result.fashion = fashion;
                 result.money = qulityTotal * 5 + specialityCount * 3 + fashion * 2;
+                AddNewClothesItem(result, saleBag);//衣服放哪个背包在这可以修改，目前放售卖背包
+                //合成之后销毁
+                int childCount1 = CraftingGrid.transform.childCount;
+                for (int i = 0; i < childCount1; i++)
+                {
+                    Destroy(CraftingGrid.transform.GetChild(i).gameObject);
+                }
+                //销毁 CraftingGrid2 的子物体
+                int childCount2 = CraftingGrid2.transform.childCount;
+                for (int i = 0; i < childCount2; i++)
+                {
+                    Destroy(CraftingGrid2.transform.GetChild(i).gameObject);
+                }
+                CraftingBag.itemList.Clear();
                 //合成成功衣服衣服的动画播放
-                player.SetActive(false);
-                CraftingPanel.SetActive(false);
+                player.SetActive(false);//主角消失
+                CraftingPanel.SetActive(false);//UI消失
                 Scene otherScene = SceneManager.GetSceneByName("ClothesStore");
                 foreach (GameObject obj in otherScene.GetRootGameObjects())
                 {
@@ -606,24 +621,10 @@ public class CraftingSystem : MonoBehaviour
                         break;
                     }
                 }
-                animator.enabled = true;
-                PlayAnimation("working_01");
-                AddNewItem(result, BagManager.instance.SaleBag);//衣服放哪个背包在这可以修改，目前放售卖背包
-
-                //合成之后销毁
-                for (int i = 0; i < CraftingGrid.transform.childCount; i++)
-                {
-                    if (CraftingGrid.transform.childCount == 0)
-                        break;
-                    Destroy(CraftingGrid.transform.GetChild(i).gameObject);
-                }
-                for (int i = 0; i < CraftingGrid2.transform.childCount; i++)
-                {
-                    if (CraftingGrid2.transform.childCount == 0)
-                        break;
-                    Destroy(CraftingGrid2.transform.GetChild(i).gameObject);
-                }
-                CraftingBag.itemList.Clear();
+                animator.enabled = true;//激活背景和动画
+                PlayAnimation("working_01");//播放哪个动画
+                //AddNewClothesItem(result, BagManager.instance.SaleBag);//衣服放哪个背包在这可以修改，目前放售卖背包
+                //AddNewClothesItem(result, saleBag);//衣服放哪个背包在这可以修改，目前放售卖背包
             }
             else
             {
@@ -743,5 +744,40 @@ public class CraftingSystem : MonoBehaviour
             Destroy(newItem.gameObject);
         });
      
+    }
+    public void AddNewClothesItem(Item thisItem, bag bag, Dictionary<string, Item> bagItems = null)//XY:使用bag传参传入指定背包
+    {
+
+        if (bagItems != null)
+        {
+            if (bagItems.ContainsKey(thisItem.itemName))
+            {
+                bagItems[thisItem.itemName].itemHeld += thisItem.itemHeld;
+            }
+            else
+            {
+                bagItems.Add(thisItem.itemName, thisItem);
+            }
+            if (bagItems[thisItem.itemName].itemHeld <= 0)
+            {
+                bagItems.Remove(thisItem.itemName);
+            }
+        }
+            if (!bag.itemList.Contains(thisItem))
+            {
+                bag.itemList.Add(thisItem);//这个物品添加到这个包里面
+                                           //BagManager.CreateNewItem(thisItem);
+            }
+            else
+            {
+                thisItem.itemHeld += 1;
+            }
+            BagManager.RefreshItem();
+            BagManager.RefreshUSEItem();
+            BagManager.RefreshSaleItem();
+            if (isWorkOne)
+                BagManager.RefreshWorkOneItemXY();
+            else
+                BagManager.RefreshWorkTwoItemXY();    
     }
 }

@@ -41,9 +41,11 @@ public class saleClothesController : MonoBehaviour
             {
                 foreach (GameObject obj in otherScene.GetRootGameObjects())
                 {
+                    Debug.Log("2222");
                     // 找到你要激活的GameObject
-                    if (obj.CompareTag("saleCanvas"))
+                    if (obj.CompareTag("sale"))
                     {
+                        Debug.Log("3333");
                         // 激活GameObject
                         obj.SetActive(true);
                         break;

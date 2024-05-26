@@ -12,6 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a0bc983f2768f94899d737bc207e4c1, type: 3}
   m_Name: saleBag
   m_EditorClassIdentifier: 
-  itemList:
-  - {fileID: 11400000, guid: da5a13358f4c14a41881af7349e3448a, type: 2}
-  - {fileID: 11400000, guid: a56638834ffb79c4a84a925aebf186b2, type: 2}
+  itemList: []

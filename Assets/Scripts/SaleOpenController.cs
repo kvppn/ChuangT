@@ -31,15 +31,12 @@ public class SaleOpenController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
         if (Input.GetMouseButtonDown(1)) // 1´ú±íÊó±êÓÒ¼ü
         {
             Debug.Log("1");
             Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             int layerMask = 1 << LayerMask.NameToLayer("Default");
-
             RaycastHit2D hit = Physics2D.Raycast(mousePosition, Vector2.zero, Mathf.Infinity, layerMask);
-
             if (hit.collider != null && hit.collider == GetComponent<Collider2D>() && playerInRange == true)
             {
                 Sale.GetComponent<Canvas>().enabled = true;
