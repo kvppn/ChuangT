@@ -25,7 +25,9 @@ public class CraftingSystem : MonoBehaviour
 
     public GameObject work2BG;
     public Animator animator;
-
+    public Animator shiningg;
+    public Animator animatorPlayer;
+    public GameObject player;
     private void Awake()
     {
         //if (instance != null)
@@ -49,14 +51,17 @@ public class CraftingSystem : MonoBehaviour
     }
     private void Update()
     {
-        //Scene otherScene = SceneManager.GetSceneByName("ClothesStore");
-        //work2BG = GameObject.FindGameObjectWithTag("workTwoBG");
         animator = GameObject.FindGameObjectWithTag("workinganimitor").GetComponent<Animator>();
         // 检查动画是否播放完成
         if (animator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1)
         {
             // 如果动画播放完成，停止动画
             StopAnimation();
+        }
+        if (shiningg.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1)
+        {
+            // 如果动画播放完成，停止动画
+            StopAnimationShine();
         }
     }
     public void Exit()
@@ -587,7 +592,7 @@ public class CraftingSystem : MonoBehaviour
                 result.fashion = fashion;
                 result.money = qulityTotal * 5 + specialityCount * 3 + fashion * 2;
                 //合成成功衣服衣服的动画播放
-                GameObject.FindGameObjectWithTag("player").SetActive(false);
+                player.SetActive(false);
                 CraftingPanel.SetActive(false);
                 Scene otherScene = SceneManager.GetSceneByName("ClothesStore");
                 foreach (GameObject obj in otherScene.GetRootGameObjects())
@@ -604,6 +609,21 @@ public class CraftingSystem : MonoBehaviour
                 animator.enabled = true;
                 PlayAnimation("working_01");
                 AddNewItem(result, BagManager.instance.SaleBag);//衣服放哪个背包在这可以修改，目前放售卖背包
+
+                //合成之后销毁
+                for (int i = 0; i < CraftingGrid.transform.childCount; i++)
+                {
+                    if (CraftingGrid.transform.childCount == 0)
+                        break;
+                    Destroy(CraftingGrid.transform.GetChild(i).gameObject);
+                }
+                for (int i = 0; i < CraftingGrid2.transform.childCount; i++)
+                {
+                    if (CraftingGrid2.transform.childCount == 0)
+                        break;
+                    Destroy(CraftingGrid2.transform.GetChild(i).gameObject);
+                }
+                CraftingBag.itemList.Clear();
             }
             else
             {
@@ -612,8 +632,8 @@ public class CraftingSystem : MonoBehaviour
                 print("不能合成");
                 return;
             }
-            //合成之后销毁
-            for (int i = 0; i < CraftingGrid.transform.childCount; i++)
+           //合成之后销毁
+            /*for (int i = 0; i < CraftingGrid.transform.childCount; i++)
             {
                 if (CraftingGrid.transform.childCount == 0)
                     break;
@@ -625,7 +645,7 @@ public class CraftingSystem : MonoBehaviour
                     break;
                 Destroy(CraftingGrid2.transform.GetChild(i).gameObject);
             }
-            CraftingBag.itemList.Clear();
+            CraftingBag.itemList.Clear();*/
         }
     }
     public void PlayAnimation(string animationName)
@@ -639,8 +659,16 @@ public class CraftingSystem : MonoBehaviour
         work2BG.SetActive(false);
         animator.enabled = false; // 禁用Animator组件以停止动画播放
         CraftingPanel.SetActive(true);
-        GameObject.FindGameObjectWithTag("player").SetActive(true);
-        GameObject.FindGameObjectWithTag("player").transform.position = new Vector3(9.95f, -2.8f, 0);
+        player.SetActive(true);
+        player.transform.position = new Vector3(9.07f, -0.64f, 0);
+        animatorPlayer.SetTrigger("juqi");
+        shiningg.enabled = true;
+        shiningg.Play("shining");
+    }
+    public void StopAnimationShine()
+    {
+        animatorPlayer.SetTrigger("bujuqi");
+        shiningg.enabled = false;
     }
     public void DescreaseTheItem(Item thisItem, Dictionary<string, Item> bagItems)
     {
