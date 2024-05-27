@@ -23,12 +23,17 @@ public class CraftingSystem : MonoBehaviour
     public GameObject CraftingPanel;
     public CraftingSlot craftingSlotPrefab;
     public GameObject[] buttons;
-
+    public Sprite[] image;//被点击按钮的图片
+    public Sprite[] imageInitial;//被点击按钮的图片原始的样子
+    public GameObject[] crafting;//合成的三个按钮
+    public Animator[] transitionAnimators; // 存储不同切换动画的Animator组件
     public GameObject work2BG;
     public Animator animator;
     public Animator shiningg;
     public Animator animatorPlayer;
     public GameObject player;
+
+    private int currentIndex = 0; // 当前按钮的索引
     private void Awake()
     {
         //if (instance != null)
@@ -187,15 +192,55 @@ public class CraftingSystem : MonoBehaviour
     //切换页签  0=布  1=线  2=染料
     public void Switch(int index)
     {
+        Debug.Log("index"+index);
         for(int i = 0; i < buttons.Length; i++)
         {
-            buttons[i].transform.GetChild(1).gameObject.SetActive(false);
-            buttons[i].GetComponent<Image>().color = new Color(1,1,1,1);
+            Debug.Log("壁了" + index);
+            //buttons[i].transform.GetChild(0).gameObject.SetActive(false);
+            crafting[i].SetActive(false);
+            //buttons[i].GetComponent<Image>().color = new Color(1,1,1,1);
+            buttons[i].GetComponent<RectTransform>().localScale = new Vector2(1f, 1f);
+            buttons[i].GetComponent<Image>().sprite = imageInitial[i];
         }
-        buttons[index].transform.GetChild(1).gameObject.SetActive(true);
-        buttons[index].GetComponent<Image>().color = new Color(175f / 255f, 175f / 255f, 175f / 255f, 1);
+        //buttons[index].transform.GetChild(0).gameObject.SetActive(true);
+        // 播放切换动画
+        PlayTransitionAnimation(currentIndex, index);
+        // 更新当前索引
+        currentIndex = index;
+
+
+        crafting[index].SetActive(true);
+        //buttons[index].GetComponent<Image>().color = new Color(175f / 255f, 175f / 255f, 175f / 255f, 1);
+        buttons[index].GetComponent<RectTransform>().localScale = new Vector2(1.2f,1.2f);
+        buttons[index].GetComponent<Image>().sprite = image[index];
+    }
+    private void PlayTransitionAnimation(int fromIndex, int toIndex)
+    {
+        int transitionIndex = GetTransitionIndex(fromIndex, toIndex);
+        if (transitionIndex >= 0 && transitionIndex < transitionAnimators.Length)
+        {
+            transitionAnimators[transitionIndex].SetTrigger("PlayTransition");
+        }
     }
 
+    // 根据当前按钮和目标按钮的索引获取切换动画的索引
+    private int GetTransitionIndex(int fromIndex, int toIndex)
+    {
+        if (fromIndex == 0 && toIndex == 1) // 布到线
+            return 0;
+        else if (fromIndex == 0 && toIndex == 2) // 布到燃料
+            return 1;
+        else if (fromIndex == 1 && toIndex == 0) // 线到布
+            return 2;
+        else if (fromIndex == 1 && toIndex == 2) // 线到燃料
+            return 3;
+        else if (fromIndex == 2 && toIndex == 0) // 燃料到布
+            return 4;
+        else if (fromIndex == 2 && toIndex == 1) // 燃料到线
+            return 5;
+        else
+            return -1; // 没有匹配的切换动画
+    }
     //点击按钮合成布
     public void Craft1()
     {

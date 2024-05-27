@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 public class Work_1Controller : MonoBehaviour
 {
     public bool playerInRange = false;//主角是否在npc的碰撞范围内
-
+    public Animator animator;
     //public GameObject workone;//工作台1的UI
     public void OnTriggerEnter2D(Collider2D other)
     {
@@ -42,6 +42,7 @@ public class Work_1Controller : MonoBehaviour
             //Debug.Log(hit.collider.name);
             if (hit.collider != null && hit.collider == GetComponent<Collider2D>() && playerInRange == true)
             {
+                animator.Play("workOne_jiaohu");
                 GameObject.FindGameObjectWithTag("player").GetComponent<playerWalk>().enabled=false ;
                 foreach (GameObject obj in otherScene.GetRootGameObjects())
                 {
