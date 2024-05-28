@@ -26,13 +26,13 @@ AnimatorStateMachine:
     m_Position: {x: 870, y: 160, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -1206806289548392291}
-    m_Position: {x: 650, y: 100, z: 0}
+    m_Position: {x: 650, y: 90, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 959747727664179059}
     m_Position: {x: 650, y: 160, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 5643860671829149669}
-    m_Position: {x: 870, y: 100, z: 0}
+    m_Position: {x: 880, y: 90, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 2052481812826779062}
     m_Position: {x: 700, y: -10, z: 0}
@@ -80,7 +80,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: fabricToThread
+  m_Name: 0to1
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -195,7 +195,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: DyeToThread
+  m_Name: 2to1
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -244,7 +244,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: ThreadToFabric
+  m_Name: 1to0
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -323,7 +323,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: fabricToDye
+  m_Name: 0to2
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -350,7 +350,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: ThreadToDye
+  m_Name: 1to2
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -421,7 +421,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: DyeToFabric
+  m_Name: 2to0
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:

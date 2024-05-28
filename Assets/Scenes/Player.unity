@@ -1848,16 +1848,10 @@ MonoBehaviour:
   - {fileID: 1908446847}
   - {fileID: 1217514500}
   - {fileID: 1009697244}
-  transitionAnimators:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  transitionAnimators: {fileID: 0}
   work2BG: {fileID: 0}
   animator: {fileID: 0}
-  shiningg: {fileID: 0}
+  shiningg: {fileID: 1108942689}
   animatorPlayer: {fileID: 0}
   player: {fileID: 0}
 --- !u!1 &121928146
@@ -15202,7 +15196,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1108942688
 Transform:
   m_ObjectHideFlags: 0
@@ -15225,7 +15219,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1108942687}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: adaa6c6d042439b429e0f8962b4655fa, type: 2}
   m_CullingMode: 0
@@ -16467,7 +16461,7 @@ MonoBehaviour:
   image: []
   imageInitial: []
   crafting: []
-  transitionAnimators: []
+  transitionAnimators: {fileID: 0}
   work2BG: {fileID: 0}
   animator: {fileID: 0}
   shiningg: {fileID: 1108942689}

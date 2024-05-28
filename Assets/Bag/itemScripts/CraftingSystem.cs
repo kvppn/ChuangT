@@ -26,11 +26,11 @@ public class CraftingSystem : MonoBehaviour
     public Sprite[] image;//被点击按钮的图片
     public Sprite[] imageInitial;//被点击按钮的图片原始的样子
     public GameObject[] crafting;//合成的三个按钮
-    public Animator[] transitionAnimators; // 存储不同切换动画的Animator组件
+    public Animator transitionAnimators; // 存储不同切换动画的Animator组件
     public GameObject work2BG;
     public Animator animator;
-    public Animator shiningg;
-    public Animator animatorPlayer;
+    public Animator shiningg;//闪光动画
+    public Animator animatorPlayer;//主角的动画
     public GameObject player;
 
     private int currentIndex = 0; // 当前按钮的索引
@@ -54,10 +54,12 @@ public class CraftingSystem : MonoBehaviour
     void Start()
     {
         //SetResultItem(ResultItem);
+        transitionAnimators = GameObject.FindGameObjectWithTag("transAnimator").GetComponent<Animator>();
     }
-    private void Update()
+     void Update()
     {
         animator = GameObject.FindGameObjectWithTag("workinganimitor").GetComponent<Animator>();
+        
         // 检查动画是否播放完成
         if (animator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1)
         {
@@ -66,13 +68,14 @@ public class CraftingSystem : MonoBehaviour
         }
         if (shiningg.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1)
         {
-            // 如果动画播放完成，停止动画
             StopAnimationShine();
+            // 如果动画播放完成，停止动画      
         }
     }
     public void Exit()
     {
         GameObject.FindGameObjectWithTag("player").GetComponent<playerWalk>().enabled = true;
+        transitionAnimators.Play("workOne_idle");
         if (isWorkOne)
         {
             for (int i=0;i< CraftingBag.itemList.Count;i++)
@@ -216,30 +219,7 @@ public class CraftingSystem : MonoBehaviour
     }
     private void PlayTransitionAnimation(int fromIndex, int toIndex)
     {
-        int transitionIndex = GetTransitionIndex(fromIndex, toIndex);
-        if (transitionIndex >= 0 && transitionIndex < transitionAnimators.Length)
-        {
-            transitionAnimators[transitionIndex].SetTrigger("PlayTransition");
-        }
-    }
-
-    // 根据当前按钮和目标按钮的索引获取切换动画的索引
-    private int GetTransitionIndex(int fromIndex, int toIndex)
-    {
-        if (fromIndex == 0 && toIndex == 1) // 布到线
-            return 0;
-        else if (fromIndex == 0 && toIndex == 2) // 布到燃料
-            return 1;
-        else if (fromIndex == 1 && toIndex == 0) // 线到布
-            return 2;
-        else if (fromIndex == 1 && toIndex == 2) // 线到燃料
-            return 3;
-        else if (fromIndex == 2 && toIndex == 0) // 燃料到布
-            return 4;
-        else if (fromIndex == 2 && toIndex == 1) // 燃料到线
-            return 5;
-        else
-            return -1; // 没有匹配的切换动画
+            transitionAnimators.Play(fromIndex+"to"+toIndex);
     }
     //点击按钮合成布
     public void Craft1()
@@ -708,13 +688,13 @@ public class CraftingSystem : MonoBehaviour
         player.SetActive(true);
         player.transform.position = new Vector3(9.07f, -0.64f, 0);
         animatorPlayer.SetTrigger("juqi");
-        shiningg.enabled = true;
+        shiningg.gameObject.SetActive(true);
         shiningg.Play("shining");
     }
     public void StopAnimationShine()
     {
         animatorPlayer.SetTrigger("bujuqi");
-        shiningg.enabled = false;
+        shiningg.gameObject.SetActive(false);
     }
     public void DescreaseTheItem(Item thisItem, Dictionary<string, Item> bagItems)
     {
