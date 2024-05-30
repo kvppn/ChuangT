@@ -128,7 +128,7 @@ public class ChestController : MonoBehaviour
         {
             Debug.Log("0000022");
             GameObject player = GameObject.FindGameObjectWithTag("player");
-            player.transform.position = new Vector3(-4.38f, -6.16f, 0);
+            player.transform.position = new Vector3(-4.31f, -4.96f, 0);
 
             SceneManager.sceneLoaded -= OnSceneLoadedbar;
         }

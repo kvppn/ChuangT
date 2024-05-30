@@ -40,11 +40,15 @@ public class IntoStore : MonoBehaviour
 
             if (hit.collider != null && hit.collider == GetComponent<Collider2D>() && playerInRange == true)
             {
+                Debug.Log(" obj.SetActive");
+
                 foreach (GameObject obj in otherScene.GetRootGameObjects())
                 {
+                    Debug.Log("SetActive");
                     // 找到你要激活的GameObject
                     if (obj.CompareTag("store"))
                     {
+                        Debug.Log(" obj.SetActive(true)");
                         // 激活GameObject
                         obj.SetActive(true);
                         break;

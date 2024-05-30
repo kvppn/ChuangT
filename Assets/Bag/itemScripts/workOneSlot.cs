@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
-public class workOneSlot : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler, IPointerExitHandler, IPointerMoveHandler
+public class workOneSlot : MonoBehaviour, IPointerClickHandler//, IPointerEnterHandler, IPointerExitHandler, IPointerMoveHandler
 {
     
     public Item slotItem;//格子中的物品
@@ -17,7 +17,7 @@ public class workOneSlot : MonoBehaviour, IPointerClickHandler, IPointerEnterHan
         craftingSystem = FindObjectOfType<CraftingSystem>();
        
     }
-    public void OnPointerEnter(PointerEventData eventData)
+    /*public void OnPointerEnter(PointerEventData eventData)
     {
         UIcontrollerr.instance_.uitextobj.position = new Vector3(Input.mousePosition.x + 60, Input.mousePosition.y - 50, 0);
         UIcontrollerr.instance_.uitextobj.gameObject.SetActive(true);
@@ -34,7 +34,7 @@ public class workOneSlot : MonoBehaviour, IPointerClickHandler, IPointerEnterHan
         UIcontrollerr.instance_.uitextobj.position = new Vector3(Input.mousePosition.x + 60, Input.mousePosition.y - 50, 0);
         UIcontrollerr.instance_.uitextobj.gameObject.SetActive(true);
         //UIcontrollerr.instance_.text.text = this.name;
-    }
+    }*/
     public void OnPointerClick(PointerEventData eventData)
     {
         // 点击左键

@@ -34,12 +34,12 @@ public class ExitController : MonoBehaviour
                 {
                     Debug.Log("º§ªÓGameObject");
                     // º§ªÓGameObject
-                    obj.SetActive(true);
+                    obj.transform.GetChild(0).gameObject.SetActive(true);
                     break;
                 }
             }
         }
-        else if(playerInRange==false)
+        else if (playerInRange == false)
         {
             foreach (GameObject obj in otherScene.GetRootGameObjects())
             {
@@ -47,7 +47,7 @@ public class ExitController : MonoBehaviour
                 if (obj.CompareTag("selectScene"))
                 {
                     // º§ªÓGameObject
-                    obj.SetActive(false);
+                    obj.transform.GetChild(0).gameObject.SetActive(false);
                     break;
                 }
             }

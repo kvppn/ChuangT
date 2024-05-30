@@ -17,7 +17,7 @@ MonoBehaviour:
   prefab: {fileID: 6772429086600758001, guid: 0ec21e9ff739e044299a114daeef2dca, type: 3}
   growed: {fileID: 5016149915501112860, guid: 6f1c3cfee54123a4386308326c8abb41, type: 3}
   itemImage: {fileID: -2758073135426804063, guid: c1cde189186e8f54fb30b49aa5892d64, type: 3}
-  itemHeld: 2
+  itemHeld: 1
   itemInfo: 
   money: 25
   equip: 0
