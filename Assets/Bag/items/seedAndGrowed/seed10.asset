@@ -15,7 +15,6 @@ MonoBehaviour:
   itemName: "\u8776\u8C46\u82B1\u79CD\u5B50"
   itemType: 0
   prefab: {fileID: 5979941229089517216, guid: 70e86291ac029714587031ac29ec76f1, type: 3}
-  growing: {fileID: 0}
   growed: {fileID: 8793727731211466085, guid: fcbcdb26704474044a8637c1bc4080d0, type: 3}
   itemImage: {fileID: 730407155227746385, guid: c1cde189186e8f54fb30b49aa5892d64, type: 3}
   itemHeld: 1

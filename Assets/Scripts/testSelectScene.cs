@@ -28,22 +28,22 @@ public class testSelectScene : MonoBehaviour
     }
     public void clothesButton()
     {
-        selectScene.SetActive(false);
+        selectScene.transform.GetChild(0).gameObject.SetActive(false);
         StartCoroutine(LoadClothesScene());
     }
     public void growButton()
     {
-        selectScene.SetActive(false);
+        selectScene.transform.GetChild(0).gameObject.SetActive(false);
         StartCoroutine(LoadgrowScene());
     }
     public void barButton()
     {
-        selectScene.SetActive(false);
+        selectScene.transform.GetChild(0).gameObject.SetActive(false);
         StartCoroutine(LoadbarScene());
     }
     public void storeButton()
     {
-        selectScene.SetActive(false);
+        selectScene.transform.GetChild(0).gameObject.SetActive(false);
         StartCoroutine(LoadstoreScene());
     }
     private IEnumerator LoadClothesScene()
@@ -141,11 +141,11 @@ public class testSelectScene : MonoBehaviour
         }
     }
     private void OnSceneLoadedstore(Scene scene, LoadSceneMode mode)
-    {
+    {    
         if (scene.buildIndex == 0)
         {
             GameObject player = GameObject.FindGameObjectWithTag("player");
-            player.transform.position = new Vector3(3.15f, -4.48f, 0);
+            player.transform.position = new Vector3(3.08f, -4.34f, 0);
 
             SceneManager.sceneLoaded -= OnSceneLoadedbar;
         }

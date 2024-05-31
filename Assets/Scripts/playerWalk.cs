@@ -141,6 +141,10 @@ public class playerWalk : MonoBehaviour
                 equip.GetComponent<SpriteRenderer>().sprite = null;
             }
         }
+        else if(USE_Bag.itemList[Kuang] = null)
+        {
+
+        }
     }
     public void DescreaseTheItem(Item thisItem)
     {
