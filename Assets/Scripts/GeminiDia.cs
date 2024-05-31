@@ -82,7 +82,7 @@ public class GeminiDia : MonoBehaviour
     }
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        if (scene.buildIndex == 0)
+        if (scene.buildIndex == 1)
         {
             Debug.Log("0000022");
             GameObject player = GameObject.FindGameObjectWithTag("player");

@@ -15,11 +15,10 @@ MonoBehaviour:
   itemName: "\u661F\u7ED2\u8349"
   itemType: 2
   prefab: {fileID: 0}
-  growing: {fileID: 0}
   growed: {fileID: 0}
   itemImage: {fileID: 8645182094176790479, guid: c1cde189186e8f54fb30b49aa5892d64, type: 3}
   itemHeld: 96
-  itemInfo: 
+  itemInfo: "\u661F\u7ED2\u8349 \u81EA\u8EAB\u5206\u6CCC\u7684\u7C98\u6DB2\u5177\u6709\u5149\u6548\uFF0C\u661F\u7ED2\u8349\u7684\u5236\u54C1\u5728\u591C\u665A\u90FD\u4F1A\u5E26\u6709\u661F\u661F\u70B9\u70B9\u7684\u5149\u4EAE\u3002\r\n"
   money: 85
   equip: 0
   grow: 0

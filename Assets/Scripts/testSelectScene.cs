@@ -58,7 +58,7 @@ public class testSelectScene : MonoBehaviour
         transmit1.gameObject.SetActive(false);
         // 加载 Clothes 场景
         SceneManager.LoadScene("ClothesStore");   
-        SceneManager.LoadScene(0, LoadSceneMode.Additive); 
+        SceneManager.LoadScene(1, LoadSceneMode.Additive); 
         SceneManager.sceneLoaded += OnSceneLoadedclothes;
     }
     private IEnumerator LoadgrowScene()
@@ -73,7 +73,7 @@ public class testSelectScene : MonoBehaviour
         transmit1.gameObject.SetActive(false);
         // 加载 Clothes 场景
         SceneManager.LoadScene("Grow");
-        SceneManager.LoadScene(0, LoadSceneMode.Additive);
+        SceneManager.LoadScene(1, LoadSceneMode.Additive);
         SceneManager.sceneLoaded += OnSceneLoadedclothes;
     }
     private IEnumerator LoadbarScene()
@@ -89,7 +89,7 @@ public class testSelectScene : MonoBehaviour
         transmit1.gameObject.SetActive(false);
         // 加载 Clothes 场景
         SceneManager.LoadScene("Bar");
-        SceneManager.LoadScene(0, LoadSceneMode.Additive);
+        SceneManager.LoadScene(1, LoadSceneMode.Additive);
         SceneManager.sceneLoaded += OnSceneLoadedclothes;
     }
     private IEnumerator LoadstoreScene()
@@ -104,13 +104,13 @@ public class testSelectScene : MonoBehaviour
         transmit1.gameObject.SetActive(false);
         // 加载 Clothes 场景
         SceneManager.LoadScene("store");
-        SceneManager.LoadScene(0, LoadSceneMode.Additive);
+        SceneManager.LoadScene(1, LoadSceneMode.Additive);
         SceneManager.sceneLoaded += OnSceneLoadedclothes;
     }
     private void OnSceneLoadedclothes(Scene scene, LoadSceneMode mode)
     {
 
-        if (scene.buildIndex == 0)
+        if (scene.buildIndex == 1)
         {
             Debug.Log("0000022");
             GameObject player = GameObject.FindGameObjectWithTag("player");
@@ -120,7 +120,7 @@ public class testSelectScene : MonoBehaviour
     }
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        if (scene.buildIndex == 0)
+        if (scene.buildIndex == 1)
         {
             Debug.Log("0000022");
             GameObject player = GameObject.FindGameObjectWithTag("player");
@@ -131,7 +131,7 @@ public class testSelectScene : MonoBehaviour
     }
     private void OnSceneLoadedbar(Scene scene, LoadSceneMode mode)
     {
-        if (scene.buildIndex == 0)
+        if (scene.buildIndex == 1)
         {
             Debug.Log("0000022");
             GameObject player = GameObject.FindGameObjectWithTag("player");
@@ -142,7 +142,7 @@ public class testSelectScene : MonoBehaviour
     }
     private void OnSceneLoadedstore(Scene scene, LoadSceneMode mode)
     {    
-        if (scene.buildIndex == 0)
+        if (scene.buildIndex == 1)
         {
             GameObject player = GameObject.FindGameObjectWithTag("player");
             player.transform.position = new Vector3(3.08f, -4.34f, 0);

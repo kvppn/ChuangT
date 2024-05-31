@@ -29,7 +29,7 @@ public class startGame : MonoBehaviour
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         Debug.Log("00000");
-        if (scene.buildIndex == 0)
+        if (scene.buildIndex == 1)
         {
             Debug.Log("000002333");
             bloodText= GameObject.FindGameObjectWithTag("blood").GetComponent<Text>();

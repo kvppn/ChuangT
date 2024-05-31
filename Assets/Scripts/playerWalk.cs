@@ -129,13 +129,14 @@ public class playerWalk : MonoBehaviour
                     Debug.Log(hit.collider.name);
                     if (hit.collider != null && hit.collider == gameObject.GetComponent<Collider2D>())
                     {
-                        animator.SetTrigger("bujuqi");
+                        animator.SetTrigger("eat");
+                        equip.GetComponent<SpriteRenderer>().sprite = null;//看用不用得到协程
                         DescreaseTheItem(item);
                         bloody.increseBlood(5);
                     }
                 }
             }
-            else if (item.equip == false)
+            else if (item.equip == false|| USE_Bag.itemList[Kuang] != null)
             {
                 animator.SetTrigger("bujuqi");
                 equip.GetComponent<SpriteRenderer>().sprite = null;
