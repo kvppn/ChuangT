@@ -509,6 +509,7 @@ public class CraftingSystem : MonoBehaviour
                 result.itemImage = Resources.Load<Sprite>("dye1");//临时图片
                 result.itemColor = Item.ItemColor.Red;
                 result.fashion = 25;
+                result.itemInfo = "红色染剂 能够将衣物染成红色。";
                 AddNewItem(result, BagManager.instance.WorkTwoBag, BagManager.instance.WorkTwoBagItems);
 
             }
@@ -521,6 +522,7 @@ public class CraftingSystem : MonoBehaviour
                 result.itemImage = result.itemImage = Resources.Load<Sprite>("dye2");//临时图片
                 result.itemColor = Item.ItemColor.Bule;
                 result.fashion = 30;
+                result.itemInfo = "蓝色染剂 能够将衣物染成蓝色。";
                 AddNewItem(result, BagManager.instance.WorkTwoBag, BagManager.instance.WorkTwoBagItems);
 
             }
@@ -533,6 +535,7 @@ public class CraftingSystem : MonoBehaviour
                 result.itemImage = result.itemImage = Resources.Load<Sprite>("dye3");//临时图片
                 result.itemColor = Item.ItemColor.Yellow;
                 result.fashion = 20;
+                result.itemInfo = "黄色染剂 能够将衣物染成黄色。";
                 AddNewItem(result, BagManager.instance.WorkTwoBag, BagManager.instance.WorkTwoBagItems);
 
             }
@@ -545,6 +548,7 @@ public class CraftingSystem : MonoBehaviour
                 result.itemImage = result.itemImage = Resources.Load<Sprite>("dye4");//临时图片
                 result.itemColor = Item.ItemColor.Black;
                 result.fashion = 40;
+                result.itemInfo = "黑色染剂 能够将衣物染成黑色。";
                 AddNewItem(result, BagManager.instance.WorkTwoBag, BagManager.instance.WorkTwoBagItems);
 
             }
@@ -557,6 +561,7 @@ public class CraftingSystem : MonoBehaviour
                 result.itemImage = result.itemImage = Resources.Load<Sprite>("dye5");//临时图片
                 result.itemColor = Item.ItemColor.Colors;
                 result.fashion = 60;
+                result.itemInfo = "炫彩染剂 能够将衣物染成彩色。";
                 AddNewItem(result, BagManager.instance.WorkTwoBag, BagManager.instance.WorkTwoBagItems);
 
             }
