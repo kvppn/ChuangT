@@ -66,7 +66,7 @@ public class Blood : MonoBehaviour
     }
     private void OnSceneLoadedhome(Scene scene, LoadSceneMode mode)
     {
-        if (scene.buildIndex == 0)
+        if (scene.buildIndex == 1)
         {
             GameObject player = GameObject.FindGameObjectWithTag("player");
             player.transform.position = new Vector3(-1.04f, 0.07f, 0);
