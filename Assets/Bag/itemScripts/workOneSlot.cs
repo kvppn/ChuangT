@@ -17,6 +17,7 @@ public class workOneSlot : MonoBehaviour, IPointerClickHandler, IPointerEnterHan
         craftingSystem = FindObjectOfType<CraftingSystem>();
        
     }
+    //从这开始
     public void OnPointerEnter(PointerEventData eventData)
     {
         UIcontrollerr.instance_.uitextobj.position = new Vector3(Input.mousePosition.x + 60, Input.mousePosition.y - 50, 0);
@@ -35,6 +36,7 @@ public class workOneSlot : MonoBehaviour, IPointerClickHandler, IPointerEnterHan
         UIcontrollerr.instance_.uitextobj.gameObject.SetActive(true);
         UIcontrollerr.instance_.text.text = slotItem.itemInfo;
     }
+    //结束
     public void OnPointerClick(PointerEventData eventData)
     {
         // 点击左键
