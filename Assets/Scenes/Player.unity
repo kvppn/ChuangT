@@ -16557,7 +16557,7 @@ MonoBehaviour:
   thisItem23: {fileID: 11400000, guid: 2d3c4629277122d47a2f10862add16c0, type: 2}
   Mybag: {fileID: 11400000, guid: 5df1c5e88a7d2314d909d74d63f221b5, type: 2}
   USE_Bag: {fileID: 11400000, guid: c6a84735ca77b2945b9c418687012a6f, type: 2}
-  WorkOneBag: {fileID: 11400000, guid: 17697b62ec6bf494caaafa550a1012f7, type: 2}
+  WorkOneBag: {fileID: 11400000, guid: d413fac498ae95240843054c392d58e8, type: 2}
   WorkTwoBag: {fileID: 11400000, guid: 17697b62ec6bf494caaafa550a1012f7, type: 2}
 --- !u!4 &1224174076
 Transform:

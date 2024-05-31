@@ -12,14 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a0bc983f2768f94899d737bc207e4c1, type: 3}
   m_Name: WorkTwoBag
   m_EditorClassIdentifier: 
-  itemList:
-  - {fileID: 11400000, guid: 3cda19b813d4a604e8c3fdb01a384a44, type: 2}
-  - {fileID: 11400000, guid: fd355addaf85c574884dbb60c09243a7, type: 2}
-  - {fileID: 11400000, guid: b91be4fe4d7a8da40acaf1d1b929cffd, type: 2}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  itemList: []
