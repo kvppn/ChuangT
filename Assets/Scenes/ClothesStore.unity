@@ -614,8 +614,9 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 90915215}
-  selectedCommands: []
+  - {fileID: 90915207}
+  selectedCommands:
+  - {fileID: 90915206}
   variables: []
   description: 
   stepPause: 0
@@ -697,7 +698,7 @@ MonoBehaviour:
   setSayDialog: {fileID: 0}
 --- !u!114 &90915214
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -4644,7 +4645,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &413011513
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -15,6 +15,7 @@ public class playerWalk : MonoBehaviour
     public Item item;
     public GameObject equip;
     public Blood bloody;
+    public int flag = 1;//判断动画是否播放完，播放完为1，为放完为0
     void Start()
     {
         animator = GetComponent<Animator>();
@@ -114,9 +115,9 @@ public class playerWalk : MonoBehaviour
             ActivateGameObjectAtIndex(8);
             Kuang = 8;
         }
-        if (USE_Bag.itemList[Kuang] != null) {
+        if (Kuang < USE_Bag.itemList.Count&&USE_Bag.itemList[Kuang] != null) {
             item = USE_Bag.itemList[Kuang];
-            if (item.equip == true)
+            if (item.equip == true&&flag==1)
             {
                 animator.SetTrigger("juqi");
                 equip.GetComponent<SpriteRenderer>().sprite= item.itemImage;
@@ -129,23 +130,39 @@ public class playerWalk : MonoBehaviour
                     Debug.Log(hit.collider.name);
                     if (hit.collider != null && hit.collider == gameObject.GetComponent<Collider2D>())
                     {
-                        animator.SetTrigger("eat");
+                        flag = 0;//正在播放动画
+                        StartCoroutine(EAT());
+                       /* animator.SetTrigger("eat");
                         equip.GetComponent<SpriteRenderer>().sprite = null;//看用不用得到协程
                         DescreaseTheItem(item);
-                        bloody.increseBlood(5);
+                        bloody.increseBlood(5);*/
                     }
                 }
             }
-            else if (item.equip == false|| USE_Bag.itemList[Kuang] != null)
+            else if (item.equip == false)
             {
                 animator.SetTrigger("bujuqi");
                 equip.GetComponent<SpriteRenderer>().sprite = null;
             }
         }
-        else if(USE_Bag.itemList[Kuang] = null)
+        else
         {
-
+            animator.SetTrigger("bujuqi");
+            equip.GetComponent<SpriteRenderer>().sprite = null;
         }
+    }
+    IEnumerator EAT()
+    {
+        equip.GetComponent<SpriteRenderer>().sprite = null;//看用不用得到协程
+        animator.SetTrigger("eat");
+        DescreaseTheItem(item);
+        yield return null; // 等待下一帧
+        while (animator.GetCurrentAnimatorStateInfo(0).normalizedTime < 1f)
+        {
+            yield return null; // 等待动画播放完毕
+        }
+        bloody.increseBlood(5);
+        flag = 1;//动画播完了
     }
     public void DescreaseTheItem(Item thisItem)
     {
