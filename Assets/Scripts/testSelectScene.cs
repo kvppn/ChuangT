@@ -100,8 +100,8 @@ public class testSelectScene : MonoBehaviour
         transmit1.Play("Transmit1");
         // 等待动画播放结束
         yield return new WaitForSeconds(transmit1.GetCurrentAnimatorStateInfo(0).length);
-        //transmit1.enabled = false;
-        //transmit1.gameObject.SetActive(false);
+        transmit1.enabled = false;
+        transmit1.gameObject.SetActive(false);
         // 加载 Clothes 场景
         SceneManager.LoadScene("ClothesStore");   
         SceneManager.LoadScene(1, LoadSceneMode.Additive); 
