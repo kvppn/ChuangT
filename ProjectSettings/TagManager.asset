@@ -40,6 +40,10 @@ TagManager:
   - 2
   - 3
   - 4
+  - soundBar
+  - soundStore
+  - soundGrow
+  - soundClothes
   layers:
   - Default
   - TransparentFX

@@ -8,13 +8,55 @@ public class testSelectScene : MonoBehaviour
     public Animator transmit2;
    
     public GameObject selectScene;
+    public AudioSource bar;
+    public AudioSource store;
+    public AudioSource grow;
+    public AudioSource clothes;
    // private bool isTransmitting = false;
 
     void Start()
     {
+        if (GameObject.FindGameObjectWithTag("soundBar") != null) 
+        {
+            bar = GameObject.FindGameObjectWithTag("soundBar").GetComponent<AudioSource>();
+        }
+        if (GameObject.FindGameObjectWithTag("soundStore") != null)
+        {  
+            store=GameObject.FindGameObjectWithTag("soundStore").GetComponent<AudioSource>();
+        }
+        if (GameObject.FindGameObjectWithTag("soundGrow") != null)
+        {
+            grow = GameObject.FindGameObjectWithTag("soundGrow").GetComponent<AudioSource>();
+        }
+        if (GameObject.FindGameObjectWithTag("soundClothes") != null)
+        {
+            clothes = GameObject.FindGameObjectWithTag("soundClothes").GetComponent<AudioSource>();
+        }
+        StartCoroutine(Sound());
+    }
+    IEnumerator Sound()
+    {
         transmit2.gameObject.SetActive(true);
         transmit2.enabled = true;
         transmit2.Play("transmitScene_2");
+        yield return new WaitForSeconds(transmit2.GetCurrentAnimatorStateInfo(0).length);
+        if (store != null)
+        {
+            store.Play();
+        }
+        if (bar != null)
+        {
+            bar.Play();
+        }
+        if (grow != null)
+        {
+            grow.Play();
+        }
+        if (clothes != null)
+        {
+            clothes.Play();
+        }
+
     }
     private void Update()
     {
