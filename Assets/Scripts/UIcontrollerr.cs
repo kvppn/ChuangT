@@ -12,4 +12,14 @@ public class UIcontrollerr : MonoBehaviour
         instance_ = this;
     }
 
+    public void SetInfo(string info)
+    {
+        text.text = info;
+        uitextobj.gameObject.SetActive(true);
+    }
+    public void HideInfo()
+    {
+        uitextobj.gameObject.SetActive(false);
+    }
+
 }
