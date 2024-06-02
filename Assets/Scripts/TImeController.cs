@@ -55,7 +55,7 @@ public class TImeController : MonoBehaviour
         if (scene.buildIndex == 1)
         {
             GameObject player = GameObject.FindGameObjectWithTag("player");
-            player.transform.position = new Vector3(-1.04f, 0.07f, 0);
+            player.transform.position = new Vector3(-2f, -0.95f, 0);
 
             SceneManager.sceneLoaded -= OnSceneLoadedhome;
         }

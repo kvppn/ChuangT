@@ -15,6 +15,7 @@ public class GeminiDia : MonoBehaviour
     public static int flag = 1;//判断对话是否结束
 
     int intGemi;
+    public GameObject Canvas;
     public void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("player"))
@@ -32,6 +33,7 @@ public class GeminiDia : MonoBehaviour
     }
     private void Start()
     {
+        Canvas = GameObject.FindGameObjectWithTag("Canvas");
         flowchart = GameObject.Find("Flowchart").GetComponent<Flowchart>();
         intGemi = PlayerPrefs.GetInt("intGemi");
         if (intGemi == 2)
@@ -45,19 +47,26 @@ public class GeminiDia : MonoBehaviour
     }
     void Update()
     {
-       
+        
         if (flowchart.HasExecutingBlocks()==true)
         {
             Debug.Log("正在进行对话ing");
         }
         else if(flowchart.HasExecutingBlocks() == false&&flag==3)
         {
+            GameObject.FindGameObjectWithTag("player").GetComponent<playerWalk>().enabled = true;
+            Canvas.SetActive(true);
             Debug.Log("已经结束对话了");
             flag = 4;
             PlayerPrefs.SetInt("intGrowDia", 1);
             SceneManager.LoadScene("Grow");
               SceneManager.LoadScene("Player", LoadSceneMode.Additive);
               SceneManager.sceneLoaded += OnSceneLoaded;
+        }
+        else if(flowchart.HasExecutingBlocks() == false && flag == 2)
+        {
+            //第一段动画结束主角才可以移动
+            GameObject.FindGameObjectWithTag("player").GetComponent<playerWalk>().enabled = true;
         }
         if (Input.GetMouseButtonDown(1)) // 1代表鼠标右键
         {
@@ -69,6 +78,8 @@ public class GeminiDia : MonoBehaviour
             RaycastHit2D hit = Physics2D.Raycast(mousePosition, Vector2.zero, Mathf.Infinity, layerMask);
             if (hit.collider != null && hit.collider == GetComponent<Collider2D>() && playerInRange == true&&flag==1&&intGemi==1)
             {
+                GameObject.FindGameObjectWithTag("player").GetComponent<playerWalk>().enabled = false;//对话时主角禁止移动
+                Canvas.SetActive(false);
                 PlayerPrefs.SetInt("intGemi", 2);
                 //此处的flag=1表示第一次对话
                 Debug.Log("3");
@@ -76,6 +87,8 @@ public class GeminiDia : MonoBehaviour
             }
             else if (flowchart.HasExecutingBlocks() == false && flag == 2&&hit.collider != null && hit.collider == GetComponent<Collider2D>() && playerInRange == true)
             {
+                GameObject.FindGameObjectWithTag("player").GetComponent<playerWalk>().enabled = false;//对话时主角禁止移动
+                
                 SayAgain();
             }
         }
@@ -84,9 +97,8 @@ public class GeminiDia : MonoBehaviour
     {
         if (scene.buildIndex == 1)
         {
-            Debug.Log("0000022");
             GameObject player = GameObject.FindGameObjectWithTag("player");
-            player.transform.position = new Vector3(-0.5f, -4.5f, 0);
+            player.transform.position = new Vector3(-4.52f, 0.26f, 0);
 
             SceneManager.sceneLoaded -= OnSceneLoaded;
         }

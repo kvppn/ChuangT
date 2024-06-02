@@ -2640,7 +2640,7 @@ GameObject:
   - component: {fileID: 494071890}
   m_Layer: 0
   m_Name: exit
-  m_TagString: soundGrow
+  m_TagString: exit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4207,7 +4207,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 777940803}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.682, y: 1.508, z: -7.7471952}
+  m_LocalPosition: {x: -4.529, y: 1.377, z: -7.7471952}
   m_LocalScale: {x: 0.8, y: 0.8, z: 1}
   m_Children:
   - {fileID: 1546815102}
@@ -4520,6 +4520,7 @@ GameObject:
   - component: {fileID: 815150132}
   - component: {fileID: 815150131}
   - component: {fileID: 815150130}
+  - component: {fileID: 815150133}
   m_Layer: 5
   m_Name: Continue
   m_TagString: Untagged
@@ -4641,6 +4642,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 815150128}
   m_CullTransparentMesh: 1
+--- !u!95 &815150133
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 815150128}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d06011d9e9dc34e41bebcf5680591b67, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &877844028
 GameObject:
   m_ObjectHideFlags: 0
@@ -4833,7 +4853,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 883937224}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.15, y: -1.33, z: -7.7471952}
+  m_LocalPosition: {x: 5.17, y: -1.44, z: -7.7471952}
   m_LocalScale: {x: 0.8, y: 0.8, z: 1}
   m_Children:
   - {fileID: 1360811874}
@@ -5126,7 +5146,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 971939340}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.672, y: 0.648, z: -7.7471952}
+  m_LocalPosition: {x: -4.532, y: 0.397, z: -7.7471952}
   m_LocalScale: {x: 0.8, y: 0.8, z: 1}
   m_Children:
   - {fileID: 6250237}
@@ -7557,7 +7577,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1104220063}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.43, y: -0.64, z: -7.7471952}
+  m_LocalPosition: {x: -3.157, y: -0.633, z: -7.7471952}
   m_LocalScale: {x: 0.8, y: 0.8, z: 1}
   m_Children:
   - {fileID: 1233792447}
@@ -7721,7 +7741,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1115890403}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.15, y: -0.3, z: -7.7471952}
+  m_LocalPosition: {x: 5.18, y: -0.59, z: -7.7471952}
   m_LocalScale: {x: 0.8, y: 0.8, z: 1}
   m_Children:
   - {fileID: 547833411}
@@ -8211,7 +8231,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1151098453}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.11, y: -1.33, z: -7.7471952}
+  m_LocalPosition: {x: 4.11, y: -1.45, z: -7.7471952}
   m_LocalScale: {x: 0.8, y: 0.8, z: 1}
   m_Children:
   - {fileID: 1947513557}
@@ -11265,6 +11285,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ChatName: miLuo
+  Canvas: {fileID: 0}
 --- !u!4 &1283615029
 Transform:
   m_ObjectHideFlags: 0
@@ -11337,7 +11358,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1299555647}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.653, y: -0.216, z: -7.7471952}
+  m_LocalPosition: {x: -4.255, y: -0.526, z: -7.7471952}
   m_LocalScale: {x: 0.8, y: 0.8, z: 1}
   m_Children:
   - {fileID: 1437685863}
@@ -13051,7 +13072,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 1410446576}
+  setSayDialog: {fileID: 1499265444}
 --- !u!114 &1341367202
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -13135,9 +13156,8 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 1341367209}
-  selectedCommands:
-  - {fileID: 1341367200}
+  - {fileID: 1341367203}
+  selectedCommands: []
   variables: []
   description: 
   stepPause: 0
@@ -16926,7 +16946,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!82 &1499265440
 AudioSource:
   m_ObjectHideFlags: 0
@@ -17691,7 +17711,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1588773604}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.1, y: -4.43, z: 0}
+  m_LocalPosition: {x: -5.218, y: -0.474, z: 0}
   m_LocalScale: {x: 4, y: 4, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -17763,6 +17783,7 @@ MonoBehaviour:
   WorkOneBag: {fileID: 11400000, guid: d413fac498ae95240843054c392d58e8, type: 2}
   ChatName: teach
   ChatNameBye: MiLuoagain
+  Canvas: {fileID: 0}
 --- !u!58 &1588773610
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -20622,7 +20643,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1766370368}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.35, y: -0.67, z: -7.7471952}
+  m_LocalPosition: {x: -2.18, y: -0.648, z: -7.7471952}
   m_LocalScale: {x: 0.8, y: 0.8, z: 1}
   m_Children:
   - {fileID: 16053948}
@@ -21033,7 +21054,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1844060605}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.11, y: -0.3, z: -7.7471952}
+  m_LocalPosition: {x: 4.09, y: -0.56, z: -7.7471952}
   m_LocalScale: {x: 0.8, y: 0.8, z: 1}
   m_Children:
   - {fileID: 76338202}

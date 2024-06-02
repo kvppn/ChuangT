@@ -21,7 +21,8 @@ public class NPC_Bar : MonoBehaviour
     public static int flag2 = 1;//判断是否是介绍的第一次，退出交易界面，弹出对话
     public Image black;//黑幕
     float fadeOutTime=2f;
-   
+
+    public GameObject Canvas;
     void Start()
     {
         //PlayerPrefs.SetInt("intbar", 1);//跟酒店老板娘的对话
@@ -87,6 +88,7 @@ public class NPC_Bar : MonoBehaviour
             RaycastHit2D hit = Physics2D.Raycast(mousePosition, Vector2.zero, Mathf.Infinity, layerMask);
             if (hit.collider != null && hit.collider == gameObject.GetComponent<Collider2D>() && playerInRange == true)
             {
+                GameObject.FindGameObjectWithTag("player").GetComponent<playerWalk>().enabled = false;
                 Say();
                 flag = 2;
             }
@@ -100,6 +102,7 @@ public class NPC_Bar : MonoBehaviour
             RaycastHit2D hit = Physics2D.Raycast(mousePosition, Vector2.zero, Mathf.Infinity, layerMask);
             if (hit.collider != null && hit.collider ==gameObject.GetComponent<Collider2D>() && playerInRange == true)
             {
+                GameObject.FindGameObjectWithTag("player").GetComponent<playerWalk>().enabled = false;
                 //NPCbar.enabled = true;
                 foreach (GameObject obj in otherScene.GetRootGameObjects())
                 {
@@ -125,6 +128,7 @@ public class NPC_Bar : MonoBehaviour
            
            if (hit.collider != null && hit.collider == gameObject.GetComponent<Collider2D>() && playerInRange == true)
             {
+                GameObject.FindGameObjectWithTag("player").GetComponent<playerWalk>().enabled = false;
                 foreach (GameObject obj in otherScene.GetRootGameObjects())
                 {
                     // 找到你要激活的GameObject
@@ -184,7 +188,7 @@ public class NPC_Bar : MonoBehaviour
         if (scene.buildIndex == 1)
         {
             GameObject player = GameObject.FindGameObjectWithTag("player");
-            player.transform.position = new Vector3(-1.04f, 0.07f, 0);
+            player.transform.position = new Vector3(-2f, -0.95f, 0);
 
             SceneManager.sceneLoaded -= OnSceneLoadedhome;
         }

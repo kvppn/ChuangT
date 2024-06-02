@@ -445,6 +445,7 @@ GameObject:
   - component: {fileID: 67898442}
   - component: {fileID: 67898441}
   - component: {fileID: 67898440}
+  - component: {fileID: 67898443}
   m_Layer: 5
   m_Name: Continue
   m_TagString: Untagged
@@ -566,6 +567,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 67898438}
   m_CullTransparentMesh: 1
+--- !u!95 &67898443
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 67898438}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d06011d9e9dc34e41bebcf5680591b67, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &90915205
 GameObject:
   m_ObjectHideFlags: 0
@@ -6485,6 +6505,7 @@ GameObject:
   - component: {fileID: 579573286}
   - component: {fileID: 579573285}
   - component: {fileID: 579573284}
+  - component: {fileID: 579573287}
   m_Layer: 5
   m_Name: Continue
   m_TagString: Untagged
@@ -6606,6 +6627,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 579573282}
   m_CullTransparentMesh: 1
+--- !u!95 &579573287
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 579573282}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d06011d9e9dc34e41bebcf5680591b67, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &598493192
 GameObject:
   m_ObjectHideFlags: 0
@@ -12285,7 +12325,7 @@ GameObject:
   - component: {fileID: 1008082025}
   m_Layer: 0
   m_Name: exit
-  m_TagString: Untagged
+  m_TagString: exit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19544,6 +19584,7 @@ MonoBehaviour:
   ChatName: Gemini
   ChatNameAgain: again
   playerInRange: 0
+  Canvas: {fileID: 0}
 --- !u!61 &2065132553
 BoxCollider2D:
   m_ObjectHideFlags: 0

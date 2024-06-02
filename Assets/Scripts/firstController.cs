@@ -14,6 +14,7 @@ public class firstController : MonoBehaviour
         PlayerPrefs.SetInt("intbar", 1);//跟酒店老板娘的对话
         PlayerPrefs.SetInt("ChestOpened_1", 0);//表示宝箱已经被打开
         PlayerPrefs.SetInt("intKey", 0);//这是开始计时时间的触发，初始为0
+        PlayerPrefs.SetInt("intGrowFirstDia", 1);//这是为了判断刚进入荒地对话Canvas要消失
         PlayerPrefs.SetInt("intFlag", 3);
         for (int i = 0; i<=40;i++) {
             PlayerPrefs.SetInt("DataInitialized" + "tile_"+i.ToString(), 0);//判断耕地是否初始

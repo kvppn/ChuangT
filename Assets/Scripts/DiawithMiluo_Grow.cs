@@ -8,10 +8,12 @@ public class DiawithMiluo_Grow : MonoBehaviour
     public string ChatName;    //定义选择哪个对话block
     //当前是否可以对话
     private Flowchart flowchart;
+    public GameObject Canvas;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        Canvas = GameObject.FindGameObjectWithTag("Canvas");
     }
 
     // Update is called once per frame
@@ -21,16 +23,22 @@ public class DiawithMiluo_Grow : MonoBehaviour
         int intGrowDia = PlayerPrefs.GetInt("intGrowDia");
         if (intGrowDia == 1)
         {
-            PlayerPrefs.SetInt("intGrowDia", 2);
-            say();
+            PlayerPrefs.SetInt("intGrowDia", 2);//之后进入就不会说话了
+            StartCoroutine(firstDia());
             intGrowDia = 2;
         }
+       
     }
-    public void say()
+    IEnumerator firstDia()
     {
-            if (flowchart.HasBlock(ChatName))
-            {
-                flowchart.ExecuteBlock(ChatName);
-            }
+        yield return new WaitForSeconds(1.5f);
+        if (flowchart.HasBlock(ChatName))
+        {
+            flowchart.ExecuteBlock(ChatName);
+        }
+       /* if (flowchart.HasExecutingBlocks() == false)
+        {
+            Canvas.SetActive(true);
+        }*/
     }
 }

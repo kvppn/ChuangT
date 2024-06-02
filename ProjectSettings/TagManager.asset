@@ -44,6 +44,7 @@ TagManager:
   - soundStore
   - soundGrow
   - soundClothes
+  - exit
   layers:
   - Default
   - TransparentFX

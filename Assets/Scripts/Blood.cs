@@ -8,8 +8,8 @@ public class Blood : MonoBehaviour
     private Slider bloodSlider;
     private Text bloodText;
     // Start is called before the first frame update
-    public float orange=0.9f;//变成橙色精力条的数值
-    public float red=0.8f;//变成红色精力条的数值
+    public float orange=0.5f;//变成橙色精力条的数值
+    public float red=0.3f;//变成红色精力条的数值
     public float SpeedCut = 0.2f;//速度变慢的精力数值
 
     public playerWalk playerSpeed;

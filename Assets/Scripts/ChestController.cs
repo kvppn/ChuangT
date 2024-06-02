@@ -16,8 +16,10 @@ public class ChestController : MonoBehaviour
 
     public string ChatName;    //定义选择哪个对话block
     public string ChatNameBye;    //定义选择哪个对话block
+
     private Flowchart flowchart;
 
+    public GameObject Canvas;
     public void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("player"))
@@ -33,13 +35,27 @@ public class ChestController : MonoBehaviour
             playerInRange = false;
         }
     }
-    private void Start()
+     void Start()
     {
+        Canvas = GameObject.FindGameObjectWithTag("Canvas");
         if (PlayerPrefs.GetInt("ChestOpened_1", 0) == 1)
         {
             GetComponent<SpriteRenderer>().enabled = false;
             //GetComponent<CircleCollider2D>().enabled = false;
         }
+        if(PlayerPrefs.GetInt("intGrowFirstDia", 0) == 1)
+        {
+            Debug.Log("intGrowFirstDia");
+
+            StartCoroutine(hhhh());
+            
+        }
+    }
+   IEnumerator hhhh()
+    {
+        yield return new WaitForSeconds(0.5f);
+        Canvas.SetActive(false);
+        PlayerPrefs.SetInt("intGrowFirstDia", 2);
     }
     void Update()
     {
@@ -48,7 +64,12 @@ public class ChestController : MonoBehaviour
 
 
         int intFlag = PlayerPrefs.GetInt("intFlag");
-
+       
+        if (flowchart.HasExecutingBlocks() == false && flag == 2)
+        {
+            //Canvas.SetActive(true);
+            flag = 3;
+        }
         if (intFlag == 1)
         {
             PlayerPrefs.SetInt("intFlag", 2);//土地教程结束
@@ -74,6 +95,8 @@ public class ChestController : MonoBehaviour
 
             if (hit.collider != null && hit.collider == GetComponent<Collider2D>() && playerInRange == true&&flag==1)
             {
+                Debug.Log("Canvas咋不出现");
+                Canvas.SetActive(true);
                 Debug.Log("3");
                 PlayerPrefs.SetInt("ChestOpened_1" , 1);//表示宝箱已经被打开
                 gameObject.GetComponent<SpriteRenderer>().enabled=false;
@@ -113,7 +136,9 @@ public class ChestController : MonoBehaviour
     }
     IEnumerator ToBarCoroutine()
     {
+        
         yield return new WaitForSeconds(2f);
+        //Canvas.SetActive(false);
         if (flowchart.HasBlock(ChatNameBye))
         {
             flowchart.ExecuteBlock(ChatNameBye);

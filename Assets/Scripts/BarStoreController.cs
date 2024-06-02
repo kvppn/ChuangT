@@ -43,6 +43,7 @@ public class BarStoreController : MonoBehaviour
     }
     public void Exit()
     {
+        GameObject.FindGameObjectWithTag("player").GetComponent<playerWalk>().enabled = true;
         if (firstExit == 1)
         {
             NpcBar.SetActive(false);

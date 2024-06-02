@@ -70,22 +70,26 @@ public class testSelectScene : MonoBehaviour
     }
     public void clothesButton()
     {
-        selectScene.transform.GetChild(0).gameObject.SetActive(false);
+        selectScene.SetActive(false);
+        GameObject.FindGameObjectWithTag("exit").SetActive(false);
         StartCoroutine(LoadClothesScene());
     }
     public void growButton()
     {
-        selectScene.transform.GetChild(0).gameObject.SetActive(false);
+        selectScene.SetActive(false);
+        GameObject.FindGameObjectWithTag("exit").SetActive(false);
         StartCoroutine(LoadgrowScene());
     }
     public void barButton()
     {
-        selectScene.transform.GetChild(0).gameObject.SetActive(false);
+        selectScene.SetActive(false);
+        GameObject.FindGameObjectWithTag("exit").SetActive(false);
         StartCoroutine(LoadbarScene());
     }
     public void storeButton()
     {
-        selectScene.transform.GetChild(0).gameObject.SetActive(false);
+        selectScene.SetActive(false);
+        GameObject.FindGameObjectWithTag("exit").SetActive(false);
         StartCoroutine(LoadstoreScene());
     }
     private IEnumerator LoadClothesScene()
@@ -96,8 +100,8 @@ public class testSelectScene : MonoBehaviour
         transmit1.Play("Transmit1");
         // 等待动画播放结束
         yield return new WaitForSeconds(transmit1.GetCurrentAnimatorStateInfo(0).length);
-        transmit1.enabled = false;
-        transmit1.gameObject.SetActive(false);
+        //transmit1.enabled = false;
+        //transmit1.gameObject.SetActive(false);
         // 加载 Clothes 场景
         SceneManager.LoadScene("ClothesStore");   
         SceneManager.LoadScene(1, LoadSceneMode.Additive); 
@@ -116,7 +120,7 @@ public class testSelectScene : MonoBehaviour
         // 加载 Clothes 场景
         SceneManager.LoadScene("Grow");
         SceneManager.LoadScene(1, LoadSceneMode.Additive);
-        SceneManager.sceneLoaded += OnSceneLoadedclothes;
+        SceneManager.sceneLoaded += OnSceneLoaded;
     }
     private IEnumerator LoadbarScene()
     {
@@ -132,7 +136,7 @@ public class testSelectScene : MonoBehaviour
         // 加载 Clothes 场景
         SceneManager.LoadScene("Bar");
         SceneManager.LoadScene(1, LoadSceneMode.Additive);
-        SceneManager.sceneLoaded += OnSceneLoadedclothes;
+        SceneManager.sceneLoaded += OnSceneLoadedbar;
     }
     private IEnumerator LoadstoreScene()
     {
@@ -147,7 +151,7 @@ public class testSelectScene : MonoBehaviour
         // 加载 Clothes 场景
         SceneManager.LoadScene("store");
         SceneManager.LoadScene(1, LoadSceneMode.Additive);
-        SceneManager.sceneLoaded += OnSceneLoadedclothes;
+        SceneManager.sceneLoaded += OnSceneLoadedstore;
     }
     private void OnSceneLoadedclothes(Scene scene, LoadSceneMode mode)
     {
@@ -166,7 +170,7 @@ public class testSelectScene : MonoBehaviour
         {
             Debug.Log("0000022");
             GameObject player = GameObject.FindGameObjectWithTag("player");
-            player.transform.position = new Vector3(-0.5f, -4.5f, 0);
+            player.transform.position = new Vector3(-4.52f, 0.26f, 0);
 
             SceneManager.sceneLoaded -= OnSceneLoaded;
         }
