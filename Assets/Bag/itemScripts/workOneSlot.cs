@@ -5,17 +5,22 @@ using UnityEngine.UI;
 using UnityEngine.EventSystems;
 public class workOneSlot : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler, IPointerExitHandler, IPointerMoveHandler
 {
-    
+
     public Item slotItem;//格子中的物品
     public Image slotImage;//格子的图片
     public Text slotNum;//格子物品的数量
                         //public CraftingSystem craftingSystem;
     public CraftingSystem craftingSystem;
     public bool isClick = true;
-    public void Update()
+
+    private void Start()
     {
         craftingSystem = FindObjectOfType<CraftingSystem>();
-       
+        
+    }
+    public void Update()
+    {
+
     }
     //从这开始
     public void OnPointerEnter(PointerEventData eventData)
@@ -40,11 +45,11 @@ public class workOneSlot : MonoBehaviour, IPointerClickHandler, IPointerEnterHan
     public void OnPointerClick(PointerEventData eventData)
     {
         // 点击左键
-        if (eventData.button == PointerEventData.InputButton.Left && craftingSystem.CraftingExit.transform.childCount==0)
+        if (eventData.button == PointerEventData.InputButton.Left && craftingSystem.CraftingExit.transform.childCount == 0)
         {
             // 调用 CraftingSystem 的 DescreaseItem 方法并传入对应的物品
             craftingSystem.DescreaseItem(slotItem);
         }
     }
-   
+
 }

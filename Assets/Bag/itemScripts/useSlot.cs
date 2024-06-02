@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
-public class useSlot : MonoBehaviour , IPointerEnterHandler, IPointerExitHandler, IPointerMoveHandler
+public class useSlot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerMoveHandler
 {
     // Start is called before the first frame update
     public Item slotItem;//格子中的物品
