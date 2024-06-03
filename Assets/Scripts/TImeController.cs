@@ -11,7 +11,7 @@ public class TImeController : MonoBehaviour
     public Text dayText;
     public string sceneToCheck = "Bar";
     public int flag = 0;
-
+    public Blood blloody;
  
     private void Update()
     {
@@ -20,8 +20,8 @@ public class TImeController : MonoBehaviour
         dayText.text = day.ToString();
         if (gameTime >= 70f) // 一天20小时
         {
+            blloody.sleepBlood();
             gameTime = 0f;
-
                 SceneManager.LoadScene("bar");
                 SceneManager.LoadScene("Player", LoadSceneMode.Additive);
                 SceneManager.sceneLoaded += OnSceneLoadedhome;
@@ -31,6 +31,7 @@ public class TImeController : MonoBehaviour
     }
     public void GoToSleep()
     {
+        blloody.sleepBlood();
         gameTime = 0;
         dayText.text = day.ToString();
         SceneManager.LoadScene("bar");

@@ -66,11 +66,6 @@ public class CraftingSystem : MonoBehaviour
             // 如果动画播放完成，停止动画
             StopAnimation();
         }
-        if (shiningg.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1)
-        {
-            StopAnimationShine();
-            // 如果动画播放完成，停止动画      
-        }
     }
     public void Exit()
     {
@@ -699,12 +694,20 @@ public class CraftingSystem : MonoBehaviour
         player.SetActive(true);
         player.transform.position = new Vector3(9.07f, -0.64f, 0);
         animatorPlayer.SetTrigger("juqi");
+        StartCoroutine(SHINE());
+    }
+    IEnumerator SHINE()
+    {
         shiningg.gameObject.SetActive(true);
         shiningg.Play("shining");
+        yield return new WaitForSeconds(shiningg.GetCurrentAnimatorStateInfo(0).length);
+        animatorPlayer.SetTrigger("bujuqi");
+        shiningg.gameObject.SetActive(false);
     }
     public void StopAnimationShine()
     {
         animatorPlayer.SetTrigger("bujuqi");
+        shiningg.enabled = false;
         shiningg.gameObject.SetActive(false);
     }
     public void DescreaseTheItem(Item thisItem, Dictionary<string, Item> bagItems)
