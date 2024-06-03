@@ -6,7 +6,7 @@ public class testSelectScene : MonoBehaviour
 {
     public Animator transmit1;
     public Animator transmit2;
-   
+    public GameObject transmit;
     public GameObject selectScene;
     public AudioSource bar;
     public AudioSource store;
@@ -36,6 +36,7 @@ public class testSelectScene : MonoBehaviour
     }
     IEnumerator Sound()
     {
+        transmit.SetActive(false);
         transmit2.gameObject.SetActive(true);
         transmit2.enabled = true;
         transmit2.Play("transmitScene_2");
@@ -99,7 +100,9 @@ public class testSelectScene : MonoBehaviour
         transmit1.enabled = true;
         transmit1.Play("Transmit1");
         // 等待动画播放结束
-        yield return new WaitForSeconds(transmit1.GetCurrentAnimatorStateInfo(0).length);
+        yield return new WaitForSeconds(transmit1.GetCurrentAnimatorStateInfo(0).length-0.1f);
+        transmit.SetActive(true);
+        yield return new WaitForSeconds(0.1f);
         transmit1.enabled = false;
         transmit1.gameObject.SetActive(false);
         // 加载 Clothes 场景
