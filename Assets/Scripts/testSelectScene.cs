@@ -102,7 +102,7 @@ public class testSelectScene : MonoBehaviour
         // 等待动画播放结束
         yield return new WaitForSeconds(transmit1.GetCurrentAnimatorStateInfo(0).length-0.1f);
         transmit.SetActive(true);
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(0.1f); 
         transmit1.enabled = false;
         transmit1.gameObject.SetActive(false);
         // 加载 Clothes 场景
@@ -117,7 +117,10 @@ public class testSelectScene : MonoBehaviour
         transmit1.enabled = true;
         transmit1.Play("Transmit1");
         // 等待动画播放结束
-        yield return new WaitForSeconds(transmit1.GetCurrentAnimatorStateInfo(0).length);
+        //yield return new WaitForSeconds(transmit1.GetCurrentAnimatorStateInfo(0).length);
+        yield return new WaitForSeconds(transmit1.GetCurrentAnimatorStateInfo(0).length - 0.1f);
+        transmit.SetActive(true);
+        yield return new WaitForSeconds(0.1f);
         transmit1.enabled = false;
         transmit1.gameObject.SetActive(false);
         // 加载 Clothes 场景
@@ -133,7 +136,10 @@ public class testSelectScene : MonoBehaviour
         transmit1.Play("Transmit1");
 
         // 等待动画播放结束
-        yield return new WaitForSeconds(transmit1.GetCurrentAnimatorStateInfo(0).length);
+        //yield return new WaitForSeconds(transmit1.GetCurrentAnimatorStateInfo(0).length);
+        yield return new WaitForSeconds(transmit1.GetCurrentAnimatorStateInfo(0).length - 0.1f);
+        transmit.SetActive(true);
+        yield return new WaitForSeconds(0.1f);
         transmit1.enabled = false;
         transmit1.gameObject.SetActive(false);
         // 加载 Clothes 场景
@@ -148,7 +154,10 @@ public class testSelectScene : MonoBehaviour
         transmit1.enabled = true;
         transmit1.Play("Transmit1");
         // 等待动画播放结束
-        yield return new WaitForSeconds(transmit1.GetCurrentAnimatorStateInfo(0).length);
+        //yield return new WaitForSeconds(transmit1.GetCurrentAnimatorStateInfo(0).length);
+        yield return new WaitForSeconds(transmit1.GetCurrentAnimatorStateInfo(0).length - 0.1f);
+        transmit.SetActive(true);
+        yield return new WaitForSeconds(0.1f);
         transmit1.enabled = false;
         transmit1.gameObject.SetActive(false);
         // 加载 Clothes 场景
@@ -173,7 +182,7 @@ public class testSelectScene : MonoBehaviour
         {
             Debug.Log("0000022");
             GameObject player = GameObject.FindGameObjectWithTag("player");
-            player.transform.position = new Vector3(-4.52f, 0.26f, 0);
+            player.transform.position = new Vector3(-4.33f, -1.63f, 0);
 
             SceneManager.sceneLoaded -= OnSceneLoaded;
         }

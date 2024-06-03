@@ -621,6 +621,7 @@ GameObject:
   - component: {fileID: 90915217}
   - component: {fileID: 90915212}
   - component: {fileID: 90915214}
+  - component: {fileID: 90915233}
   m_Layer: 0
   m_Name: Flowchart
   m_TagString: Untagged
@@ -693,6 +694,7 @@ MonoBehaviour:
   - {fileID: 90915224}
   - {fileID: 90915223}
   - {fileID: 90915222}
+  - {fileID: 90915233}
   - {fileID: 90915221}
   - {fileID: 90915220}
   - {fileID: 90915219}
@@ -758,7 +760,7 @@ MonoBehaviour:
   scrollPos: {x: 0, y: 0}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
-  blockViewHeight: 400
+  blockViewHeight: 602.8
   zoom: 1
   scrollViewRect:
     serializedVersion: 2
@@ -767,9 +769,9 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 90915215}
+  - {fileID: 90915207}
   selectedCommands:
-  - {fileID: 90915213}
+  - {fileID: 90915233}
   variables: []
   description: 
   stepPause: 0
@@ -1362,6 +1364,33 @@ MonoBehaviour:
   stopVoiceover: 1
   waitForVO: 0
   setSayDialog: {fileID: 1372443574}
+--- !u!114 &90915233
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 90915205}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 26
+  indentLevel: 0
+  storyText: "\u4F60\u4FE1\u91CC\u7684\u771F\u8BDA\u6253\u52A8\u4E86\u4ED6\uFF0C\u4ECE\u4ECA\u5929\u5F00\u59CB\u4F60\u5C31\u8981\u5B66\u4E60\u5982\u4F55\u6210\u4E3A\u4E00\u540D\u9876\u5C16\u7684\u88C1\u7F1D\u4E86\u3002"
+  description: 
+  character: {fileID: 1491941079}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 1215317369}
 --- !u!1 &142937939
 GameObject:
   m_ObjectHideFlags: 0
@@ -18415,6 +18444,50 @@ TilemapCollider2D:
   m_Offset: {x: 0, y: 0}
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0.00001
+--- !u!1 &1767437020
+GameObject:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1767437022}
+  - component: {fileID: 1767437021}
+  m_Layer: 0
+  m_Name: _FungusState
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1767437021
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1767437020}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61dddfdc5e0e44ca298d8f46f7f5a915, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  selectedFlowchart: {fileID: 90915210}
+--- !u!4 &1767437022
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1767437020}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 20
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1774201052
 GameObject:
   m_ObjectHideFlags: 0
@@ -20019,7 +20092,7 @@ Transform:
   m_GameObject: {fileID: 2065132551}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.095, y: -0.13, z: 0}
-  m_LocalScale: {x: 2.5, y: 2.5, z: 1}
+  m_LocalScale: {x: 3.5, y: 3.5, z: 1}
   m_Children:
   - {fileID: 341404704}
   - {fileID: 1774201053}

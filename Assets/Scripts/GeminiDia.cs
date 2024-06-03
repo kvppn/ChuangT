@@ -98,7 +98,7 @@ public class GeminiDia : MonoBehaviour
         if (scene.buildIndex == 1)
         {
             GameObject player = GameObject.FindGameObjectWithTag("player");
-            player.transform.position = new Vector3(-4.52f, 0.26f, 0);
+            player.transform.position = new Vector3(-4.33f, -1.63f, 0);
 
             SceneManager.sceneLoaded -= OnSceneLoaded;
         }
