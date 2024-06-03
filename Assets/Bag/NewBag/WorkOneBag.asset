@@ -12,4 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a0bc983f2768f94899d737bc207e4c1, type: 3}
   m_Name: WorkOneBag
   m_EditorClassIdentifier: 
-  itemList: []
+  itemList:
+  - {fileID: 11400000, guid: 9d97a5da1f83b6b4d938380734c931d3, type: 2}
+  - {fileID: 11400000, guid: 2aae286465561784aaca0163f0652c1a, type: 2}
+  - {fileID: 11400000, guid: 4a9fee19c8174674baa8b6288f884145, type: 2}
+  - {fileID: 11400000, guid: 61ccfef3d82e74d48a9f148a3ccc7871, type: 2}
+  - {fileID: 11400000, guid: 54d17ff05a564a14c8258b432dffa61c, type: 2}
+  - {fileID: 11400000, guid: 3a48dfdd89136054b8ebcf0be0f8587a, type: 2}
+  - {fileID: 11400000, guid: 4349a6fd3a39a3042aa5fdc64c6df0b0, type: 2}
+  - {fileID: 11400000, guid: 1d450209a9ff4af43a88ad9fbcf0f89c, type: 2}
+  - {fileID: 11400000, guid: a4f112a381ce003489f27a2f9732332a, type: 2}
+  - {fileID: 11400000, guid: 14e03accaafbe6740a4bccb54c36daba, type: 2}
+  - {fileID: 11400000, guid: c537160f86246a74bab0bfbdc46e8bc2, type: 2}

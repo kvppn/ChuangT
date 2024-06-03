@@ -9558,18 +9558,18 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.18733668, y: 0.030694023}
+  m_Offset: {x: -0.20330244, y: -0.18708165}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.34, y: 1.04}
+    oldSize: {x: 1.47, y: 1.1}
     newSize: {x: 1.47, y: 1.1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.0765927, y: 1.0386121}
+  m_Size: {x: 0.99464905, y: 0.4269834}
   m_EdgeRadius: 0
 --- !u!50 &731971156
 Rigidbody2D:
@@ -9646,8 +9646,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 10
-  m_Sprite: {fileID: 21300000, guid: 908e9374c5b4f4b428060d9cf5e8fdf9, type: 3}
+  m_SortingOrder: 20
+  m_Sprite: {fileID: 21300000, guid: 298e467a583596f4fb1f69b2112a4270, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -9666,7 +9666,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 731971153}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11.681, y: 1.379, z: 0}
+  m_LocalPosition: {x: 12.25, y: 1.1, z: 0}
   m_LocalScale: {x: 3.0697997, y: 3.0697997, z: 3.0697997}
   m_Children: []
   m_Father: {fileID: 0}
@@ -14633,7 +14633,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.9379554, y: -0.06641734}
+  m_Offset: {x: 1.2577186, y: -0.06641734}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -14644,7 +14644,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3.2006197, y: 1.1328347}
+  m_Size: {x: 2.5610933, y: 1.1328347}
   m_EdgeRadius: 0
 --- !u!1 &1283876054
 GameObject:
@@ -19635,6 +19635,7 @@ GameObject:
   - component: {fileID: 2060648711}
   - component: {fileID: 2060648713}
   - component: {fileID: 2060648712}
+  - component: {fileID: 2060648714}
   m_Layer: 0
   m_Name: wall
   m_TagString: Untagged
@@ -19696,7 +19697,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 20
+  m_SortingOrder: 10
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
@@ -20001,6 +20002,22 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!19719996 &2060648714
+TilemapCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2060648710}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_MaximumTileChangeCount: 1000
+  m_ExtrusionFactor: 0.00001
 --- !u!1 &2065132551
 GameObject:
   m_ObjectHideFlags: 0

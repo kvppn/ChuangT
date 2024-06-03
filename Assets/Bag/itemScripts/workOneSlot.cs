@@ -22,20 +22,40 @@ public class workOneSlot : MonoBehaviour, IPointerClickHandler, IPointerEnterHan
     {
         craftingSystem = FindObjectOfType<CraftingSystem>();
     }
-     public void OnPointerEnter(PointerEventData eventData) { 
-        UIcontrollerr.instance_.uitextobj.position = new Vector3(Input.mousePosition.x + 60, Input.mousePosition.y - 50, 0);
-        UIcontrollerr.instance_.uitextobj.gameObject.SetActive(true); 
+    /*ublic void OnPointerEnter(PointerEventData eventData) { 
+       UIcontrollerr.instance_.uitextobj.position = new Vector3(Input.mousePosition.x + 60, Input.mousePosition.y - 50, 0);
+       UIcontrollerr.instance_.uitextobj.gameObject.SetActive(true); 
+       UIcontrollerr.instance_.text.text = slotItem.itemInfo;
+   } //鼠标离开 
+   public void OnPointerExit(PointerEventData eventData) { 
+       UIcontrollerr.instance_.uitextobj.gameObject.SetActive(false); 
+   } //鼠标在ui里滑动
+   public void OnPointerMove(PointerEventData eventData) { 
+      *//* UIcontrollerr.instance_.uitextobj.position = new Vector3(Input.mousePosition.x + 60, Input.mousePosition.y - 50, 0);
+       UIcontrollerr.instance_.uitextobj.gameObject.SetActive(true); 
+       UIcontrollerr.instance_.text.text = slotItem.itemInfo; *//*
+   } //结束*/
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        Debug.Log("abs");
+        UIcontrollerr.instance_.uitextobj.position = new Vector3(Input.mousePosition.x + 60, Input.mousePosition.y - 100, 0);
+        UIcontrollerr.instance_.SetInfo(slotItem.itemInfo);
         UIcontrollerr.instance_.text.text = slotItem.itemInfo;
-    } //鼠标离开 
-    public void OnPointerExit(PointerEventData eventData) { 
-        UIcontrollerr.instance_.uitextobj.gameObject.SetActive(false); 
-    } //鼠标在ui里滑动
-    public void OnPointerMove(PointerEventData eventData) { 
-       /* UIcontrollerr.instance_.uitextobj.position = new Vector3(Input.mousePosition.x + 60, Input.mousePosition.y - 50, 0);
-        UIcontrollerr.instance_.uitextobj.gameObject.SetActive(true); 
-        UIcontrollerr.instance_.text.text = slotItem.itemInfo; */
-    } //结束
-      public void OnPointerClick(PointerEventData eventData) { // 点击左键
+    }
+    //鼠标离开
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        Debug.Log("abbs");
+        UIcontrollerr.instance_.HideInfo();
+    }
+    //鼠标在ui里滑动
+    public void OnPointerMove(PointerEventData eventData)
+    {
+        /*UIcontrollerr.instance_.uitextobj.position = new Vector3(Input.mousePosition.x + 60, Input.mousePosition.y - 50, 0);
+        UIcontrollerr.instance_.uitextobj.gameObject.SetActive(true);*/
+        //UIcontrollerr.instance_.text.text = this.name;
+    }
+    public void OnPointerClick(PointerEventData eventData) { // 点击左键
          if (eventData.button == PointerEventData.InputButton.Left && craftingSystem.CraftingExit.transform.childCount == 0) 
         { // 调用 CraftingSystem 的 DescreaseItem 方法并传入对应的物品
           craftingSystem.DescreaseItem(slotItem);
