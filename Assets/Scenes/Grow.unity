@@ -17702,7 +17702,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerInRange: 0
-  thisItem: {fileID: 11400000, guid: e4cf4c65349a0eb46901560b72b0f8dc, type: 2}
+  thisItem: {fileID: 11400000, guid: 3cda19b813d4a604e8c3fdb01a384a44, type: 2}
   Mybag: {fileID: 11400000, guid: 5df1c5e88a7d2314d909d74d63f221b5, type: 2}
   USE_Bag: {fileID: 11400000, guid: c6a84735ca77b2945b9c418687012a6f, type: 2}
   WorkOneBag: {fileID: 11400000, guid: d413fac498ae95240843054c392d58e8, type: 2}

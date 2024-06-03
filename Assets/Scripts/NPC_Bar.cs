@@ -25,6 +25,7 @@ public class NPC_Bar : MonoBehaviour
     public GameObject Canvas;
     void Start()
     {
+        Canvas = GameObject.FindGameObjectWithTag("Canvas");
         //PlayerPrefs.SetInt("intbar", 1);//跟酒店老板娘的对话
     }
     public void OnTriggerEnter2D(Collider2D other)
@@ -88,6 +89,7 @@ public class NPC_Bar : MonoBehaviour
             RaycastHit2D hit = Physics2D.Raycast(mousePosition, Vector2.zero, Mathf.Infinity, layerMask);
             if (hit.collider != null && hit.collider == gameObject.GetComponent<Collider2D>() && playerInRange == true)
             {
+                Canvas.SetActive(false);
                 GameObject.FindGameObjectWithTag("player").GetComponent<playerWalk>().enabled = false;
                 Say();
                 flag = 2;
@@ -102,6 +104,7 @@ public class NPC_Bar : MonoBehaviour
             RaycastHit2D hit = Physics2D.Raycast(mousePosition, Vector2.zero, Mathf.Infinity, layerMask);
             if (hit.collider != null && hit.collider ==gameObject.GetComponent<Collider2D>() && playerInRange == true)
             {
+                Canvas.SetActive(false);
                 GameObject.FindGameObjectWithTag("player").GetComponent<playerWalk>().enabled = false;
                 //NPCbar.enabled = true;
                 foreach (GameObject obj in otherScene.GetRootGameObjects())
@@ -128,6 +131,7 @@ public class NPC_Bar : MonoBehaviour
            
            if (hit.collider != null && hit.collider == gameObject.GetComponent<Collider2D>() && playerInRange == true)
             {
+                Canvas.SetActive(false);
                 GameObject.FindGameObjectWithTag("player").GetComponent<playerWalk>().enabled = false;
                 foreach (GameObject obj in otherScene.GetRootGameObjects())
                 {

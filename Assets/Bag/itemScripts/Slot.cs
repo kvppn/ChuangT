@@ -13,13 +13,12 @@ public class Slot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IP
         Debug.Log("abs");
         UIcontrollerr.instance_.uitextobj.position = new Vector3(Input.mousePosition.x + 60, Input.mousePosition.y - 100, 0);
         UIcontrollerr.instance_.SetInfo(slotItem.itemInfo);
-        //UIcontrollerr.instance_.text.text = this.name;
+        UIcontrollerr.instance_.text.text = slotItem.itemInfo;
     }
     //鼠标离开
     public void OnPointerExit(PointerEventData eventData)
     {
         Debug.Log("abbs");
-
         UIcontrollerr.instance_.HideInfo();
     }
     //鼠标在ui里滑动

@@ -31,9 +31,9 @@ public class workOneSlot : MonoBehaviour, IPointerClickHandler, IPointerEnterHan
         UIcontrollerr.instance_.uitextobj.gameObject.SetActive(false); 
     } //鼠标在ui里滑动
     public void OnPointerMove(PointerEventData eventData) { 
-        UIcontrollerr.instance_.uitextobj.position = new Vector3(Input.mousePosition.x + 60, Input.mousePosition.y - 50, 0);
+       /* UIcontrollerr.instance_.uitextobj.position = new Vector3(Input.mousePosition.x + 60, Input.mousePosition.y - 50, 0);
         UIcontrollerr.instance_.uitextobj.gameObject.SetActive(true); 
-        UIcontrollerr.instance_.text.text = slotItem.itemInfo; 
+        UIcontrollerr.instance_.text.text = slotItem.itemInfo; */
     } //结束
       public void OnPointerClick(PointerEventData eventData) { // 点击左键
          if (eventData.button == PointerEventData.InputButton.Left && craftingSystem.CraftingExit.transform.childCount == 0) 
