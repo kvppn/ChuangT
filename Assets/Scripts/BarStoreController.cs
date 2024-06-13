@@ -44,15 +44,23 @@ public class BarStoreController : MonoBehaviour
     public void Exit()
     {
         GameObject.FindGameObjectWithTag("player").GetComponent<playerWalk>().enabled = true;
+        NPC_Bar yali= GameObject.FindGameObjectWithTag("NPC_Bar").GetComponent<NPC_Bar>();
         if (firstExit == 1)
         {
             NpcBar.SetActive(false);
             NPC_Bar.flag2 = 2;
             firstExit = 2;
+
+            //老板娘的回归移动
+            yali.animator.SetTrigger("isRight");
+            yali.MoveToPos3();
         }
         if (firstExit == 2)
         {
             NpcBar.SetActive(false);
+            //老板娘的回归移动
+            yali.animator.SetTrigger("isRight");
+            yali.MoveToPos3();
         }
     }
     public void Button_1()

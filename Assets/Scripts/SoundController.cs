@@ -4,15 +4,35 @@ using UnityEngine;
 
 public class SoundController : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public static SoundController instance;
+
+    // 定义音频剪辑
+    public AudioClip GetGrain;
+    public AudioClip GrowSeed;
+    public AudioClip click;
+    public AudioClip moneyChange;
+
+    private AudioSource audioSource;
+
+    private void Awake()
     {
-        
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else if (instance != this)
+        {
+            Destroy(gameObject);
+        }
+
+        DontDestroyOnLoad(gameObject);
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Start()
     {
-        
+        audioSource = GetComponent<AudioSource>();
     }
+
+    // 播放音效1
+    
 }

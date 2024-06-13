@@ -45,6 +45,7 @@ TagManager:
   - soundGrow
   - soundClothes
   - exit
+  - collier
   layers:
   - Default
   - TransparentFX
@@ -55,7 +56,7 @@ TagManager:
   - CMvcan1
   - ZhiWu
   - WorkOne
-  - 
+  - other
   - 
   - 
   - 

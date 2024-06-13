@@ -16,6 +16,16 @@ public class NPC_Bar : MonoBehaviour
     public static int flag2 = 1;//判断是否是介绍的第一次，退出交易界面，弹出对话
 
     public GameObject Canvas;
+    public GameObject pos1;
+    public GameObject pos2;
+    public float speed = 0.2f;
+    private float startTime;
+    private float journeyLength;
+    private bool isMoving = false;
+    private bool isMoving2 = false;
+    public Animator animator;
+
+    public float fadeOutTime = 1f;//遮罩渐隐渐显的时间
     void Start()
     {
         Canvas = GameObject.FindGameObjectWithTag("Canvas");
@@ -38,6 +48,33 @@ public class NPC_Bar : MonoBehaviour
     }
     void Update()
     {
+        if (isMoving)
+        {
+            float distCovered = (Time.time - startTime) * speed;
+            float fractionOfJourney = distCovered / journeyLength;
+            transform.position = Vector3.Lerp(pos1.transform.position, pos2.transform.position, fractionOfJourney);
+            Debug.Log("在动吗");
+            if (distCovered >= journeyLength)
+            {
+                Debug.Log("老板娘别漂移了");
+                isMoving = false;
+                animator.SetTrigger("finishWalk");
+            }
+        }
+
+        if (isMoving2)
+        {
+            float distCovered = (Time.time - startTime) * speed;
+            float fractionOfJourney = distCovered / journeyLength;
+            transform.position = Vector3.Lerp(pos2.transform.position, pos1.transform.position, fractionOfJourney);
+            Debug.Log("在动吗");
+            if (distCovered >= journeyLength)
+            {
+                Debug.Log("老板娘别漂移了");
+                isMoving2 = false;
+                animator.SetTrigger("finishWalk");
+            }
+        }
         Scene otherScene = SceneManager.GetSceneByName("Player");
         flowchart = GameObject.Find("Flowchart").GetComponent<Flowchart>();
      
@@ -57,6 +94,7 @@ public class NPC_Bar : MonoBehaviour
             SceneManager.sceneLoaded += OnSceneLoadedhome;
         }
         int intbar = PlayerPrefs.GetInt("intbar");
+        Debug.Log("NPC的flag" + flag);
         if (Input.GetMouseButtonDown(1)&&flag==1&&intbar==1) // 1代表鼠标右键
         {
             PlayerPrefs.SetInt("intbar", 2);
@@ -82,8 +120,13 @@ public class NPC_Bar : MonoBehaviour
            
            if (hit.collider != null && hit.collider == gameObject.GetComponent<Collider2D>() && playerInRange == true)
             {
+
                 Canvas.SetActive(false);
                 GameObject.FindGameObjectWithTag("player").GetComponent<playerWalk>().enabled = false;
+
+                animator.SetTrigger("isWalk");//老板娘动作和位置的变化
+                MoveToPos2();
+
                 foreach (GameObject obj in otherScene.GetRootGameObjects())
                 {
                     // 找到你要激活的GameObject
@@ -91,24 +134,59 @@ public class NPC_Bar : MonoBehaviour
                     {
                         // 激活GameObject
                         obj.SetActive(true);
+                        obj.transform.GetChild(1).GetComponent<Animator>().enabled = true;
+                        StartCoroutine(UIwork(obj));
+                        StartCoroutine(ZheZhao(obj));
                         break;
                     }
                 }
             }
         }
     }
-    //这个黑屏就是跳转到下一个场景了
-  /*  IEnumerator BlackAgain()
+    public void MoveToPos2()
     {
-      *//*  for (float t = 0.0f; t < fadeOutTime; t += Time.deltaTime)
+        startTime = Time.time;
+        journeyLength = Vector3.Distance(pos1.transform.position, pos2.transform.position);
+        Debug.Log("pos1.transfrom" + pos1.transform.position.x);
+        Debug.Log("pos2.transfrom" + pos1.transform.position.x);
+        isMoving = true;
+        
+    }
+    public void MoveToPos3()
+    {
+        startTime = Time.time;
+        journeyLength = Vector3.Distance(pos2.transform.position, pos1.transform.position);
+        isMoving2 = true;
+
+    }
+    IEnumerator UIwork(GameObject obj)
+    {
+        yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length);
+        obj.transform.GetChild(1).GetComponent<Animator>().enabled = false;
+    }
+    IEnumerator ZheZhao(GameObject obj)
+    {
+        for (float t = 0.0f; t < fadeOutTime; t += Time.deltaTime)
         {
-            Color color = black.color;
+            Color color = obj.transform.GetChild(0).GetComponent<Image>().color;
             color.a = Mathf.Lerp(0.0f, 1.0f, t / fadeOutTime);
-            black.color = color;
+            obj.transform.GetChild(0).GetComponent<Image>().color = color;
             yield return null;
-        }*//*
-        yield return new WaitForSeconds(1f);
-    }*/
+        }
+       yield return new WaitForSeconds(1f);
+    }
+    //这个黑屏就是跳转到下一个场景了
+    /*  IEnumerator BlackAgain()
+      {
+        *//*  for (float t = 0.0f; t < fadeOutTime; t += Time.deltaTime)
+          {
+              Color color = black.color;
+              color.a = Mathf.Lerp(0.0f, 1.0f, t / fadeOutTime);
+              black.color = color;
+              yield return null;
+          }*//*
+          yield return new WaitForSeconds(1f);
+      }*/
     private void OnSceneLoadedhome(Scene scene, LoadSceneMode mode)
     {
         PlayerPrefs.SetInt("intKey", 1);//可以开始计时了

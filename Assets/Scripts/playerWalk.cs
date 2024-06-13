@@ -16,12 +16,13 @@ public class playerWalk : MonoBehaviour
     public GameObject equip;
     public Blood bloody;
     public int flag = 1;//判断动画是否播放完，播放完为1，为放完为0
+
+    
     void Start()
     {
         animator = GetComponent<Animator>();
         bloody = GameObject.FindGameObjectWithTag("bloody").GetComponent<Blood>();
-    }  
-
+    }
     void Update()
     {
         float horizontalInput = Input.GetAxis("Horizontal");

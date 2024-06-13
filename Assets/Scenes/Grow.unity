@@ -21492,8 +21492,9 @@ GameObject:
   - component: {fileID: 1951994781}
   - component: {fileID: 1951994780}
   - component: {fileID: 1951994782}
+  - component: {fileID: 1951994783}
   m_Layer: 0
-  m_Name: "npc_\u88C1\u7F1D\u5F1F_4"
+  m_Name: npc_littleBrother
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -21584,6 +21585,32 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!61 &1951994783
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1951994779}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.0017779395, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.33, y: 0.4}
+    newSize: {x: 0.33, y: 0.4}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.32644415, y: 0.4}
+  m_EdgeRadius: 0
 --- !u!1 &1958335837
 GameObject:
   m_ObjectHideFlags: 0

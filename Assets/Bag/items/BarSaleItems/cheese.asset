@@ -18,8 +18,8 @@ MonoBehaviour:
   growed: {fileID: 0}
   itemImage: {fileID: -3274750234354241568, guid: c1cde189186e8f54fb30b49aa5892d64, type: 3}
   itemHeld: 1
-  itemInfo: "\u4E73\u916A"
-  money: 0
+  itemInfo: "\u4E73\u916A\n\u7531\u65B0\u9C9C\u7684\u7434\u725B\u4E73\u5236\u6210\uFF0C\u8D28\u5730\u67D4\u8F6F\u7EC6\u817B\u3002\r\n"
+  money: 40
   equip: 1
   grow: 0
   quality: 0
