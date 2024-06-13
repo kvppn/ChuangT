@@ -7372,6 +7372,7 @@ MonoBehaviour:
   pos2: {fileID: 338690238}
   speed: 1.5
   animator: {fileID: 1678282225}
+  fadeOutTime: 1
 --- !u!95 &1678282225
 Animator:
   serializedVersion: 3
