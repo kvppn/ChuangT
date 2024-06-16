@@ -25,6 +25,7 @@ public class NPC_Bar : MonoBehaviour
     private bool isMoving2 = false;
     public Animator animator;
 
+
     public float fadeOutTime = 1f;//ÕÚÕÖ½¥Òþ½¥ÏÔµÄÊ±¼ä
     void Start()
     {
@@ -135,7 +136,9 @@ public class NPC_Bar : MonoBehaviour
                         // ¼¤»îGameObject
                         obj.SetActive(true);
                         obj.transform.GetChild(1).GetComponent<Animator>().enabled = true;
+                        obj.transform.GetChild(2).GetComponent<Animator>().enabled = true;
                         StartCoroutine(UIwork(obj));
+                        StartCoroutine(UIDiawork(obj));
                         StartCoroutine(ZheZhao(obj));
                         break;
                     }
@@ -161,8 +164,13 @@ public class NPC_Bar : MonoBehaviour
     }
     IEnumerator UIwork(GameObject obj)
     {
-        yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length);
+        yield return new WaitForSeconds(obj.transform.GetChild(1).GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).length-0.1f);
         obj.transform.GetChild(1).GetComponent<Animator>().enabled = false;
+    }
+    IEnumerator UIDiawork(GameObject obj)
+    {
+        yield return new WaitForSeconds(obj.transform.GetChild(2).GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).length-0.1f);
+        obj.transform.GetChild(2).GetComponent<Animator>().enabled = false;
     }
     IEnumerator ZheZhao(GameObject obj)
     {
