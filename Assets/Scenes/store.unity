@@ -133,6 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 77708226}
   - component: {fileID: 77708225}
+  - component: {fileID: 77708227}
   m_Layer: 0
   m_Name: collier_2
   m_TagString: collier
@@ -180,6 +181,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &77708227
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 77708224}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa8d54c23147bf54da2e1feb61f7b0e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  t: 
 --- !u!1 &121928146
 GameObject:
   m_ObjectHideFlags: 0
@@ -646,6 +660,7 @@ GameObject:
   m_Component:
   - component: {fileID: 202824735}
   - component: {fileID: 202824734}
+  - component: {fileID: 202824736}
   m_Layer: 0
   m_Name: collier_5
   m_TagString: collier
@@ -693,6 +708,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -26.923}
+--- !u!114 &202824736
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 202824733}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa8d54c23147bf54da2e1feb61f7b0e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  t: 
 --- !u!1 &294648754
 GameObject:
   m_ObjectHideFlags: 0
@@ -1120,6 +1148,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1070174410}
   - component: {fileID: 1070174409}
+  - component: {fileID: 1070174411}
   m_Layer: 0
   m_Name: collier_3
   m_TagString: collier
@@ -1167,6 +1196,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1070174411
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1070174408}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa8d54c23147bf54da2e1feb61f7b0e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  t: 
 --- !u!1 &1075584030
 GameObject:
   m_ObjectHideFlags: 0
@@ -3077,6 +3119,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1478880438}
   - component: {fileID: 1478880437}
+  - component: {fileID: 1478880439}
   m_Layer: 0
   m_Name: collier_1
   m_TagString: collier
@@ -3094,7 +3137,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -3.6782367, y: -0.5472455}
@@ -3124,6 +3167,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1478880439
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1478880436}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa8d54c23147bf54da2e1feb61f7b0e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  t: 111
 --- !u!1 &1584279928
 GameObject:
   m_ObjectHideFlags: 0
@@ -3890,6 +3946,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerInRange: 0
+  fadeOutTime: 1
 --- !u!1 &1948041596
 GameObject:
   m_ObjectHideFlags: 0
@@ -3900,6 +3957,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1948041598}
   - component: {fileID: 1948041597}
+  - component: {fileID: 1948041599}
   m_Layer: 0
   m_Name: collier_6
   m_TagString: collier
@@ -3947,6 +4005,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1948041599
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1948041596}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa8d54c23147bf54da2e1feb61f7b0e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  t: 
 --- !u!1 &1955042543
 GameObject:
   m_ObjectHideFlags: 0
@@ -4115,6 +4186,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1990920095}
   - component: {fileID: 1990920094}
+  - component: {fileID: 1990920096}
   m_Layer: 0
   m_Name: collier_4
   m_TagString: collier
@@ -4162,6 +4234,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1990920096
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1990920093}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa8d54c23147bf54da2e1feb61f7b0e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  t: 
 --- !u!1 &2002184974
 GameObject:
   m_ObjectHideFlags: 0
