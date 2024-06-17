@@ -11,6 +11,7 @@ public class testSelectScene : MonoBehaviour
     public Animator sleep2;
     public GameObject sleep;
     public GameObject selectScene;
+    public GameObject sleepselectScene;
     public AudioSource bar;
     public AudioSource store;
     public AudioSource grow;
@@ -49,8 +50,8 @@ public class testSelectScene : MonoBehaviour
     public void GotoSleep()
     {
         flag = 2;
-        selectScene.SetActive(false);
-        GameObject.FindGameObjectWithTag("exit").SetActive(false);
+        sleepselectScene.SetActive(false);
+        GameObject.FindGameObjectWithTag("exit2").SetActive(false);
         StartCoroutine(GOTOSLEEP());
     }
     IEnumerator GOTOSLEEP()

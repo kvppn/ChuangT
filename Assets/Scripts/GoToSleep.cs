@@ -30,12 +30,12 @@ public class GoToSleep : MonoBehaviour
                 if (obj.CompareTag("gosleep"))
                 {
                     // º§ªÓGameObject
-                    obj.SetActive(true);
+                    obj.transform.GetChild(0).gameObject.SetActive(true);
                     break;
                 }
             }
         }
-        else if (playerInRange == false)
+        /*else if (playerInRange == false)
         {
             foreach (GameObject obj in otherScene.GetRootGameObjects())
             {
@@ -45,6 +45,6 @@ public class GoToSleep : MonoBehaviour
                     break;
                 }
             }
-        }
+        }*/
     }
 }

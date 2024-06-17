@@ -47,6 +47,7 @@ TagManager:
   - exit
   - collier
   - BCanvas
+  - exit2
   layers:
   - Default
   - TransparentFX
