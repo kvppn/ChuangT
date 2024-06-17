@@ -18,8 +18,9 @@ public class ChestController : MonoBehaviour
     public string ChatNameBye;    //定义选择哪个对话block
 
     private Flowchart flowchart;
-
+    private Flowchart flowchartNext;
     public GameObject Canvas;
+    public GameObject BeignCanvas;
     public void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("player"))
@@ -36,8 +37,9 @@ public class ChestController : MonoBehaviour
         }
     }
      void Start()
-    {
+     {
         Canvas = GameObject.FindGameObjectWithTag("Canvas");
+        BeignCanvas = GameObject.FindGameObjectWithTag("BCanvas");
         if (PlayerPrefs.GetInt("ChestOpened_1", 0) == 1)
         {
             GetComponent<SpriteRenderer>().enabled = false;
@@ -61,13 +63,14 @@ public class ChestController : MonoBehaviour
     {
 
         flowchart = GameObject.Find("Flowchart").GetComponent<Flowchart>();
-
+        flowchartNext= GameObject.Find("FlowchartNext").GetComponent<Flowchart>();
 
         int intFlag = PlayerPrefs.GetInt("intFlag");
        
         if (flowchart.HasExecutingBlocks() == false && flag == 2)
         {
-            //Canvas.SetActive(true);
+            Canvas.SetActive(false);
+            BeignCanvas.SetActive(true);
             flag = 3;
         }
         if (intFlag == 1)
@@ -79,6 +82,7 @@ public class ChestController : MonoBehaviour
 
         if (flowchart.HasExecutingBlocks() == false&&lastDia==2)
         {
+            //最后的对话
             lastDia = 3;
             SceneManager.LoadScene("Bar");
             SceneManager.LoadScene("Player", LoadSceneMode.Additive);
@@ -123,11 +127,10 @@ public class ChestController : MonoBehaviour
     {
         // 等待两秒
         yield return new WaitForSeconds(2f);
-
         if (flowchart.HasBlock(ChatName))
-            {
-                flowchart.ExecuteBlock(ChatName);
-            }
+        {
+           flowchart.ExecuteBlock(ChatName);
+        }
 
     }
     public void sayLast()

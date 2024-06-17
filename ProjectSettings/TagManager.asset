@@ -46,6 +46,7 @@ TagManager:
   - soundClothes
   - exit
   - collier
+  - BCanvas
   layers:
   - Default
   - TransparentFX
