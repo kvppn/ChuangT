@@ -7,11 +7,15 @@ public class testSelectScene : MonoBehaviour
     public Animator transmit1;
     public Animator transmit2;
     public GameObject transmit;
+    public Animator sleep1;
+    public Animator sleep2;
+    public GameObject sleep;
     public GameObject selectScene;
     public AudioSource bar;
     public AudioSource store;
     public AudioSource grow;
     public AudioSource clothes;
+    public static int flag = 1;//判断是否按下睡觉的按钮，按下变成2
    // private bool isTransmitting = false;
 
     void Start()
@@ -32,7 +36,66 @@ public class testSelectScene : MonoBehaviour
         {
             clothes = GameObject.FindGameObjectWithTag("soundClothes").GetComponent<AudioSource>();
         }
-        StartCoroutine(Sound());
+        if (flag == 1)
+        {
+            StartCoroutine(Sound());
+        }
+        if (flag == 2)
+        {
+            flag = 1;
+            StartCoroutine(SLEEP());
+        }
+    }
+    public void GotoSleep()
+    {
+        flag = 2;
+        selectScene.SetActive(false);
+        GameObject.FindGameObjectWithTag("exit").SetActive(false);
+        StartCoroutine(GOTOSLEEP());
+    }
+    IEnumerator GOTOSLEEP()
+    {
+        // 播放 transmit1 动画
+        sleep1.gameObject.SetActive(true);
+        sleep1.enabled = true;
+        sleep1.Play("sleepScene_01");
+        // 等待动画播放结束
+        yield return new WaitForSeconds(sleep1.GetCurrentAnimatorStateInfo(0).length - 0.1f);
+        sleep.SetActive(true);
+        yield return new WaitForSeconds(0.1f);
+        sleep1.enabled = false;
+        sleep1.gameObject.SetActive(false);
+        // 加载 Clothes 场景
+        SceneManager.LoadScene("Bar");
+        SceneManager.LoadScene(1, LoadSceneMode.Additive);
+        SceneManager.sceneLoaded += OnSceneLoadedhomebar;
+    }
+    IEnumerator SLEEP()
+    {
+        sleep.SetActive(false);
+        sleep2.gameObject.SetActive(true);
+        sleep2.enabled = true;
+        sleep2.Play("sleepScene_02");//播放开屏动画
+        yield return new WaitForSeconds(sleep2.GetCurrentAnimatorStateInfo(0).length);
+        sleep2.gameObject.SetActive(false);
+        // 如果动画播放完成，停止动画
+        sleep2.enabled = false;
+        if (store != null)
+        {
+            store.Play();
+        }
+        if (bar != null)
+        {
+            bar.Play();
+        }
+        if (grow != null)
+        {
+            grow.Play();
+        }
+        if (clothes != null)
+        {
+            clothes.Play();
+        }
     }
     IEnumerator Sound()
     {
@@ -193,9 +256,20 @@ public class testSelectScene : MonoBehaviour
         {
             Debug.Log("0000022");
             GameObject player = GameObject.FindGameObjectWithTag("player");
-            player.transform.position = new Vector3(-4.38f, -6.16f, 0);
+            player.transform.position = new Vector3(-4.41f, -4.31f, 0);
 
             SceneManager.sceneLoaded -= OnSceneLoadedbar;
+        }
+    }
+    private void OnSceneLoadedhomebar(Scene scene, LoadSceneMode mode)
+    {
+        if (scene.buildIndex == 1)
+        {
+            Debug.Log("0000022");
+            GameObject player = GameObject.FindGameObjectWithTag("player");
+            player.transform.position = new Vector3(-2f, -0.95f, 0);
+
+            SceneManager.sceneLoaded -= OnSceneLoadedhomebar;
         }
     }
     private void OnSceneLoadedstore(Scene scene, LoadSceneMode mode)

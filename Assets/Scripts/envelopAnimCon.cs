@@ -51,7 +51,7 @@ public class envelopAnimCon : MonoBehaviour
         Dia.SetActive(true);
         yield return new WaitForSeconds(Dia.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).length - 0.1f);
         Dia.GetComponent<Animator>().enabled = false;//对话框的动画结束
-        nextButton.SetActive(true);
+        
         string sentence = "你好，我们已经收到你的信了。威德很满意你的诚恳和认真，他也好好看了你以前的设计。近日有空的话，请尽快来到店里吧。";
         TEXT.text = ""; // 清空文本
         foreach (char letter in sentence)
@@ -66,5 +66,6 @@ public class envelopAnimCon : MonoBehaviour
             NameText.text += letter; // 逐字添加到文本中
             yield return new WaitForSeconds(letterDelay); // 等待一段时间
         }
+        nextButton.SetActive(true);
     }
 }

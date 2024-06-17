@@ -7,10 +7,13 @@ public class BeginTeachTextCon : MonoBehaviour
     public Text TEXT;
 
     public float letterDelay = 0.08f;
+
+    public GameObject JiaoCheng;
     // Start is called before the first frame update
     void Start()
     {
         StartCoroutine(Dialogue());
+        StartCoroutine(JiaoChengAnim());
     }
 
     // Update is called once per frame
@@ -27,5 +30,11 @@ public class BeginTeachTextCon : MonoBehaviour
             TEXT.text += letter; // 逐字添加到文本中
             yield return new WaitForSeconds(letterDelay); // 等待一段时间
         }
+    }
+    IEnumerator JiaoChengAnim()
+    {
+        JiaoCheng.SetActive(true);
+        yield return new WaitForSeconds(JiaoCheng.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).length - 0.1f);
+        JiaoCheng.GetComponent<Animator>().enabled = false;//对话框的动画结束
     }
 }

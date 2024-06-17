@@ -12,27 +12,24 @@ public class TImeController : MonoBehaviour
  
     private void Update()
     {
-
-       /* gameTime += Time.deltaTime; // 真实时间流逝
         dayText.text = day.ToString();
-        if (gameTime >= 70f) // 一天20小时
-        {
-            blloody.sleepBlood();
-            gameTime = 0f;
-                SceneManager.LoadScene("bar");
-                SceneManager.LoadScene("Player", LoadSceneMode.Additive);
-                SceneManager.sceneLoaded += OnSceneLoadedhome;
+        /* gameTime += Time.deltaTime; // 真实时间流逝
 
-            day++;
-        }*/
+         if (gameTime >= 70f) // 一天20小时
+         {
+             blloody.sleepBlood();
+             gameTime = 0f;
+                 SceneManager.LoadScene("bar");
+                 SceneManager.LoadScene("Player", LoadSceneMode.Additive);
+                 SceneManager.sceneLoaded += OnSceneLoadedhome;
+
+             day++;
+         }*/
     }
     public void GoToSleep()
     {
         blloody.sleepBlood();
         dayText.text = day.ToString();
-        SceneManager.LoadScene("bar");
-        SceneManager.LoadScene("Player", LoadSceneMode.Additive);
-        SceneManager.sceneLoaded += OnSceneLoadedhome;
         day++;
     }
     bool IsSceneLoaded(string sceneName)
