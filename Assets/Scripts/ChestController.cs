@@ -18,7 +18,7 @@ public class ChestController : MonoBehaviour
     public string ChatNameBye;    //定义选择哪个对话block
 
     private Flowchart flowchart;
-    private Flowchart flowchartNext;
+    //private Flowchart flowchartNext;
     public GameObject Canvas;
     public GameObject BeignCanvas;
     public void OnTriggerEnter2D(Collider2D other)
@@ -39,7 +39,17 @@ public class ChestController : MonoBehaviour
      void Start()
      {
         Canvas = GameObject.FindGameObjectWithTag("Canvas");
-        BeignCanvas = GameObject.FindGameObjectWithTag("BCanvas");
+        //BeignCanvas = GameObject.FindGameObjectWithTag("BCanvas");
+        Scene otherScene = SceneManager.GetSceneByName("Player");
+        foreach (GameObject obj in otherScene.GetRootGameObjects())
+        {
+            // 找到你要激活的GameObject
+            if (obj.CompareTag("BCanvas"))
+            {
+                BeignCanvas = obj;
+                break;
+            }
+        }
         if (PlayerPrefs.GetInt("ChestOpened_1", 0) == 1)
         {
             GetComponent<SpriteRenderer>().enabled = false;
@@ -63,16 +73,16 @@ public class ChestController : MonoBehaviour
     {
 
         flowchart = GameObject.Find("Flowchart").GetComponent<Flowchart>();
-        flowchartNext= GameObject.Find("FlowchartNext").GetComponent<Flowchart>();
+        //flowchartNext= GameObject.Find("FlowchartNext").GetComponent<Flowchart>();
 
         int intFlag = PlayerPrefs.GetInt("intFlag");
        
-        if (flowchart.HasExecutingBlocks() == false && flag == 2)
+       /* if (flowchartNext.HasExecutingBlocks() == false && flag == 2)
         {
-            Canvas.SetActive(false);
+            //Canvas.SetActive(false);
             BeignCanvas.SetActive(true);
             flag = 3;
-        }
+        }*/
         if (intFlag == 1)
         {
             PlayerPrefs.SetInt("intFlag", 2);//土地教程结束
@@ -100,7 +110,7 @@ public class ChestController : MonoBehaviour
             if (hit.collider != null && hit.collider == GetComponent<Collider2D>() && playerInRange == true&&flag==1)
             {
                 Debug.Log("Canvas咋不出现");
-                Canvas.SetActive(true);
+                //Canvas.SetActive(true);
                 Debug.Log("3");
                 PlayerPrefs.SetInt("ChestOpened_1" , 1);//表示宝箱已经被打开
                 gameObject.GetComponent<SpriteRenderer>().enabled=false;
@@ -126,12 +136,19 @@ public class ChestController : MonoBehaviour
     IEnumerator ToCoroutine()
     {
         // 等待两秒
-        yield return new WaitForSeconds(2f);
-        if (flowchart.HasBlock(ChatName))
+        yield return new WaitForSeconds(1f);
+        /*if (flowchartNext.HasBlock(ChatName))
         {
-           flowchart.ExecuteBlock(ChatName);
+           flowchartNext.ExecuteBlock(ChatName);
         }
-
+*/
+        BeignCanvas.SetActive(true);
+        flag = 3;
+    }
+    public void ExitTeach()
+    {
+        Canvas.SetActive(true);
+        BeignCanvas.SetActive(false);
     }
     public void sayLast()
     {
