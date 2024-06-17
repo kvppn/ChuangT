@@ -5,18 +5,15 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 public class TImeController : MonoBehaviour
 {
-
-    public static float gameTime = 0f; // 游戏时间，单位：小时
     public static int day= 1; // 天数
     public Text dayText;
     public string sceneToCheck = "Bar";
-    public int flag = 0;
     public Blood blloody;
  
     private void Update()
     {
 
-        gameTime += Time.deltaTime; // 真实时间流逝
+       /* gameTime += Time.deltaTime; // 真实时间流逝
         dayText.text = day.ToString();
         if (gameTime >= 70f) // 一天20小时
         {
@@ -27,12 +24,11 @@ public class TImeController : MonoBehaviour
                 SceneManager.sceneLoaded += OnSceneLoadedhome;
 
             day++;
-        }
+        }*/
     }
     public void GoToSleep()
     {
         blloody.sleepBlood();
-        gameTime = 0;
         dayText.text = day.ToString();
         SceneManager.LoadScene("bar");
         SceneManager.LoadScene("Player", LoadSceneMode.Additive);

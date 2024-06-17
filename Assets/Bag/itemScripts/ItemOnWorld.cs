@@ -38,6 +38,7 @@ public class ItemOnWorld : MonoBehaviour
             Debug.Log("点击了植物" + hit.collider.gameObject.name);
             if (hit.collider != null && hit.collider ==gameObject.GetComponent<Collider2D>() && playerInRange == true)
             {
+                SoundController.instance.GETGRAIN();
                 Debug.Log("添加植物进背包");
                 string parentObjectName = transform.parent.name;//获取预制体下父物体的名字
                 PlayerPrefs.SetInt("DataInitialized" + parentObjectName, 0);

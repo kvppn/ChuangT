@@ -10,7 +10,9 @@ public class SoundController : MonoBehaviour
     public AudioClip GetGrain;
     public AudioClip GrowSeed;
     public AudioClip click;
+    public AudioClip button;
     public AudioClip moneyChange;
+    public AudioClip workOneWorking;
 
     private AudioSource audioSource;
 
@@ -32,7 +34,35 @@ public class SoundController : MonoBehaviour
     {
         audioSource = GetComponent<AudioSource>();
     }
-
     // ≤•∑≈“Ù–ß1
-    
+    public void GETGRAIN()
+    {
+        audioSource.clip = GetGrain;
+        audioSource.Play();
+    }
+    public void GrowSEED()
+    {
+        audioSource.clip = GrowSeed;
+        audioSource.Play();
+    }
+    public void CLICK()
+    {
+        audioSource.clip = click;
+        audioSource.Play();
+    }
+    public void BUTTON()
+    {
+        audioSource.clip = button;
+        audioSource.Play();
+    }
+    public void MONEYCHANGE()
+    {
+        audioSource.clip = moneyChange;
+        audioSource.Play();
+    }
+    public void WORKINGONEWORKING()
+    {
+        audioSource.clip = workOneWorking;
+        audioSource.Play();
+    }
 }

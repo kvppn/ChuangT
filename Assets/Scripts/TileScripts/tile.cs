@@ -219,6 +219,7 @@ public class tile : MonoBehaviour
                     PlayerPrefs.SetInt("StartTime" + objectIdentifier, plantStartTime);//储存开始的天数
                     //
                     isPlanted = true;
+                    SoundController.instance.GrowSEED();
                     animator.SetTrigger("isAction");
                     Instantiate(item.prefab,transform.position, Quaternion.identity).transform.parent = transform;
                     currentPlantPrefab = item.prefab; // 设置当前种植的植物预制体
@@ -273,6 +274,7 @@ public class tile : MonoBehaviour
                     plantStartTime = int.Parse(daytext.text);
                     PlayerPrefs.SetInt("StartTime" + objectIdentifier, plantStartTime);//储存开始的天数
                     isPlanted = true;
+                    SoundController.instance.GrowSEED();
                     animator.SetTrigger("isAction");
                     currentPlantPrefab = item.prefab; // 设置当前种植的植物预制体
                     growedtPlantPrefab = item.growed;//成熟状态
@@ -364,7 +366,7 @@ public class tile : MonoBehaviour
                 Debug.LogError("Failed to load plant prefab: " + plantPrefabName);
             }*/
         //}
-        if (isPlanted)
+        if (isPlanted&&isWatered)
         {
             // 实例化种植的植物预制体（如果已经种植）
             Debug.Log("我操你妈啊啊啊啊时间过去多少了" + int.Parse(daytext.text));

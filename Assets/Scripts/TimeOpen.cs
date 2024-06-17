@@ -5,7 +5,7 @@ using UnityEngine;
 public class TimeOpen : MonoBehaviour
 {
     public GameObject TimeCon;
-    public GameObject select;
+    //public GameObject select;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,7 +18,7 @@ public class TimeOpen : MonoBehaviour
         int intVal = PlayerPrefs.GetInt("intKey");
         if (intVal == 1)
         {
-            select.SetActive(true);
+            //select.SetActive(true);
             TimeCon.SetActive(true);
             //ActivateTimeCon();
         }
@@ -30,16 +30,4 @@ public class TimeOpen : MonoBehaviour
             TimeCon.SetActive(true);
         }
     }
-    // 在离开场景时保存TimeCon的激活状态
-    /*private void OnDestroy()
-    {
-        if (TimeCon.activeSelf)
-        {
-            PlayerPrefs.SetInt("TimeConActive", 1);
-        }
-        else
-        {
-            PlayerPrefs.SetInt("TimeConActive", 0);
-        }
-    }*/
 }

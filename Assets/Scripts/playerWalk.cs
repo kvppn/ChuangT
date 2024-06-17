@@ -162,7 +162,7 @@ public class playerWalk : MonoBehaviour
         {
             yield return null; // 等待动画播放完毕
         }
-        bloody.increseBlood(5);
+        bloody.increseBlood(item.money);
         flag = 1;//动画播完了
     }
     public void DescreaseTheItem(Item thisItem)

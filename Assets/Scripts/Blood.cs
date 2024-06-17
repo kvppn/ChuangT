@@ -14,6 +14,8 @@ public class Blood : MonoBehaviour
 
     public playerWalk playerSpeed;
     private int flag = 1;//判断速度是否减半了
+    public TImeController timeController;
+
     void Start()
     {
         bloodSlider = GetComponent<Slider>();
@@ -50,13 +52,14 @@ public class Blood : MonoBehaviour
         }
         else if (bloodSlider.value ==0)
         {
-            PlayerPrefs.SetInt("BloodY", 100); // 更新PlayerPrefs中的值
+            timeController.GoToSleep(); 
+          /*  PlayerPrefs.SetInt("BloodY", 100); // 更新PlayerPrefs中的值
             bloodText.text = PlayerPrefs.GetInt("BloodY", 0).ToString(); // 更新UI显示
             bloodSlider.fillRect.GetComponent<Image>().color = new Color(1,0,0,0);
             //精力条为0有个动画，之后xxxx传送到
             SceneManager.LoadScene("bar");
             SceneManager.LoadScene("Player", LoadSceneMode.Additive);
-            SceneManager.sceneLoaded += OnSceneLoadedhome;   
+            SceneManager.sceneLoaded += OnSceneLoadedhome;   */
         }
         if (bloodSlider.value < SpeedCut&&flag==1)
         {
@@ -64,7 +67,7 @@ public class Blood : MonoBehaviour
             flag = 2;
         }
     }
-    private void OnSceneLoadedhome(Scene scene, LoadSceneMode mode)
+   /* private void OnSceneLoadedhome(Scene scene, LoadSceneMode mode)
     {
         if (scene.buildIndex == 1)
         {
@@ -72,7 +75,7 @@ public class Blood : MonoBehaviour
             player.transform.position = new Vector3(-4.33f, -1.63f, 0);
             SceneManager.sceneLoaded -= OnSceneLoadedhome;
         }
-    }
+    }*/
     //血量减少的代码，储存数据
     public void decreseBlood(int amount)
     {

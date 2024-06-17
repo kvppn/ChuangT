@@ -22,19 +22,6 @@ public class workOneSlot : MonoBehaviour, IPointerClickHandler, IPointerEnterHan
     {
         craftingSystem = FindObjectOfType<CraftingSystem>();
     }
-    /*ublic void OnPointerEnter(PointerEventData eventData) { 
-       UIcontrollerr.instance_.uitextobj.position = new Vector3(Input.mousePosition.x + 60, Input.mousePosition.y - 50, 0);
-       UIcontrollerr.instance_.uitextobj.gameObject.SetActive(true); 
-       UIcontrollerr.instance_.text.text = slotItem.itemInfo;
-   } //鼠标离开 
-   public void OnPointerExit(PointerEventData eventData) { 
-       UIcontrollerr.instance_.uitextobj.gameObject.SetActive(false); 
-   } //鼠标在ui里滑动
-   public void OnPointerMove(PointerEventData eventData) { 
-      *//* UIcontrollerr.instance_.uitextobj.position = new Vector3(Input.mousePosition.x + 60, Input.mousePosition.y - 50, 0);
-       UIcontrollerr.instance_.uitextobj.gameObject.SetActive(true); 
-       UIcontrollerr.instance_.text.text = slotItem.itemInfo; *//*
-   } //结束*/
     public void OnPointerEnter(PointerEventData eventData)
     {
         Debug.Log("abs");
@@ -56,10 +43,11 @@ public class workOneSlot : MonoBehaviour, IPointerClickHandler, IPointerEnterHan
         //UIcontrollerr.instance_.text.text = this.name;
     }
     public void OnPointerClick(PointerEventData eventData) { // 点击左键
+        SoundController.instance.CLICK();
          if (eventData.button == PointerEventData.InputButton.Left && craftingSystem.CraftingExit.transform.childCount == 0) 
-        { // 调用 CraftingSystem 的 DescreaseItem 方法并传入对应的物品
-          craftingSystem.DescreaseItem(slotItem);
-        } 
+         { // 调用 CraftingSystem 的 DescreaseItem 方法并传入对应的物品
+            craftingSystem.DescreaseItem(slotItem);
+         } 
     } 
 }
                                                                                                                              //从这开始
