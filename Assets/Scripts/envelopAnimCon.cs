@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class envelopAnimCon : MonoBehaviour
 {
     public GameObject EnvelopClosed;
@@ -9,6 +9,10 @@ public class envelopAnimCon : MonoBehaviour
     public GameObject TextAnim;
     public GameObject Dia;
     public GameObject nextButton;
+    public Text TEXT;
+    public Text NameText;
+    public float letterDelay = 0.1f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -48,5 +52,19 @@ public class envelopAnimCon : MonoBehaviour
         yield return new WaitForSeconds(Dia.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).length - 0.1f);
         Dia.GetComponent<Animator>().enabled = false;//对话框的动画结束
         nextButton.SetActive(true);
+        string sentence = "你好，我们已经收到你的信了。威德很满意你的诚恳和认真，他也好好看了你以前的设计。近日有空的话，请尽快来到店里吧。";
+        TEXT.text = ""; // 清空文本
+        foreach (char letter in sentence)
+        {
+            TEXT.text += letter; // 逐字添加到文本中
+            yield return new WaitForSeconds(letterDelay); // 等待一段时间
+        }
+        NameText.text = ""; // 清空文本
+        string name = "米罗   威德";
+        foreach (char letter in name)
+        {
+            NameText.text += letter; // 逐字添加到文本中
+            yield return new WaitForSeconds(letterDelay); // 等待一段时间
+        }
     }
 }
