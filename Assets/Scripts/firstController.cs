@@ -16,7 +16,7 @@ public class firstController : MonoBehaviour
         PlayerPrefs.SetInt("intKey", 0);//这是开始计时时间的触发，初始为0
         PlayerPrefs.SetInt("intGrowFirstDia", 1);//这是为了判断刚进入荒地对话Canvas要消失
         PlayerPrefs.SetInt("intFlag", 3);
-        PlayerPrefs.SetInt("NewPlayerEnvelope", 0);//新手教程动画信封的触发，初始为0
+        PlayerPrefs.SetInt("NewPlayerEnvelope", 1);//新手教程动画信封的触发，初始为1
         for (int i = 0; i<=61;i++) {
             PlayerPrefs.SetInt("DataInitialized" + "tile_"+i.ToString(), 0);//判断耕地是否初始
             PlayerPrefs.SetInt("StartTime" + "tile_" + i.ToString(), 0);//储存开始的天数
