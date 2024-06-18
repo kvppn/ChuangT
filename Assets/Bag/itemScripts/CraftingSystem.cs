@@ -34,6 +34,12 @@ public class CraftingSystem : MonoBehaviour
     public GameObject player;
 
     private int currentIndex = 0; // 当前按钮的索引
+
+    public GameObject settleAccountAnim;
+    public GameObject person;
+    public GameObject Dia;
+    public Text TEXT;
+    public float letterDelay = 0.08f;
     private void Awake()
     {
         //if (instance != null)
@@ -63,8 +69,7 @@ public class CraftingSystem : MonoBehaviour
         // 检查动画是否播放完成
         if (animator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1)
         {
-            // 如果动画播放完成，停止动画
-            StopAnimation();
+           
         }
     }
     public void Exit()
@@ -653,7 +658,7 @@ public class CraftingSystem : MonoBehaviour
                     }
                 }
                 animator.enabled = true;//激活背景和动画
-                PlayAnimation("working_01");//播放哪个动画
+                StartCoroutine(PlayAnimation(result.money));//播放哪个动画
                 //AddNewClothesItem(result, BagManager.instance.SaleBag);//衣服放哪个背包在这可以修改，目前放售卖背包
                 //AddNewClothesItem(result, saleBag);//衣服放哪个背包在这可以修改，目前放售卖背包
             }
@@ -680,13 +685,16 @@ public class CraftingSystem : MonoBehaviour
             CraftingBag.itemList.Clear();*/
         }
     }
-    public void PlayAnimation(string animationName) 
+    IEnumerator PlayAnimation(int money) 
     {
-        animator.Play(animationName);
+        animator.Play("working_01");
+        yield return new WaitForSeconds(shiningg.GetCurrentAnimatorStateInfo(0).length);
+        // 如果动画播放完成，停止动画
+        StopAnimation(money);
     }
 
     // 停止当前正在播放的动画
-    public void StopAnimation()
+    public void StopAnimation(int money)
     {
         work2BG.SetActive(false);
         animator.enabled = false; // 禁用Animator组件以停止动画播放
@@ -694,15 +702,66 @@ public class CraftingSystem : MonoBehaviour
         player.SetActive(true);
         player.transform.position = new Vector3(9.07f, -0.64f, 0);
         animatorPlayer.SetTrigger("juqi");
-        StartCoroutine(SHINE());
+        StartCoroutine(SHINE(money));
     }
-    IEnumerator SHINE()
+    IEnumerator SHINE(int money)
     {
         shiningg.gameObject.SetActive(true);
         shiningg.Play("shining");
         yield return new WaitForSeconds(shiningg.GetCurrentAnimatorStateInfo(0).length);
         animatorPlayer.SetTrigger("bujuqi");
         shiningg.gameObject.SetActive(false);
+        //闪完星星后进入结算动画
+        settleAccountAnim.SetActive(true);
+        settleAccountAnim.GetComponent<Animator>().enabled = true;
+        yield return new WaitForSeconds(settleAccountAnim.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).length-0.1f);
+        settleAccountAnim.GetComponent<Animator>().enabled = false;
+        person.SetActive(true);
+        Dia.SetActive(true);
+        person.GetComponent<Animator>().enabled = true;
+        Dia.GetComponent<Animator>().enabled = true;
+        yield return new WaitForSeconds(Dia.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).length - 0.1f);
+        person.GetComponent<Animator>().enabled = false;
+        Dia.GetComponent<Animator>().enabled = false;
+        TEXT.text = ""; // 清空文本
+        string text = "首发结束啦——来了好多客人，大家都很【热情】~！不愧是你！";
+        foreach (char letter in text)
+        {
+            TEXT.text += letter; // 逐字添加到文本中
+            yield return new WaitForSeconds(letterDelay); // 等待一段时间
+        }
+        TEXT.text = ""; // 清空文本
+        text = "总计获得了【】金币，大家对你的评价是：【功能性很棒，喜欢这个剪裁设计，这个月买到最棒的东西】";
+        foreach (char letter in text)
+        {
+            TEXT.text += letter; // 逐字添加到文本中
+            yield return new WaitForSeconds(letterDelay); // 等待一段时间
+        }
+        //金币的数量
+        text = money.ToString();
+        foreach (char letter in text)
+        {
+            TEXT.text += letter; // 逐字添加到文本中
+            yield return new WaitForSeconds(letterDelay); // 等待一段时间
+        }
+        text = "】金币，大家对你的评价是：【功能性很棒，喜欢这个剪裁设计，这个月买到最棒的东西】";
+        foreach (char letter in text)
+        {
+            TEXT.text += letter; // 逐字添加到文本中
+            yield return new WaitForSeconds(letterDelay); // 等待一段时间
+        }
+        TEXT.text = ""; // 清空文本
+        text = "【崭露头角】了呢，继续加油哦~！";
+        foreach (char letter in text)
+        {
+            TEXT.text += letter; // 逐字添加到文本中
+            yield return new WaitForSeconds(letterDelay); // 等待一段时间
+        }
+        yield return new WaitForSeconds(1f);
+        TEXT.text = ""; // 清空文本
+        person.SetActive(false);
+        Dia.SetActive(false);
+        settleAccountAnim.SetActive(false);
     }
     public void StopAnimationShine()
     {
