@@ -262,7 +262,7 @@ public class CraftingSystem : MonoBehaviour
                 result.quality = qulityTotal / CraftingBag.itemList.Count;
                 result.itemImage = Resources.Load<Sprite>("fabric1");//临时图片
                 result.itemInfo = "赫姆棉布 百分百的赫姆棉制成的布料。";
-                AddNewItem(result, BagManager.instance.WorkTwoBag, BagManager.instance.WorkTwoBagItems);
+                StartCoroutine(WorkOneWorking(result, BagManager.instance.WorkTwoBag, BagManager.instance.WorkTwoBagItems));
 
             }
             else if (basi == 5)
@@ -273,7 +273,7 @@ public class CraftingSystem : MonoBehaviour
                 result.quality = qulityTotal / CraftingBag.itemList.Count;
                 result.itemImage = Resources.Load<Sprite>("fabric2");//临时图片
                 result.itemInfo = "巴斯棉布 百分百的巴斯棉制成的布料。";
-                AddNewItem(result, BagManager.instance.WorkTwoBag, BagManager.instance.WorkTwoBagItems);
+                StartCoroutine(WorkOneWorking(result, BagManager.instance.WorkTwoBag, BagManager.instance.WorkTwoBagItems));
 
             }
             else if (hemu == 3 && basi == 2)
@@ -284,7 +284,7 @@ public class CraftingSystem : MonoBehaviour
                 result.quality = qulityTotal / CraftingBag.itemList.Count;
                 result.itemImage = Resources.Load<Sprite>("fabric5");//临时图片
                 result.itemInfo = "混合棉布 赫姆棉与巴斯棉混纺成的布料。";
-                AddNewItem(result, BagManager.instance.WorkTwoBag, BagManager.instance.WorkTwoBagItems);
+                StartCoroutine(WorkOneWorking(result, BagManager.instance.WorkTwoBag, BagManager.instance.WorkTwoBagItems));
 
             }
             else if (zishan == 5)
@@ -295,7 +295,7 @@ public class CraftingSystem : MonoBehaviour
                 result.quality = qulityTotal / CraftingBag.itemList.Count;
                 result.itemImage = Resources.Load<Sprite>("fabric3");//临时图片
                 result.itemInfo = "紫杉麻布 百分百的紫杉麻制成的布料。";
-                AddNewItem(result, BagManager.instance.WorkTwoBag, BagManager.instance.WorkTwoBagItems);
+                StartCoroutine(WorkOneWorking(result, BagManager.instance.WorkTwoBag, BagManager.instance.WorkTwoBagItems));
 
             }
             else if (jiaoma == 5)
@@ -306,7 +306,7 @@ public class CraftingSystem : MonoBehaviour
                 result.quality = qulityTotal / CraftingBag.itemList.Count;
                 result.itemImage = Resources.Load<Sprite>("fabric4");//临时图片
                 result.itemInfo = "蕉麻布 百分百的蕉麻制成的布料。";
-                AddNewItem(result, BagManager.instance.WorkTwoBag, BagManager.instance.WorkTwoBagItems);
+                StartCoroutine(WorkOneWorking(result, BagManager.instance.WorkTwoBag, BagManager.instance.WorkTwoBagItems));
 
             }
             else if (zishan == 3 && jiaoma == 2)
@@ -317,7 +317,7 @@ public class CraftingSystem : MonoBehaviour
                 result.quality = qulityTotal / CraftingBag.itemList.Count;
                 result.itemImage = Resources.Load<Sprite>("fabric6");//临时图片
                 result.itemInfo = "混合麻布 紫杉苎麻和蕉麻混纺成的布料。";
-                AddNewItem(result, BagManager.instance.WorkTwoBag, BagManager.instance.WorkTwoBagItems);
+                StartCoroutine(WorkOneWorking(result, BagManager.instance.WorkTwoBag, BagManager.instance.WorkTwoBagItems));
 
             }
             else if (hemu == 1 && basi == 1 && zishan == 1 && jiaoma == 2)
@@ -328,7 +328,7 @@ public class CraftingSystem : MonoBehaviour
                 result.quality = qulityTotal / CraftingBag.itemList.Count;
                 result.itemImage = Resources.Load<Sprite>("fabric7");//临时图片
                 result.itemInfo = "棉麻布 棉麻混纺成的布料。";
-                AddNewItem(result, BagManager.instance.WorkTwoBag, BagManager.instance.WorkTwoBagItems);
+                StartCoroutine(WorkOneWorking(result, BagManager.instance.WorkTwoBag, BagManager.instance.WorkTwoBagItems));
 
             }
             else
@@ -395,7 +395,7 @@ public class CraftingSystem : MonoBehaviour
                 result.itemSpeciality = Item.ItemSpeciality.Dexterity;
                 result.specialityCount = 30;//特性固定，需修改在这写公式即可
                 result.itemInfo = "风织线 极其轻柔，放在手中好似不存在一般，但如果用力拉扯会发现怎样都不会断。";
-                AddNewItem(result, BagManager.instance.WorkTwoBag, BagManager.instance.WorkTwoBagItems);
+                StartCoroutine(WorkOneWorking(result, BagManager.instance.WorkTwoBag, BagManager.instance.WorkTwoBagItems));
 
             }
             else if (xingrong == 5)
@@ -408,7 +408,7 @@ public class CraftingSystem : MonoBehaviour
                 result.itemSpeciality = Item.ItemSpeciality.Shine;
                 result.specialityCount = 50;//特性固定，需修改在这写公式即可
                 result.itemInfo = "星绒线 发出淡淡的光芒，在夜晚尤其明显。";
-                AddNewItem(result, BagManager.instance.WorkTwoBag, BagManager.instance.WorkTwoBagItems);
+                StartCoroutine(WorkOneWorking(result, BagManager.instance.WorkTwoBag, BagManager.instance.WorkTwoBagItems));
 
             }
             else if (shuangjing == 3 && xingrong == 2)
@@ -680,7 +680,7 @@ public class CraftingSystem : MonoBehaviour
             CraftingBag.itemList.Clear();*/
         }
     }
-    public void PlayAnimation(string animationName)
+    public void PlayAnimation(string animationName) 
     {
         animator.Play(animationName);
     }
@@ -709,7 +709,7 @@ public class CraftingSystem : MonoBehaviour
         animatorPlayer.SetTrigger("bujuqi");
         shiningg.enabled = false;
         shiningg.gameObject.SetActive(false);
-    }
+    } 
     public void DescreaseTheItem(Item thisItem, Dictionary<string, Item> bagItems)
     {
             bagItems[thisItem.itemName].itemHeld -= 1;
@@ -783,6 +783,68 @@ public class CraftingSystem : MonoBehaviour
             Destroy(newItem.gameObject);
         });
      
+    }
+    IEnumerator WorkOneWorking(Item thisItem, bag bag, Dictionary<string, Item> bagItems = null)
+    {
+        if (currentIndex == 0)
+        {
+            transitionAnimators.Play("clothesProcess");
+            yield return new WaitForSeconds(0.2f);
+            yield return new WaitForSeconds(transitionAnimators.GetCurrentAnimatorStateInfo(0).length);
+        }
+        else if (currentIndex == 1)
+        {
+            transitionAnimators.Play("threadProcess");
+            yield return new WaitForSeconds(0.2f);
+            yield return new WaitForSeconds(transitionAnimators.GetCurrentAnimatorStateInfo(0).length);
+        }
+        else if (currentIndex == 2)
+        {
+            transitionAnimators.Play("dyeProcess");
+            yield return new WaitForSeconds(0.2f);
+            yield return new WaitForSeconds(transitionAnimators.GetCurrentAnimatorStateInfo(0).length);
+        }
+        if (bagItems != null)
+        {
+            if (bagItems.ContainsKey(thisItem.itemName))
+            {
+                bagItems[thisItem.itemName].itemHeld += thisItem.itemHeld;
+            }
+            else
+            {
+                bagItems.Add(thisItem.itemName, thisItem);
+            }
+            if (bagItems[thisItem.itemName].itemHeld <= 0)
+                bagItems.Remove(thisItem.itemName);
+        }
+
+        CraftingSlot newItem = Instantiate(craftingSlotPrefab, CraftingExit.transform.position, Quaternion.identity);
+        newItem.gameObject.transform.SetParent(CraftingExit.transform);
+        newItem.slotImage.sprite = thisItem.itemImage;
+        newItem.slotItem = thisItem;
+        newItem.slotNum.text = thisItem.itemHeld.ToString();
+
+        newItem.gameObject.AddComponent<Button>().onClick.AddListener(() => {
+            if (!bag.itemList.Contains(thisItem))
+            {
+                // Mybag.itemList.Add(thisItem);//这个物品添加到这个包里面
+                //   USE_Bag.itemList.Add(thisItem);//这个物品添加到这个包里面
+                bag.itemList.Add(thisItem);//这个物品添加到这个包里面
+                                           //BagManager.CreateNewItem(thisItem);
+            }
+            else
+            {
+                thisItem.itemHeld += 1;
+            }
+            BagManager.RefreshItem();
+            BagManager.RefreshUSEItem();
+            BagManager.RefreshSaleItem();
+            if (isWorkOne)
+                BagManager.RefreshWorkOneItemXY();
+            else
+                BagManager.RefreshWorkTwoItemXY();
+            Destroy(newItem.gameObject);
+        });
     }
     public void AddNewClothesItem(Item thisItem, bag bag, Dictionary<string, Item> bagItems = null)//XY:使用bag传参传入指定背包
     {

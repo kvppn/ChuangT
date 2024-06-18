@@ -277,4 +277,9 @@ public class BagManager : MonoBehaviour
             CreateNewSaleItem(instance.SaleBag.itemList[i]);
         }
     }
+    // 按Tab键切换到下一行显示物品
+    public static void MoveToNextRow()
+    {
+        RefreshUSEItem();
+    }
 }
