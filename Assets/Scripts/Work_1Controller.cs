@@ -40,7 +40,24 @@ public class Work_1Controller : MonoBehaviour
 
             RaycastHit2D hit = Physics2D.Raycast(mousePosition, Vector2.zero, Mathf.Infinity, layerMask);
             //Debug.Log(hit.collider.name);
-            if (hit.collider != null && hit.collider == GetComponent<Collider2D>() && playerInRange == true)
+            if (hit.collider != null && hit.collider == GetComponent<Collider2D>() && playerInRange == true && PlayerPrefs.GetInt("WorkOnE", 0) == 1)
+            {
+               
+                GameObject.FindGameObjectWithTag("player").GetComponent<playerWalk>().enabled = false;
+                foreach (GameObject obj in otherScene.GetRootGameObjects())
+                {
+                    // 找到你要激活的GameObject
+                    if (obj.CompareTag("workCraftingCanvas"))
+                    {
+                        // 激活GameObject
+                        obj.SetActive(true);
+                        obj.transform.GetChild(3).gameObject.SetActive(true);
+                        PlayerPrefs.SetInt("WorkOnE", 2);//工作台的触发，初始为1
+                        break;
+                    }
+                }
+            }
+            else if (hit.collider != null && hit.collider == GetComponent<Collider2D>() && playerInRange == true&&PlayerPrefs.GetInt("WorkOnE", 0) == 2)
             {
                 animator.Play("workOne_jiaohu");
                 GameObject.FindGameObjectWithTag("player").GetComponent<playerWalk>().enabled=false ;

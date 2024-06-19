@@ -50,7 +50,7 @@ public class Blood : MonoBehaviour
         {
             bloodSlider.fillRect.GetComponent<Image>().sprite = Resources.Load<Sprite>("redd");
         }
-        else if (bloodSlider.value ==0)
+        else if (bloodSlider.value <=0)
         {
             timeController.GoToSleep(); 
           /*  PlayerPrefs.SetInt("BloodY", 100); // 更新PlayerPrefs中的值

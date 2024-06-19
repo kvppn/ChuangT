@@ -35,16 +35,16 @@ public class GoToSleep : MonoBehaviour
                 }
             }
         }
-        /*else if (playerInRange == false)
+        else if (playerInRange == false)
         {
             foreach (GameObject obj in otherScene.GetRootGameObjects())
             {
                 if (obj.CompareTag("gosleep"))
                 {
-                    obj.SetActive(false);
+                    obj.transform.GetChild(0).gameObject.SetActive(false);
                     break;
                 }
             }
-        }*/
+        }
     }
 }

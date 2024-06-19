@@ -43,6 +43,8 @@ public class CraftingSystem : MonoBehaviour
     public Text TEXT;
     public float letterDelay = 0.08f;
     public int money=0;
+
+    public MoneyController moneyController;
     private void Awake()
     {
         //if (instance != null)
@@ -281,7 +283,7 @@ public class CraftingSystem : MonoBehaviour
                 result.quality = qulityTotal / CraftingBag.itemList.Count;
                 result.itemImage = Resources.Load<Sprite>("fabric2");//临时图片
                 result.itemInfo = "巴斯棉布 百分百的巴斯棉制成的布料。";
-                AddNewItem(result, BagManager.instance.WorkTwoBag, BagManager.instance.WorkTwoBagItems);
+                StartCoroutine(WorkOneWorking(result, BagManager.instance.WorkTwoBag, BagManager.instance.WorkTwoBagItems));
 
             }
             else if (hemu == 3 && basi == 2)
@@ -416,7 +418,7 @@ public class CraftingSystem : MonoBehaviour
                 result.itemSpeciality = Item.ItemSpeciality.Shine;
                 result.specialityCount = 50;//特性固定，需修改在这写公式即可
                 result.itemInfo = "星绒线 发出淡淡的光芒，在夜晚尤其明显。";
-                AddNewItem(result, BagManager.instance.WorkTwoBag, BagManager.instance.WorkTwoBagItems);
+                StartCoroutine(WorkOneWorking(result, BagManager.instance.WorkTwoBag, BagManager.instance.WorkTwoBagItems));
 
             }
             else if (shuangjing == 3 && xingrong == 2)
@@ -800,6 +802,7 @@ public class CraftingSystem : MonoBehaviour
         yield return new WaitForSeconds(Dia.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).length - 0.1f);
         person.GetComponent<Animator>().enabled = false;
         Dia.GetComponent<Animator>().enabled = false;
+        
         TEXT.text = ""; // 清空文本
         string text = "首发结束啦——来了好多客人，大家都很【热情】~！不愧是你！";
         foreach (char letter in text)
@@ -842,7 +845,12 @@ public class CraftingSystem : MonoBehaviour
         Dia.SetActive(false);
         settleAccountAnim.SetActive(false);
         yield return new WaitForSeconds(0.5f);
+          //金钱获得
+        moneyController.IncreaseMoney(money);
+        SoundController.instance.MONEYCHANGE();
+        yield return new WaitForSeconds(1f);
         GameObject.FindGameObjectWithTag("workTwoCanvas").GetComponent<Canvas>().enabled = true;
+  
     }
     public void StopAnimationShine()
     {
@@ -930,23 +938,32 @@ public class CraftingSystem : MonoBehaviour
         if (currentIndex == 0)
         {
             Debug.Log("clothesProcess");
+            SoundController.instance.WORKINGONEWORKING();
+            SoundController.instance.gameObject.GetComponent<AudioSource>().loop = true;
             transitionAnimators.Play("clothesProcess");
             yield return new WaitForSeconds(0.2f);
             yield return new WaitForSeconds(transitionAnimators.GetCurrentAnimatorStateInfo(0).length);
+            SoundController.instance.StopWorkingSound();
         }
         else if (currentIndex == 1)
         {
             Debug.Log("threadProcess");
+            SoundController.instance.WORKINGONEWORKING();
+            SoundController.instance.gameObject.GetComponent<AudioSource>().loop = true;
             transitionAnimators.Play("threadProcess");
             yield return new WaitForSeconds(0.2f);
             yield return new WaitForSeconds(transitionAnimators.GetCurrentAnimatorStateInfo(0).length);
+            SoundController.instance.StopWorkingSound();
         }
         else if (currentIndex == 2)
         {
             Debug.Log("dyeProcess");
+            SoundController.instance.WORKINGONEWORKING();
+            SoundController.instance.gameObject.GetComponent<AudioSource>().loop = true;
             transitionAnimators.Play("dyeProcess");
             yield return new WaitForSeconds(0.2f);
             yield return new WaitForSeconds(transitionAnimators.GetCurrentAnimatorStateInfo(0).length);
+            SoundController.instance.StopWorkingSound();
         }
         if (bagItems != null)
         {

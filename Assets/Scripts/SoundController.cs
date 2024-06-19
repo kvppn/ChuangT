@@ -13,6 +13,7 @@ public class SoundController : MonoBehaviour
     public AudioClip button;
     public AudioClip moneyChange;
     public AudioClip workOneWorking;
+    public AudioClip envelop;
 
     private AudioSource audioSource;
 
@@ -64,5 +65,14 @@ public class SoundController : MonoBehaviour
     {
         audioSource.clip = workOneWorking;
         audioSource.Play();
+    }
+    public void ENVELOP()
+    {
+        audioSource.clip = envelop;
+        audioSource.Play();
+    }
+    public void StopWorkingSound()
+    {
+        audioSource.Stop();
     }
 }

@@ -61,17 +61,17 @@ public class testSelectScene : MonoBehaviour
         sleep1.enabled = true;
         sleep1.Play("sleepScene_01");
         // 等待动画播放结束
-        yield return new WaitForSeconds(sleep1.GetCurrentAnimatorStateInfo(0).length - 0.1f);
-        sleep.SetActive(true);
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(sleep1.GetCurrentAnimatorStateInfo(0).length-0.1f);
         sleep1.enabled = false;
         sleep1.gameObject.SetActive(false);
+        sleep.SetActive(true);
+        yield return new WaitForSeconds(0.1f);
         // 加载 Clothes 场景
         SceneManager.LoadScene("Bar");
         SceneManager.LoadScene(1, LoadSceneMode.Additive);
         SceneManager.sceneLoaded += OnSceneLoadedhomebar;
     }
-    IEnumerator SLEEP()
+     public IEnumerator SLEEP()
     {
         sleep.SetActive(false);
         sleep2.gameObject.SetActive(true);
@@ -278,7 +278,7 @@ public class testSelectScene : MonoBehaviour
         if (scene.buildIndex == 1)
         {
             GameObject player = GameObject.FindGameObjectWithTag("player");
-            player.transform.position = new Vector3(3.08f, -4.34f, 0);
+            player.transform.position = new Vector3(2.94f, -3.78f, 0);
 
             SceneManager.sceneLoaded -= OnSceneLoadedbar;
         }

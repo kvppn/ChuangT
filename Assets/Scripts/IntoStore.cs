@@ -37,7 +37,7 @@ public class IntoStore : MonoBehaviour
         {
             Debug.Log("1");
             Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            int layerMask = 1 << LayerMask.NameToLayer("Default");
+            int layerMask = 1 << LayerMask.NameToLayer("other");
 
             RaycastHit2D hit = Physics2D.Raycast(mousePosition, Vector2.zero, Mathf.Infinity, layerMask);
 

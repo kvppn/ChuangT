@@ -12,6 +12,7 @@ public class BeginTeachTextCon : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        GameObject.FindGameObjectWithTag("player").GetComponent<playerWalk>().enabled = false;
         StartCoroutine(Dialogue());
         StartCoroutine(JiaoChengAnim());
     }
@@ -36,5 +37,9 @@ public class BeginTeachTextCon : MonoBehaviour
         JiaoCheng.SetActive(true);
         yield return new WaitForSeconds(JiaoCheng.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).length - 0.1f);
         JiaoCheng.GetComponent<Animator>().enabled = false;//对话框的动画结束
+    }
+    public void PlayerActive()
+    {
+        GameObject.FindGameObjectWithTag("player").GetComponent<playerWalk>().enabled = true;
     }
 }

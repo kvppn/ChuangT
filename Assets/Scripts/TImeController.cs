@@ -9,7 +9,8 @@ public class TImeController : MonoBehaviour
     public Text dayText;
     public string sceneToCheck = "Bar";
     public Blood blloody;
- 
+
+    public testSelectScene selectscene;
     private void Update()
     {
         dayText.text = day.ToString();
@@ -31,6 +32,7 @@ public class TImeController : MonoBehaviour
         blloody.sleepBlood();
         dayText.text = day.ToString();
         day++;
+        selectscene.GotoSleep();
     }
     bool IsSceneLoaded(string sceneName)
     {

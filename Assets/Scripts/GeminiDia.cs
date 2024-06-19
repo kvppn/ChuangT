@@ -7,6 +7,7 @@ public class GeminiDia : MonoBehaviour
 {
     public string ChatName;    //定义选择哪个对话block
     public string ChatNameAgain;    //定义选择哪个对话block
+ 
     //当前是否可以对话
     public bool playerInRange = false;//主角是否在npc的碰撞范围内
 
@@ -91,6 +92,7 @@ public class GeminiDia : MonoBehaviour
                 
                 SayAgain();
             }
+           
         }
     }
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
@@ -119,4 +121,5 @@ public class GeminiDia : MonoBehaviour
             flag = 3;
         }
     }
+   
 }

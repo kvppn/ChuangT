@@ -17,7 +17,7 @@ public class firstController : MonoBehaviour
         PlayerPrefs.SetInt("intGrowFirstDia", 1);//这是为了判断刚进入荒地对话Canvas要消失
         PlayerPrefs.SetInt("intFlag", 3);
         PlayerPrefs.SetInt("NewPlayerEnvelope", 1);//新手教程动画信封的触发，初始为1
-        PlayerPrefs.SetInt("WorkOne", 1);//工作台的触发，初始为1
+        PlayerPrefs.SetInt("WorkOnE", 1);//工作台的触发，初始为1
         PlayerPrefs.SetInt("WorkTwo", 1);//工作台的触发，初始为1
         for (int i = 0; i<=61;i++) {
             PlayerPrefs.SetInt("DataInitialized" + "tile_"+i.ToString(), 0);//判断耕地是否初始

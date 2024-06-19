@@ -38,7 +38,32 @@ public class work2Controller : MonoBehaviour
 
             RaycastHit2D hit = Physics2D.Raycast(mousePosition, Vector2.zero, Mathf.Infinity, layerMask);
 
-            if (hit.collider != null && hit.collider == GetComponent<Collider2D>() && playerInRange == true)
+            if (hit.collider != null && hit.collider == GetComponent<Collider2D>() && playerInRange == true&& PlayerPrefs.GetInt("WorkTwo", 0) == 1)
+            {
+
+                GameObject.FindGameObjectWithTag("player").GetComponent<playerWalk>().enabled = false;
+                GameObject Camera = GameObject.FindGameObjectWithTag("camera");
+                Camera.GetComponent<CinemachineVirtualCamera>().m_Lens.OrthographicSize = 5.3f;
+                CinemachineVirtualCamera virtualCamera = Camera.GetComponent<CinemachineVirtualCamera>();
+                // 获取当前的Follow组件
+                CinemachineTransposer transposer = virtualCamera.GetCinemachineComponent<CinemachineTransposer>();
+                // 修改follow offset
+                transposer.m_FollowOffset = new Vector3(-0.51f, -1.04f, -10);
+                foreach (GameObject obj in otherScene.GetRootGameObjects())
+                {
+                    // 找到你要激活的GameObject
+                    if (obj.CompareTag("workTwoCanvas"))
+                    {
+                        // 激活GameObject
+                        obj.SetActive(true);
+                        obj.transform.GetChild(2).gameObject.SetActive(true);
+                        PlayerPrefs.SetInt("WorkTwo", 2);//工作台的触发，初始为1
+
+                        break;
+                    }
+                }
+            }
+            else if (hit.collider != null && hit.collider == GetComponent<Collider2D>() && playerInRange == true&&PlayerPrefs.GetInt("WorkTwo", 0) == 2)
             {
 
                 GameObject.FindGameObjectWithTag("player").GetComponent<playerWalk>().enabled = false;

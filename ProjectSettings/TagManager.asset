@@ -48,6 +48,7 @@ TagManager:
   - collier
   - BCanvas
   - exit2
+  - ChangeScene
   layers:
   - Default
   - TransparentFX
