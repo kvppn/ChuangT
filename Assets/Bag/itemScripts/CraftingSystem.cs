@@ -33,7 +33,7 @@ public class CraftingSystem : MonoBehaviour
     public Animator animatorPlayer;//主角的动画
     public GameObject player;
 
-    private int currentIndex = 0; // 当前按钮的索引
+    public int currentIndex = 0; // 当前按钮的索引
 
     public GameObject settleAccountAnim;
     public GameObject person;
@@ -426,7 +426,7 @@ public class CraftingSystem : MonoBehaviour
                 result.itemSpeciality = Item.ItemSpeciality.Ice;
                 result.specialityCount = 30;//特性固定，需修改在这写公式即可
                 result.itemInfo = "霜晶莲线 握在手中冰冰凉凉，晶莹剔透。";
-                AddNewItem(result, BagManager.instance.WorkTwoBag, BagManager.instance.WorkTwoBagItems);
+                StartCoroutine(WorkOneWorking(result, BagManager.instance.WorkTwoBag, BagManager.instance.WorkTwoBagItems));
 
             }
             else if (chilin == 3&& xingrong==2)
@@ -439,7 +439,7 @@ public class CraftingSystem : MonoBehaviour
                 result.itemSpeciality = Item.ItemSpeciality.Fire;
                 result.specialityCount = 30;//特性固定，需修改在这写公式即可
                 result.itemInfo = "炽鳞线 质感硬硬的，温度比一般的线要高不少，就像在燃烧一样。";
-                AddNewItem(result, BagManager.instance.WorkTwoBag, BagManager.instance.WorkTwoBagItems);
+                StartCoroutine(WorkOneWorking(result, BagManager.instance.WorkTwoBag, BagManager.instance.WorkTwoBagItems));
 
             }
         
@@ -510,7 +510,7 @@ public class CraftingSystem : MonoBehaviour
                 result.itemColor = Item.ItemColor.Red;
                 result.fashion = 25;
                 result.itemInfo = "红色染剂 能够将衣物染成红色。";
-                AddNewItem(result, BagManager.instance.WorkTwoBag, BagManager.instance.WorkTwoBagItems);
+                StartCoroutine(WorkOneWorking(result, BagManager.instance.WorkTwoBag, BagManager.instance.WorkTwoBagItems));
 
             }
             else if (diedou == 5)
@@ -523,7 +523,7 @@ public class CraftingSystem : MonoBehaviour
                 result.itemColor = Item.ItemColor.Bule;
                 result.fashion = 30;
                 result.itemInfo = "蓝色染剂 能够将衣物染成蓝色。";
-                AddNewItem(result, BagManager.instance.WorkTwoBag, BagManager.instance.WorkTwoBagItems);
+                StartCoroutine(WorkOneWorking(result, BagManager.instance.WorkTwoBag, BagManager.instance.WorkTwoBagItems));
 
             }
             else if (huluo ==5)
@@ -536,7 +536,7 @@ public class CraftingSystem : MonoBehaviour
                 result.itemColor = Item.ItemColor.Yellow;
                 result.fashion = 20;
                 result.itemInfo = "黄色染剂 能够将衣物染成黄色。";
-                AddNewItem(result, BagManager.instance.WorkTwoBag, BagManager.instance.WorkTwoBagItems);
+                StartCoroutine(WorkOneWorking(result, BagManager.instance.WorkTwoBag, BagManager.instance.WorkTwoBagItems));
 
             }
             else if (lingtan == 5)
@@ -549,7 +549,7 @@ public class CraftingSystem : MonoBehaviour
                 result.itemColor = Item.ItemColor.Black;
                 result.fashion = 40;
                 result.itemInfo = "黑色染剂 能够将衣物染成黑色。";
-                AddNewItem(result, BagManager.instance.WorkTwoBag, BagManager.instance.WorkTwoBagItems);
+                StartCoroutine(WorkOneWorking(result, BagManager.instance.WorkTwoBag, BagManager.instance.WorkTwoBagItems));
 
             }
             else if (caifu == 5)
@@ -562,7 +562,7 @@ public class CraftingSystem : MonoBehaviour
                 result.itemColor = Item.ItemColor.Colors;
                 result.fashion = 60;
                 result.itemInfo = "炫彩染剂 能够将衣物染成彩色。";
-                AddNewItem(result, BagManager.instance.WorkTwoBag, BagManager.instance.WorkTwoBagItems);
+                StartCoroutine(WorkOneWorking(result, BagManager.instance.WorkTwoBag, BagManager.instance.WorkTwoBagItems));
 
             }
           
@@ -688,7 +688,7 @@ public class CraftingSystem : MonoBehaviour
     IEnumerator PlayAnimation(int money) 
     {
         animator.Play("working_01");
-        yield return new WaitForSeconds(shiningg.GetCurrentAnimatorStateInfo(0).length);
+        yield return new WaitForSeconds(shiningg.GetCurrentAnimatorStateInfo(0).length-0.1f);
         // 如果动画播放完成，停止动画
         StopAnimation(money);
     }
@@ -845,20 +845,24 @@ public class CraftingSystem : MonoBehaviour
     }
     IEnumerator WorkOneWorking(Item thisItem, bag bag, Dictionary<string, Item> bagItems = null)
     {
+        Debug.Log("currentinDex=" + currentIndex);
         if (currentIndex == 0)
         {
+            Debug.Log("clothesProcess");
             transitionAnimators.Play("clothesProcess");
             yield return new WaitForSeconds(0.2f);
             yield return new WaitForSeconds(transitionAnimators.GetCurrentAnimatorStateInfo(0).length);
         }
         else if (currentIndex == 1)
         {
+            Debug.Log("threadProcess");
             transitionAnimators.Play("threadProcess");
             yield return new WaitForSeconds(0.2f);
             yield return new WaitForSeconds(transitionAnimators.GetCurrentAnimatorStateInfo(0).length);
         }
         else if (currentIndex == 2)
         {
+            Debug.Log("dyeProcess");
             transitionAnimators.Play("dyeProcess");
             yield return new WaitForSeconds(0.2f);
             yield return new WaitForSeconds(transitionAnimators.GetCurrentAnimatorStateInfo(0).length);

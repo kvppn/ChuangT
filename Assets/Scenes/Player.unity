@@ -3399,6 +3399,7 @@ MonoBehaviour:
   shiningg: {fileID: 1108942689}
   animatorPlayer: {fileID: 0}
   player: {fileID: 0}
+  currentIndex: 0
   settleAccountAnim: {fileID: 0}
   person: {fileID: 0}
   Dia: {fileID: 0}
@@ -29440,6 +29441,7 @@ MonoBehaviour:
   shiningg: {fileID: 1108942689}
   animatorPlayer: {fileID: 761539425}
   player: {fileID: 761539424}
+  currentIndex: 0
   settleAccountAnim: {fileID: 2074141862}
   person: {fileID: 1652854049}
   Dia: {fileID: 1041517442}
@@ -35841,7 +35843,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: e6abecbca4c57e743ae12895def095c3, type: 3}
+  m_Sprite: {fileID: 21300000, guid: cda5341c32d4b2f46b55900670704249, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
