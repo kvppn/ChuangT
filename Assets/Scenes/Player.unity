@@ -3399,12 +3399,14 @@ MonoBehaviour:
   shiningg: {fileID: 1108942689}
   animatorPlayer: {fileID: 0}
   player: {fileID: 0}
+  flag: 1
   currentIndex: 0
   settleAccountAnim: {fileID: 0}
   person: {fileID: 0}
   Dia: {fileID: 0}
   TEXT: {fileID: 0}
   letterDelay: 0.08
+  money: 0
 --- !u!1 &121458634
 GameObject:
   m_ObjectHideFlags: 0
@@ -29441,12 +29443,14 @@ MonoBehaviour:
   shiningg: {fileID: 1108942689}
   animatorPlayer: {fileID: 761539425}
   player: {fileID: 761539424}
+  flag: 1
   currentIndex: 0
   settleAccountAnim: {fileID: 2074141862}
   person: {fileID: 1652854049}
   Dia: {fileID: 1041517442}
   TEXT: {fileID: 1350206029}
   letterDelay: 0.08
+  money: 0
 --- !u!114 &1222883709
 MonoBehaviour:
   m_ObjectHideFlags: 0

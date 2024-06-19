@@ -33,6 +33,8 @@ public class CraftingSystem : MonoBehaviour
     public Animator animatorPlayer;//主角的动画
     public GameObject player;
 
+    public int flag=1;//判断制衣动画是否执行
+
     public int currentIndex = 0; // 当前按钮的索引
 
     public GameObject settleAccountAnim;
@@ -40,6 +42,7 @@ public class CraftingSystem : MonoBehaviour
     public GameObject Dia;
     public Text TEXT;
     public float letterDelay = 0.08f;
+    public int money=0;
     private void Awake()
     {
         //if (instance != null)
@@ -65,11 +68,11 @@ public class CraftingSystem : MonoBehaviour
      void Update()
     {
         animator = GameObject.FindGameObjectWithTag("workinganimitor").GetComponent<Animator>();
-        
+
         // 检查动画是否播放完成
         if (animator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1)
         {
-           
+            StopAnimation(money);
         }
     }
     public void Exit()
@@ -278,7 +281,7 @@ public class CraftingSystem : MonoBehaviour
                 result.quality = qulityTotal / CraftingBag.itemList.Count;
                 result.itemImage = Resources.Load<Sprite>("fabric2");//临时图片
                 result.itemInfo = "巴斯棉布 百分百的巴斯棉制成的布料。";
-                StartCoroutine(WorkOneWorking(result, BagManager.instance.WorkTwoBag, BagManager.instance.WorkTwoBagItems));
+                AddNewItem(result, BagManager.instance.WorkTwoBag, BagManager.instance.WorkTwoBagItems);
 
             }
             else if (hemu == 3 && basi == 2)
@@ -413,7 +416,7 @@ public class CraftingSystem : MonoBehaviour
                 result.itemSpeciality = Item.ItemSpeciality.Shine;
                 result.specialityCount = 50;//特性固定，需修改在这写公式即可
                 result.itemInfo = "星绒线 发出淡淡的光芒，在夜晚尤其明显。";
-                StartCoroutine(WorkOneWorking(result, BagManager.instance.WorkTwoBag, BagManager.instance.WorkTwoBagItems));
+                AddNewItem(result, BagManager.instance.WorkTwoBag, BagManager.instance.WorkTwoBagItems);
 
             }
             else if (shuangjing == 3 && xingrong == 2)
@@ -657,8 +660,10 @@ public class CraftingSystem : MonoBehaviour
                         break;
                     }
                 }
+                money = result.money;
                 animator.enabled = true;//激活背景和动画
-                StartCoroutine(PlayAnimation(result.money));//播放哪个动画
+                animator.Play("working_01");
+                //StartCoroutine(PlayAnimation(result.money));//播放哪个动画
                 //AddNewClothesItem(result, BagManager.instance.SaleBag);//衣服放哪个背包在这可以修改，目前放售卖背包
                 //AddNewClothesItem(result, saleBag);//衣服放哪个背包在这可以修改，目前放售卖背包
             }
@@ -685,27 +690,26 @@ public class CraftingSystem : MonoBehaviour
             CraftingBag.itemList.Clear();*/
         }
     }
-    IEnumerator PlayAnimation(int money) 
+    IEnumerator PlayAnimation(int money)
     {
-        animator.Play("working_01");
-        yield return new WaitForSeconds(shiningg.GetCurrentAnimatorStateInfo(0).length-0.1f);
-        // 如果动画播放完成，停止动画
-        StopAnimation(money);
-    }
+        animator.enabled = true;//激活背景和动画
+        //animator.Play("working_01");
+        //yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length); // 等待动画播放完成
+        // 如果动画播放完成，停止动画 // 等待动画播放完成
+        while (animator.GetCurrentAnimatorStateInfo(0).normalizedTime < 1.0f)
+        {
+            yield return null;
+        }
 
-    // 停止当前正在播放的动画
-    public void StopAnimation(int money)
-    {
         work2BG.SetActive(false);
         animator.enabled = false; // 禁用Animator组件以停止动画播放
         CraftingPanel.SetActive(true);
         player.SetActive(true);
         player.transform.position = new Vector3(9.07f, -0.64f, 0);
         animatorPlayer.SetTrigger("juqi");
-        StartCoroutine(SHINE(money));
-    }
-    IEnumerator SHINE(int money)
-    {
+
+        //StartCoroutine(SHINE(money));
+
         shiningg.gameObject.SetActive(true);
         shiningg.Play("shining");
         yield return new WaitForSeconds(shiningg.GetCurrentAnimatorStateInfo(0).length);
@@ -714,7 +718,7 @@ public class CraftingSystem : MonoBehaviour
         //闪完星星后进入结算动画
         settleAccountAnim.SetActive(true);
         settleAccountAnim.GetComponent<Animator>().enabled = true;
-        yield return new WaitForSeconds(settleAccountAnim.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).length-0.1f);
+        yield return new WaitForSeconds(settleAccountAnim.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).length - 0.1f);
         settleAccountAnim.GetComponent<Animator>().enabled = false;
         person.SetActive(true);
         Dia.SetActive(true);
@@ -762,6 +766,83 @@ public class CraftingSystem : MonoBehaviour
         person.SetActive(false);
         Dia.SetActive(false);
         settleAccountAnim.SetActive(false);
+    }
+
+    // 停止当前正在播放的动画
+    public void StopAnimation(int money)
+    {
+        work2BG.SetActive(false);
+        animator.enabled = false; // 禁用Animator组件以停止动画播放
+        CraftingPanel.SetActive(true);
+        player.SetActive(true);
+        player.transform.position = new Vector3(9.07f, -0.64f, 0);
+        animatorPlayer.SetTrigger("juqi");
+        StartCoroutine(SHINE(money));
+    }
+    IEnumerator SHINE(int money)
+    {
+        shiningg.gameObject.SetActive(true);
+        shiningg.Play("shining");
+        yield return new WaitForSeconds(shiningg.GetCurrentAnimatorStateInfo(0).length);
+        animatorPlayer.SetTrigger("bujuqi");
+        shiningg.gameObject.SetActive(false);
+        yield return new WaitForSeconds(2f);
+        //闪完星星后进入结算动画
+        GameObject.FindGameObjectWithTag("workTwoCanvas").GetComponent<Canvas>().enabled=false;
+        settleAccountAnim.SetActive(true);
+        settleAccountAnim.GetComponent<Animator>().enabled = true;
+        yield return new WaitForSeconds(settleAccountAnim.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).length-0.1f);
+        settleAccountAnim.GetComponent<Animator>().enabled = false;
+        person.SetActive(true);
+        Dia.SetActive(true);
+        person.GetComponent<Animator>().enabled = true;
+        Dia.GetComponent<Animator>().enabled = true;
+        yield return new WaitForSeconds(Dia.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).length - 0.1f);
+        person.GetComponent<Animator>().enabled = false;
+        Dia.GetComponent<Animator>().enabled = false;
+        TEXT.text = ""; // 清空文本
+        string text = "首发结束啦——来了好多客人，大家都很【热情】~！不愧是你！";
+        foreach (char letter in text)
+        {
+            TEXT.text += letter; // 逐字添加到文本中
+            yield return new WaitForSeconds(letterDelay); // 等待一段时间
+        }
+        yield return new WaitForSeconds(1f);
+        TEXT.text = ""; // 清空文本
+        text = "总计获得了【";
+        foreach (char letter in text)
+        {
+            TEXT.text += letter; // 逐字添加到文本中
+            yield return new WaitForSeconds(letterDelay); // 等待一段时间
+        }
+        //金币的数量
+        text = money.ToString();
+        foreach (char letter in text)
+        {
+            TEXT.text += letter; // 逐字添加到文本中
+            yield return new WaitForSeconds(letterDelay); // 等待一段时间
+        }
+        text = "】金币，大家对你的评价是：【功能性很棒，喜欢这个剪裁设计，这个月买到最棒的东西】";
+        foreach (char letter in text)
+        {
+            TEXT.text += letter; // 逐字添加到文本中
+            yield return new WaitForSeconds(letterDelay); // 等待一段时间
+        }
+        yield return new WaitForSeconds(1f);
+        TEXT.text = ""; // 清空文本
+        text = "【崭露头角】了呢，继续加油哦~！";
+        foreach (char letter in text)
+        {
+            TEXT.text += letter; // 逐字添加到文本中
+            yield return new WaitForSeconds(letterDelay); // 等待一段时间
+        }
+        yield return new WaitForSeconds(1f);
+        TEXT.text = ""; // 清空文本
+        person.SetActive(false);
+        Dia.SetActive(false);
+        settleAccountAnim.SetActive(false);
+        yield return new WaitForSeconds(0.5f);
+        GameObject.FindGameObjectWithTag("workTwoCanvas").GetComponent<Canvas>().enabled = true;
     }
     public void StopAnimationShine()
     {
