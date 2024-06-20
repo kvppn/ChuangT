@@ -57,7 +57,7 @@ public class BagManager : MonoBehaviour
         {
             if (bagItems.ContainsKey(bag.itemList[i].itemName))
             {
-                bagItems[bag.itemList[i].itemName].itemHeld += bag.itemList[i].itemHeld;
+                //bagItems[bag.itemList[i].itemName].itemHeld += 1;
             }
             else
             {
@@ -140,7 +140,7 @@ public class BagManager : MonoBehaviour
         newItem.gameObject.AddComponent<Button>().onClick.AddListener(() => {
             if (bagItems.ContainsKey(item.itemName))
             {
-                bagItems[item.itemName].itemHeld += 1;
+                //bagItems[item.itemName].itemHeld += 1;
             }
             else
             {

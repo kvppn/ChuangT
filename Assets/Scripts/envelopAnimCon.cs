@@ -9,6 +9,7 @@ public class envelopAnimCon : MonoBehaviour
     public GameObject TextAnim;
     public GameObject Dia;
     public GameObject nextButton;
+    public GameObject nextButton1;
     public Text TEXT;
     public Text NameText;
     public float letterDelay = 0.1f;
@@ -67,5 +68,6 @@ public class envelopAnimCon : MonoBehaviour
             yield return new WaitForSeconds(letterDelay); // 等待一段时间
         }
         nextButton.SetActive(true);
+        nextButton.SetActive(false);
     }
 }

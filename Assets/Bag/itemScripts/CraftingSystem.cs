@@ -886,7 +886,7 @@ public class CraftingSystem : MonoBehaviour
         else
             BagManager.RefreshWorkTwoItemXY();
     }
-    public void AddNewItem(Item thisItem,bag bag, Dictionary<string, Item> bagItems=null)//XY:使用bag传参传入指定背包
+    /*public void AddNewItem(Item thisItem,bag bag, Dictionary<string, Item> bagItems=null)//XY:使用bag传参传入指定背包
     {
        
         if (bagItems != null)
@@ -931,45 +931,52 @@ public class CraftingSystem : MonoBehaviour
             Destroy(newItem.gameObject);
         });
      
-    }
+    }*/
     IEnumerator WorkOneWorking(Item thisItem, bag bag, Dictionary<string, Item> bagItems = null)
     {
+
         Debug.Log("currentinDex=" + currentIndex);
         if (currentIndex == 0)
         {
             Debug.Log("clothesProcess");
+            yield return new WaitForSeconds(0.2f);
             SoundController.instance.WORKINGONEWORKING();
             SoundController.instance.gameObject.GetComponent<AudioSource>().loop = true;
             transitionAnimators.Play("clothesProcess");
             yield return new WaitForSeconds(0.2f);
             yield return new WaitForSeconds(transitionAnimators.GetCurrentAnimatorStateInfo(0).length);
+            SoundController.instance.gameObject.GetComponent<AudioSource>().loop = false;
             SoundController.instance.StopWorkingSound();
         }
         else if (currentIndex == 1)
         {
             Debug.Log("threadProcess");
+            yield return new WaitForSeconds(0.2f);
             SoundController.instance.WORKINGONEWORKING();
             SoundController.instance.gameObject.GetComponent<AudioSource>().loop = true;
             transitionAnimators.Play("threadProcess");
             yield return new WaitForSeconds(0.2f);
             yield return new WaitForSeconds(transitionAnimators.GetCurrentAnimatorStateInfo(0).length);
+            SoundController.instance.gameObject.GetComponent<AudioSource>().loop = false;
             SoundController.instance.StopWorkingSound();
         }
         else if (currentIndex == 2)
         {
             Debug.Log("dyeProcess");
+            yield return new WaitForSeconds(0.2f);
             SoundController.instance.WORKINGONEWORKING();
             SoundController.instance.gameObject.GetComponent<AudioSource>().loop = true;
             transitionAnimators.Play("dyeProcess");
             yield return new WaitForSeconds(0.2f);
             yield return new WaitForSeconds(transitionAnimators.GetCurrentAnimatorStateInfo(0).length);
+            SoundController.instance.gameObject.GetComponent<AudioSource>().loop = false;
             SoundController.instance.StopWorkingSound();
         }
         if (bagItems != null)
         {
             if (bagItems.ContainsKey(thisItem.itemName))
             {
-                bagItems[thisItem.itemName].itemHeld += thisItem.itemHeld;
+                //bagItems[thisItem.itemName].itemHeld += 1;
             }
             else
             {
@@ -1014,7 +1021,7 @@ public class CraftingSystem : MonoBehaviour
         {
             if (bagItems.ContainsKey(thisItem.itemName))
             {
-                bagItems[thisItem.itemName].itemHeld += thisItem.itemHeld;
+                //bagItems[thisItem.itemName].itemHeld +=1;
             }
             else
             {
