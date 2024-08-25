@@ -54,6 +54,12 @@ public class testSelectScene : MonoBehaviour
         GameObject.FindGameObjectWithTag("exit2").SetActive(false);
         StartCoroutine(GOTOSLEEP());
     }
+    public void BloodGotoSleep()
+    {
+        flag = 2;
+        sleepselectScene.SetActive(false);
+        StartCoroutine(GOTOSLEEP());
+    }
     IEnumerator GOTOSLEEP()
     {
         // ²¥·Å transmit1 ¶¯»­
@@ -257,7 +263,7 @@ public class testSelectScene : MonoBehaviour
         {
             Debug.Log("0000022");
             GameObject player = GameObject.FindGameObjectWithTag("player");
-            player.transform.position = new Vector3(-4.41f, -4.31f, 0);
+            player.transform.position = new Vector3(-4.29f, -3.93f, 0);
 
             SceneManager.sceneLoaded -= OnSceneLoadedbar;
         }

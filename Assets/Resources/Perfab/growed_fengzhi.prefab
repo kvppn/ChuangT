@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: -2977267526595833031}
   - component: {fileID: 7569544161545533560}
   - component: {fileID: 3689867985389986323}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: growed_fengzhi
   m_TagString: Untagged
   m_Icon: {fileID: 0}

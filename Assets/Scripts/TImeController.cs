@@ -29,10 +29,10 @@ public class TImeController : MonoBehaviour
     }
     public void GoToSleep()
     {
-        blloody.sleepBlood();
+        //blloody.sleepBlood();
         dayText.text = day.ToString();
         day++;
-        selectscene.GotoSleep();
+        selectscene.BloodGotoSleep();
     }
     bool IsSceneLoaded(string sceneName)
     {

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: -3937926044977570936}
   - component: {fileID: -6352519842666564304}
   - component: {fileID: 6860315083572408769}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: growed_zishan
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7009259549603442812}
   - component: {fileID: -7033711142467024516}
   - component: {fileID: -773774920747572089}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: growed_jiaoma
   m_TagString: Untagged
   m_Icon: {fileID: 0}

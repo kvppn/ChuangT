@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: -4048763136213871481}
   - component: {fileID: 7259813538135320033}
   - component: {fileID: -5381517125535285293}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: growed_carrot
   m_TagString: Untagged
   m_Icon: {fileID: 0}

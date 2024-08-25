@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 590917914430023193}
   - component: {fileID: -5170043793189940402}
   - component: {fileID: 6816883580090392463}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: growed_hemu
   m_TagString: Untagged
   m_Icon: {fileID: 0}

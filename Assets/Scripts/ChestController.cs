@@ -120,13 +120,13 @@ public class ChestController : MonoBehaviour
                     Debug.Log("233333");
                     Mybag.itemList.Add(thisItem);//这个物品添加到这个包里面
                     USE_Bag.itemList.Add(thisItem);//这个物品添加到这个包里面
-                    WorkOneBag.itemList.Add(thisItem);//这个物品添加到这个包里面
+                  
                     //BagManager.CreateNewItem(thisItem);
 
                 }
                 BagManager.RefreshItem();
                 BagManager.RefreshUSEItem();
-                BagManager.RefreshWorkOneItem();
+               
 
                 StartCoroutine(ToCoroutine());
                 flag = 2;

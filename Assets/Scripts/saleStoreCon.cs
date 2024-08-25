@@ -87,7 +87,7 @@ public class saleStoreCon : MonoBehaviour
             {
                 Mybag.itemList.Add(thisItem1);//这个物品添加到这个包里面
                 USE_Bag.itemList.Add(thisItem1);//这个物品添加到这个包里面
-                WorkOneBag.itemList.Add(thisItem1);//这个物品添加到这个包里面
+               
             }
             else
             {
@@ -95,7 +95,7 @@ public class saleStoreCon : MonoBehaviour
             }
             BagManager.RefreshItem();
             BagManager.RefreshUSEItem();
-            BagManager.RefreshWorkOneItem();
+        
         }
         else
         {
@@ -112,8 +112,7 @@ public class saleStoreCon : MonoBehaviour
             {
                 Mybag.itemList.Add(thisItem2);//这个物品添加到这个包里面
                 USE_Bag.itemList.Add(thisItem2);//这个物品添加到这个包里面
-                WorkOneBag.itemList.Add(thisItem2);//这个物品添加到这个包里面
-                                                   //BagManager.CreateNewItem(thisItem);
+               
             }
             else
             {
@@ -121,7 +120,7 @@ public class saleStoreCon : MonoBehaviour
             }
             BagManager.RefreshItem();
             BagManager.RefreshUSEItem();
-            BagManager.RefreshWorkOneItem();
+            
         }
         else
         {
@@ -137,7 +136,7 @@ public class saleStoreCon : MonoBehaviour
             {
                 Mybag.itemList.Add(thisItem3);//这个物品添加到这个包里面
                 USE_Bag.itemList.Add(thisItem3);//这个物品添加到这个包里面
-                WorkOneBag.itemList.Add(thisItem3);//这个物品添加到这个包里面
+               
             }
             else
             {
@@ -145,7 +144,7 @@ public class saleStoreCon : MonoBehaviour
             }
             BagManager.RefreshItem();
             BagManager.RefreshUSEItem();
-            BagManager.RefreshWorkOneItem();
+         
         }
         else
         {
@@ -161,7 +160,7 @@ public class saleStoreCon : MonoBehaviour
             {
                 Mybag.itemList.Add(thisItem4);//这个物品添加到这个包里面
                 USE_Bag.itemList.Add(thisItem4);//这个物品添加到这个包里面
-                WorkOneBag.itemList.Add(thisItem4);//这个物品添加到这个包里面
+               
             }
             else
             {
@@ -169,7 +168,7 @@ public class saleStoreCon : MonoBehaviour
             }
             BagManager.RefreshItem();
             BagManager.RefreshUSEItem();
-            BagManager.RefreshWorkOneItem();
+          
         }
         else
         {
@@ -185,7 +184,7 @@ public class saleStoreCon : MonoBehaviour
             {
                 Mybag.itemList.Add(thisItem5);//这个物品添加到这个包里面
                 USE_Bag.itemList.Add(thisItem5);//这个物品添加到这个包里面
-                WorkOneBag.itemList.Add(thisItem5);//这个物品添加到这个包里面
+              
             }
             else
             {
@@ -193,7 +192,7 @@ public class saleStoreCon : MonoBehaviour
             }
             BagManager.RefreshItem();
             BagManager.RefreshUSEItem();
-            BagManager.RefreshWorkOneItem();
+        
         }
         else
         {
@@ -209,7 +208,7 @@ public class saleStoreCon : MonoBehaviour
             {
                 Mybag.itemList.Add(thisItem6);//这个物品添加到这个包里面
                 USE_Bag.itemList.Add(thisItem6);//这个物品添加到这个包里面
-                WorkOneBag.itemList.Add(thisItem6);//这个物品添加到这个包里面
+              
             }
             else
             {
@@ -217,7 +216,7 @@ public class saleStoreCon : MonoBehaviour
             }
             BagManager.RefreshItem();
             BagManager.RefreshUSEItem();
-            BagManager.RefreshWorkOneItem();
+          
         }
         else
         {
@@ -233,7 +232,7 @@ public class saleStoreCon : MonoBehaviour
             {
                 Mybag.itemList.Add(thisItem7);//这个物品添加到这个包里面
                 USE_Bag.itemList.Add(thisItem7);//这个物品添加到这个包里面
-                WorkOneBag.itemList.Add(thisItem7);//这个物品添加到这个包里面
+               
             }
             else
             {
@@ -241,7 +240,7 @@ public class saleStoreCon : MonoBehaviour
             }
             BagManager.RefreshItem();
             BagManager.RefreshUSEItem();
-            BagManager.RefreshWorkOneItem();
+           
         }
         else
         {
@@ -257,7 +256,7 @@ public class saleStoreCon : MonoBehaviour
             {
                 Mybag.itemList.Add(thisItem8);//这个物品添加到这个包里面
                 USE_Bag.itemList.Add(thisItem8);//这个物品添加到这个包里面
-                WorkOneBag.itemList.Add(thisItem8);//这个物品添加到这个包里面
+              
             }
             else
             {
@@ -265,7 +264,7 @@ public class saleStoreCon : MonoBehaviour
             }
             BagManager.RefreshItem();
             BagManager.RefreshUSEItem();
-            BagManager.RefreshWorkOneItem();
+           
         }
         else
         {
@@ -281,7 +280,7 @@ public class saleStoreCon : MonoBehaviour
             {
                 Mybag.itemList.Add(thisItem9);//这个物品添加到这个包里面
                 USE_Bag.itemList.Add(thisItem9);//这个物品添加到这个包里面
-                WorkOneBag.itemList.Add(thisItem9);//这个物品添加到这个包里面
+              
             }
             else
             {
@@ -289,7 +288,7 @@ public class saleStoreCon : MonoBehaviour
             }
             BagManager.RefreshItem();
             BagManager.RefreshUSEItem();
-            BagManager.RefreshWorkOneItem();
+          
         }
         else
         {
@@ -305,7 +304,7 @@ public class saleStoreCon : MonoBehaviour
             {
                 Mybag.itemList.Add(thisItem10);//这个物品添加到这个包里面
                 USE_Bag.itemList.Add(thisItem10);//这个物品添加到这个包里面
-                WorkOneBag.itemList.Add(thisItem10);//这个物品添加到这个包里面
+                
             }
             else
             {
@@ -313,7 +312,7 @@ public class saleStoreCon : MonoBehaviour
             }
             BagManager.RefreshItem();
             BagManager.RefreshUSEItem();
-            BagManager.RefreshWorkOneItem();
+           
         }
         else
         {
@@ -329,7 +328,7 @@ public class saleStoreCon : MonoBehaviour
             {
                 Mybag.itemList.Add(thisItem11);//这个物品添加到这个包里面
                 USE_Bag.itemList.Add(thisItem11);//这个物品添加到这个包里面
-                WorkOneBag.itemList.Add(thisItem11);//这个物品添加到这个包里面
+             
             }
             else
             {
@@ -337,7 +336,7 @@ public class saleStoreCon : MonoBehaviour
             }
             BagManager.RefreshItem();
             BagManager.RefreshUSEItem();
-            BagManager.RefreshWorkOneItem();
+          
         }
         else
         {
@@ -352,7 +351,7 @@ public class saleStoreCon : MonoBehaviour
             if (!Mybag.itemList.Contains(thisItem12))
             {
                 Mybag.itemList.Add(thisItem12);//这个物品添加到这个包里面
-                USE_Bag.itemList.Add(thisItem12);//这个物品添加到这个包里面
+               
                 WorkOneBag.itemList.Add(thisItem12);//这个物品添加到这个包里面
             }
             else
@@ -360,8 +359,7 @@ public class saleStoreCon : MonoBehaviour
                 thisItem12.itemHeld += 1;
             }
             BagManager.RefreshItem();
-            BagManager.RefreshUSEItem();
-            BagManager.RefreshWorkOneItem();
+            BagManager.RefreshWorkOneItemXY();
         }
         else
         {
@@ -376,7 +374,7 @@ public class saleStoreCon : MonoBehaviour
             if (!Mybag.itemList.Contains(thisItem13))
             {
                 Mybag.itemList.Add(thisItem13);//这个物品添加到这个包里面
-                USE_Bag.itemList.Add(thisItem13);//这个物品添加到这个包里面
+               
                 WorkOneBag.itemList.Add(thisItem13);//这个物品添加到这个包里面
             }
             else
@@ -384,8 +382,7 @@ public class saleStoreCon : MonoBehaviour
                 thisItem13.itemHeld += 1;
             }
             BagManager.RefreshItem();
-            BagManager.RefreshUSEItem();
-            BagManager.RefreshWorkOneItem();
+            BagManager.RefreshWorkOneItemXY();
         }
         else
         {
@@ -399,17 +396,13 @@ public class saleStoreCon : MonoBehaviour
             moneyController.ChangeMoney(int.Parse(Money_14.text));
             if (!Mybag.itemList.Contains(thisItem14))
             {
-                Mybag.itemList.Add(thisItem14);//这个物品添加到这个包里面
-                USE_Bag.itemList.Add(thisItem14);//这个物品添加到这个包里面
-                WorkOneBag.itemList.Add(thisItem14);//这个物品添加到这个包里面
+                WorkTwoBag.itemList.Add(thisItem14);//这个物品添加到这个包里面
             }
             else
             {
                 thisItem14.itemHeld += 1;
             }
-            BagManager.RefreshItem();
-            BagManager.RefreshUSEItem();
-            BagManager.RefreshWorkOneItem();
+            BagManager.RefreshWorkTwoItemXY();
         }
         else
         {
@@ -423,17 +416,15 @@ public class saleStoreCon : MonoBehaviour
             moneyController.ChangeMoney(int.Parse(Money_15.text));
             if (!Mybag.itemList.Contains(thisItem15))
             {
-                Mybag.itemList.Add(thisItem15);//这个物品添加到这个包里面
-                USE_Bag.itemList.Add(thisItem15);//这个物品添加到这个包里面
+               
                 WorkOneBag.itemList.Add(thisItem15);//这个物品添加到这个包里面
             }
             else
             {
                 thisItem15.itemHeld += 1;
             }
-            BagManager.RefreshItem();
-            BagManager.RefreshUSEItem();
-            BagManager.RefreshWorkOneItem();
+           
+            BagManager.RefreshWorkTwoItemXY();
         }
         else
         {
@@ -447,17 +438,14 @@ public class saleStoreCon : MonoBehaviour
             moneyController.ChangeMoney(int.Parse(Money_16.text));
             if (!Mybag.itemList.Contains(thisItem16))
             {
-                Mybag.itemList.Add(thisItem16);//这个物品添加到这个包里面
-                USE_Bag.itemList.Add(thisItem16);//这个物品添加到这个包里面
-                WorkOneBag.itemList.Add(thisItem16);//这个物品添加到这个包里面
+               
+                WorkTwoBag.itemList.Add(thisItem16);//这个物品添加到这个包里面
             }
             else
             {
                 thisItem16.itemHeld += 1;
             }
-            BagManager.RefreshItem();
-            BagManager.RefreshUSEItem();
-            BagManager.RefreshWorkOneItem();
+            BagManager.RefreshWorkTwoItemXY();
         }
         else
         {
@@ -471,17 +459,14 @@ public class saleStoreCon : MonoBehaviour
             moneyController.ChangeMoney(int.Parse(Money_17.text));
             if (!Mybag.itemList.Contains(thisItem17))
             {
-                Mybag.itemList.Add(thisItem17);//这个物品添加到这个包里面
-                USE_Bag.itemList.Add(thisItem17);//这个物品添加到这个包里面
-                WorkOneBag.itemList.Add(thisItem17);//这个物品添加到这个包里面
+              
+                WorkTwoBag.itemList.Add(thisItem17);//这个物品添加到这个包里面
             }
             else
             {
                 thisItem17.itemHeld += 1;
             }
-            BagManager.RefreshItem();
-            BagManager.RefreshUSEItem();
-            BagManager.RefreshWorkOneItem();
+            BagManager.RefreshWorkTwoItemXY();
         }
         else
         {
@@ -495,17 +480,14 @@ public class saleStoreCon : MonoBehaviour
             moneyController.ChangeMoney(int.Parse(Money_18.text));
             if (!Mybag.itemList.Contains(thisItem18))
             {
-                Mybag.itemList.Add(thisItem18);//这个物品添加到这个包里面
-                USE_Bag.itemList.Add(thisItem18);//这个物品添加到这个包里面
-                WorkOneBag.itemList.Add(thisItem18);//这个物品添加到这个包里面
+        
+                WorkTwoBag.itemList.Add(thisItem18);//这个物品添加到这个包里面
             }
             else
             {
                 thisItem18.itemHeld += 1;
             }
-            BagManager.RefreshItem();
-            BagManager.RefreshUSEItem();
-            BagManager.RefreshWorkOneItem();
+            BagManager.RefreshWorkTwoItemXY();
         }
         else
         {
@@ -519,17 +501,14 @@ public class saleStoreCon : MonoBehaviour
             moneyController.ChangeMoney(int.Parse(Money_19.text));
             if (!Mybag.itemList.Contains(thisItem19))
             {
-                Mybag.itemList.Add(thisItem19);//这个物品添加到这个包里面
-                USE_Bag.itemList.Add(thisItem19);//这个物品添加到这个包里面
-                WorkOneBag.itemList.Add(thisItem19);//这个物品添加到这个包里面
+            
+                WorkTwoBag.itemList.Add(thisItem19);//这个物品添加到这个包里面
             }
             else
             {
                 thisItem19.itemHeld += 1;
             }
-            BagManager.RefreshItem();
-            BagManager.RefreshUSEItem();
-            BagManager.RefreshWorkOneItem();
+            BagManager.RefreshWorkTwoItemXY();
         }
         else
         {
@@ -543,17 +522,15 @@ public class saleStoreCon : MonoBehaviour
             moneyController.ChangeMoney(int.Parse(Money_20.text));
             if (!Mybag.itemList.Contains(thisItem20))
             {
-                Mybag.itemList.Add(thisItem20);//这个物品添加到这个包里面
-                USE_Bag.itemList.Add(thisItem20);//这个物品添加到这个包里面
-                WorkOneBag.itemList.Add(thisItem20);//这个物品添加到这个包里面
+                
+                WorkTwoBag.itemList.Add(thisItem20);//这个物品添加到这个包里面
             }
             else
             {
                 thisItem20.itemHeld += 1;
             }
-            BagManager.RefreshItem();
-            BagManager.RefreshUSEItem();
-            BagManager.RefreshWorkOneItem();
+
+            BagManager.RefreshWorkTwoItemXY();
         }
         else
         {
@@ -567,17 +544,14 @@ public class saleStoreCon : MonoBehaviour
             moneyController.ChangeMoney(int.Parse(Money_21.text));
             if (!Mybag.itemList.Contains(thisItem21))
             {
-                Mybag.itemList.Add(thisItem21);//这个物品添加到这个包里面
-                USE_Bag.itemList.Add(thisItem21);//这个物品添加到这个包里面
-                WorkOneBag.itemList.Add(thisItem21);//这个物品添加到这个包里面
+         
+                WorkTwoBag.itemList.Add(thisItem21);//这个物品添加到这个包里面
             }
             else
             {
                 thisItem21.itemHeld += 1;
             }
-            BagManager.RefreshItem();
-            BagManager.RefreshUSEItem();
-            BagManager.RefreshWorkOneItem();
+            BagManager.RefreshWorkTwoItemXY();
         }
         else
         {
@@ -591,17 +565,14 @@ public class saleStoreCon : MonoBehaviour
             moneyController.ChangeMoney(int.Parse(Money_22.text));
             if (!Mybag.itemList.Contains(thisItem22))
             {
-                Mybag.itemList.Add(thisItem22);//这个物品添加到这个包里面
-                USE_Bag.itemList.Add(thisItem22);//这个物品添加到这个包里面
-                WorkOneBag.itemList.Add(thisItem22);//这个物品添加到这个包里面
+               
+                WorkTwoBag.itemList.Add(thisItem22);//这个物品添加到这个包里面
             }
             else
             {
                 thisItem22.itemHeld += 1;
             }
-            BagManager.RefreshItem();
-            BagManager.RefreshUSEItem();
-            BagManager.RefreshWorkOneItem();
+            BagManager.RefreshWorkTwoItemXY();
         }
         else
         {
@@ -615,17 +586,14 @@ public class saleStoreCon : MonoBehaviour
             moneyController.ChangeMoney(int.Parse(Money_23.text));
             if (!Mybag.itemList.Contains(thisItem23))
             {
-                Mybag.itemList.Add(thisItem23);//这个物品添加到这个包里面
-                USE_Bag.itemList.Add(thisItem23);//这个物品添加到这个包里面
-                WorkOneBag.itemList.Add(thisItem23);//这个物品添加到这个包里面
+               
+                WorkTwoBag.itemList.Add(thisItem23);//这个物品添加到这个包里面
             }
             else
             {
                 thisItem23.itemHeld += 1;
             }
-            BagManager.RefreshItem();
-            BagManager.RefreshUSEItem();
-            BagManager.RefreshWorkOneItem();
+            BagManager.RefreshWorkTwoItemXY();
         }
         else
         {

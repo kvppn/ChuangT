@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1183344565632281958}
   - component: {fileID: -2727869541765812344}
   - component: {fileID: -373739607709602138}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: growed_xingrong
   m_TagString: Untagged
   m_Icon: {fileID: 0}

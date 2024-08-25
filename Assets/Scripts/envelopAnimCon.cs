@@ -68,6 +68,6 @@ public class envelopAnimCon : MonoBehaviour
             yield return new WaitForSeconds(letterDelay); // 等待一段时间
         }
         nextButton.SetActive(true);
-        nextButton.SetActive(false);
+        nextButton1.SetActive(true);
     }
 }

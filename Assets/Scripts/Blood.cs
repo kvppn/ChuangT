@@ -52,7 +52,7 @@ public class Blood : MonoBehaviour
         }
         else if (bloodSlider.value <=0)
         {
-            timeController.GoToSleep(); 
+            //timeController.GoToSleep(); 
           /*  PlayerPrefs.SetInt("BloodY", 100); // 更新PlayerPrefs中的值
             bloodText.text = PlayerPrefs.GetInt("BloodY", 0).ToString(); // 更新UI显示
             bloodSlider.fillRect.GetComponent<Image>().color = new Color(1,0,0,0);
@@ -81,8 +81,17 @@ public class Blood : MonoBehaviour
     {
         int blood;
         blood = int.Parse(bloodText.text);
-        blood -= amount;
-        PlayerPrefs.SetInt("BloodY", blood); // 更新PlayerPrefs中的值
+        if (blood - amount <= 0)
+        {
+            blood = 100;
+            PlayerPrefs.SetInt("BloodY", blood); // 更新PlayerPrefs中的值
+            timeController.GoToSleep();
+        }
+        else
+        {
+            blood -= amount;
+            PlayerPrefs.SetInt("BloodY", blood); // 更新PlayerPrefs中的值
+        }
         bloodText.text = blood.ToString(); // 更新UI显示
     }
     public void increseBlood(int amount)
@@ -101,9 +110,5 @@ public class Blood : MonoBehaviour
         }
         bloodText.text = blood.ToString(); // 更新UI显示
     }
-    public void sleepBlood()
-    {
-        PlayerPrefs.SetInt("BloodY", 100); // 更新PlayerPrefs中的值
-        bloodText.text = PlayerPrefs.GetInt("BloodY",0).ToString(); // 更新UI显示
-    }
+  
 }

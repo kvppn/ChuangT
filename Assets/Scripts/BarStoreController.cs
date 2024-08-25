@@ -73,7 +73,7 @@ public class BarStoreController : MonoBehaviour
             {
                 Mybag.itemList.Add(thisItem1);//这个物品添加到这个包里面
                 USE_Bag.itemList.Add(thisItem1);//这个物品添加到这个包里面
-                WorkOneBag.itemList.Add(thisItem1);//这个物品添加到这个包里面
+             
             }
             else
             {
@@ -81,7 +81,7 @@ public class BarStoreController : MonoBehaviour
             }
             BagManager.RefreshItem();
             BagManager.RefreshUSEItem();
-            BagManager.RefreshWorkOneItem();
+          
         }
         else
         {
@@ -98,7 +98,7 @@ public class BarStoreController : MonoBehaviour
             {
                 Mybag.itemList.Add(thisItem2);//这个物品添加到这个包里面
                 USE_Bag.itemList.Add(thisItem2);//这个物品添加到这个包里面
-                WorkOneBag.itemList.Add(thisItem2);//这个物品添加到这个包里面
+              
 
             }
             else
@@ -107,7 +107,7 @@ public class BarStoreController : MonoBehaviour
             }
             BagManager.RefreshItem();
             BagManager.RefreshUSEItem();
-            BagManager.RefreshWorkOneItem();
+           
         }
         else
         {
@@ -123,7 +123,6 @@ public class BarStoreController : MonoBehaviour
             {
                 Mybag.itemList.Add(thisItem3);//这个物品添加到这个包里面
                 USE_Bag.itemList.Add(thisItem3);//这个物品添加到这个包里面
-                WorkOneBag.itemList.Add(thisItem3);//这个物品添加到这个包里面
             }
             else
             {
@@ -131,7 +130,7 @@ public class BarStoreController : MonoBehaviour
             }
             BagManager.RefreshItem();
             BagManager.RefreshUSEItem();
-            BagManager.RefreshWorkOneItem();
+          
         }
         else
         {
@@ -147,7 +146,7 @@ public class BarStoreController : MonoBehaviour
             {
                 Mybag.itemList.Add(thisItem4);//这个物品添加到这个包里面
                 USE_Bag.itemList.Add(thisItem4);//这个物品添加到这个包里面
-                WorkOneBag.itemList.Add(thisItem4);//这个物品添加到这个包里面
+             
             }
             else
             {
@@ -155,7 +154,7 @@ public class BarStoreController : MonoBehaviour
             }
             BagManager.RefreshItem();
             BagManager.RefreshUSEItem();
-            BagManager.RefreshWorkOneItem();
+         
         }
         else
         {
@@ -171,7 +170,7 @@ public class BarStoreController : MonoBehaviour
             {
                 Mybag.itemList.Add(thisItem5);//这个物品添加到这个包里面
                 USE_Bag.itemList.Add(thisItem5);//这个物品添加到这个包里面
-                WorkOneBag.itemList.Add(thisItem5);//这个物品添加到这个包里面
+              
             }
             else
             {
@@ -179,7 +178,7 @@ public class BarStoreController : MonoBehaviour
             }
             BagManager.RefreshItem();
             BagManager.RefreshUSEItem();
-            BagManager.RefreshWorkOneItem();
+          
         }
         else
         {

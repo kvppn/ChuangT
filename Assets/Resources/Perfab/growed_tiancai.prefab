@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: -1346163771611605867}
   - component: {fileID: -611286295665114136}
   - component: {fileID: 2116388434545038222}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: growed_tiancai
   m_TagString: Untagged
   m_Icon: {fileID: 0}

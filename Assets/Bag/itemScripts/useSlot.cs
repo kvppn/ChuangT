@@ -12,15 +12,11 @@ public class useSlot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler,
     private bool isPointerOverSlot = false;
     private void Update()
     {
-        // 检查鼠标是否在 useslot 上
-        if (!isPointerOverSlot)
-        {
-            UIcontrollerr.instance_.HideInfo();
-        }
+       
     }
     public void OnPointerEnter(PointerEventData eventData)
     {
-        isPointerOverSlot = true;
+      
         UIcontrollerr.instance_.uitextobj.position = new Vector3(Input.mousePosition.x + 60, Input.mousePosition.y - 100, 0);
         UIcontrollerr.instance_.SetInfo(slotItem.itemInfo);
         UIcontrollerr.instance_.text.text = slotItem.itemInfo;
@@ -28,7 +24,7 @@ public class useSlot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler,
     //鼠标离开
     public void OnPointerExit(PointerEventData eventData)
     {
-        isPointerOverSlot = false;
+      
         //UIcontrollerr.instance_.uitextobj.gameObject.SetActive(false);
         UIcontrollerr.instance_.HideInfo();
     }

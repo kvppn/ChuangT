@@ -140,7 +140,7 @@ public class BagManager : MonoBehaviour
         newItem.gameObject.AddComponent<Button>().onClick.AddListener(() => {
             if (bagItems.ContainsKey(item.itemName))
             {
-                //bagItems[item.itemName].itemHeld += 1;
+               bagItems[item.itemName].itemHeld += 1;
             }
             else
             {

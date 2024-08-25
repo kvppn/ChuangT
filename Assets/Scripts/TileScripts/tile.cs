@@ -199,7 +199,7 @@ public class tile : MonoBehaviour
         if (!isPlowed)
         {
             // 耕种
-            bloody.decreseBlood(5);
+            bloody.decreseBlood(1);
             isPlowed = true;
             animator.SetTrigger("isAction");
             GetComponent<SpriteRenderer>().sprite = powedSprite;
@@ -213,7 +213,7 @@ public class tile : MonoBehaviour
                 //如果没有种植则种植
                 if (item.grow == true)
                 {
-                    bloody.decreseBlood(5);
+                    bloody.decreseBlood(1);
                     //计算种植时间
                     plantStartTime = int.Parse(daytext.text);
                     PlayerPrefs.SetInt("StartTime" + objectIdentifier, plantStartTime);//储存开始的天数
@@ -237,7 +237,7 @@ public class tile : MonoBehaviour
             }
             else
             {
-                bloody.decreseBlood(5);
+                bloody.decreseBlood(1);
                 //如果种植了，则浇水
                 isWatered = true;
                 animator.SetTrigger("isAction");
@@ -254,7 +254,7 @@ public class tile : MonoBehaviour
         string objectIdentifier = gameObject.name;
         if (!isPlowed)
         {
-            bloody.decreseBlood(5);
+            bloody.decreseBlood(1);
             // 耕种
             isPlowed = true;
             animator.SetTrigger("isAction");
@@ -269,7 +269,7 @@ public class tile : MonoBehaviour
                 //如果没有种植则种植
                 if (item.grow == true)
                 {
-                    bloody.decreseBlood(5);
+                    bloody.decreseBlood(1);
                     //计算种植时间
                     plantStartTime = int.Parse(daytext.text);
                     PlayerPrefs.SetInt("StartTime" + objectIdentifier, plantStartTime);//储存开始的天数
@@ -291,7 +291,7 @@ public class tile : MonoBehaviour
             }
             else if(isPlanted&&!isWatered)
             {
-                bloody.decreseBlood(5);
+                bloody.decreseBlood(1);
                 //如果种植了，则浇水
                 isWatered = true;
                 animator.SetTrigger("isAction");

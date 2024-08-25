@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: -3131612684553414642}
   - component: {fileID: 8441230334255098887}
   - component: {fileID: 8729972898805854063}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: growed_chiling
   m_TagString: Untagged
   m_Icon: {fileID: 0}

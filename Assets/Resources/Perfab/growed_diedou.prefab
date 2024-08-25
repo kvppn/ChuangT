@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 165434508631714386}
   - component: {fileID: -3738745061674442407}
   - component: {fileID: -91575313431165722}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: growed_diedou
   m_TagString: Untagged
   m_Icon: {fileID: 0}

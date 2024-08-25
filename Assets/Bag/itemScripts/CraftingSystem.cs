@@ -271,7 +271,7 @@ public class CraftingSystem : MonoBehaviour
                 result.itemType = Item.ItemType.Fabric;
                 result.quality = qulityTotal / CraftingBag.itemList.Count;
                 result.itemImage = Resources.Load<Sprite>("fabric1");//临时图片
-                result.itemInfo = "赫姆棉布 百分百的赫姆棉制成的布料。";
+                result.itemInfo = "赫姆棉布\n百分百的赫姆棉制成的布料。";
                 StartCoroutine(WorkOneWorking(result, BagManager.instance.WorkTwoBag, BagManager.instance.WorkTwoBagItems));
 
             }
@@ -282,7 +282,7 @@ public class CraftingSystem : MonoBehaviour
                 result.itemType = Item.ItemType.Fabric;
                 result.quality = qulityTotal / CraftingBag.itemList.Count;
                 result.itemImage = Resources.Load<Sprite>("fabric2");//临时图片
-                result.itemInfo = "巴斯棉布 百分百的巴斯棉制成的布料。";
+                result.itemInfo = "巴斯棉布\n百分百的巴斯棉制成的布料。";
                 StartCoroutine(WorkOneWorking(result, BagManager.instance.WorkTwoBag, BagManager.instance.WorkTwoBagItems));
 
             }
@@ -293,7 +293,7 @@ public class CraftingSystem : MonoBehaviour
                 result.itemType = Item.ItemType.Fabric;
                 result.quality = qulityTotal / CraftingBag.itemList.Count;
                 result.itemImage = Resources.Load<Sprite>("fabric5");//临时图片
-                result.itemInfo = "混合棉布 赫姆棉与巴斯棉混纺成的布料。";
+                result.itemInfo = "混合棉布\n赫姆棉与巴斯棉混纺成的布料。";
                 StartCoroutine(WorkOneWorking(result, BagManager.instance.WorkTwoBag, BagManager.instance.WorkTwoBagItems));
 
             }
@@ -304,7 +304,7 @@ public class CraftingSystem : MonoBehaviour
                 result.itemType = Item.ItemType.Fabric;
                 result.quality = qulityTotal / CraftingBag.itemList.Count;
                 result.itemImage = Resources.Load<Sprite>("fabric3");//临时图片
-                result.itemInfo = "紫杉麻布 百分百的紫杉麻制成的布料。";
+                result.itemInfo = "紫杉麻布\n百分百的紫杉麻制成的布料。";
                 StartCoroutine(WorkOneWorking(result, BagManager.instance.WorkTwoBag, BagManager.instance.WorkTwoBagItems));
 
             }
@@ -315,7 +315,7 @@ public class CraftingSystem : MonoBehaviour
                 result.itemType = Item.ItemType.Fabric;
                 result.quality = qulityTotal / CraftingBag.itemList.Count;
                 result.itemImage = Resources.Load<Sprite>("fabric4");//临时图片
-                result.itemInfo = "蕉麻布 百分百的蕉麻制成的布料。";
+                result.itemInfo = "蕉麻布\n百分百的蕉麻制成的布料。";
                 StartCoroutine(WorkOneWorking(result, BagManager.instance.WorkTwoBag, BagManager.instance.WorkTwoBagItems));
 
             }
@@ -326,7 +326,7 @@ public class CraftingSystem : MonoBehaviour
                 result.itemType = Item.ItemType.Fabric;
                 result.quality = qulityTotal / CraftingBag.itemList.Count;
                 result.itemImage = Resources.Load<Sprite>("fabric6");//临时图片
-                result.itemInfo = "混合麻布 紫杉苎麻和蕉麻混纺成的布料。";
+                result.itemInfo = "混合麻布\n紫杉苎麻和蕉麻混纺成的布料。";
                 StartCoroutine(WorkOneWorking(result, BagManager.instance.WorkTwoBag, BagManager.instance.WorkTwoBagItems));
 
             }
@@ -337,7 +337,7 @@ public class CraftingSystem : MonoBehaviour
                 result.itemType = Item.ItemType.Fabric;
                 result.quality = qulityTotal / CraftingBag.itemList.Count;
                 result.itemImage = Resources.Load<Sprite>("fabric7");//临时图片
-                result.itemInfo = "棉麻布 棉麻混纺成的布料。";
+                result.itemInfo = "棉麻布\n棉麻混纺成的布料。";
                 StartCoroutine(WorkOneWorking(result, BagManager.instance.WorkTwoBag, BagManager.instance.WorkTwoBagItems));
 
             }
@@ -404,7 +404,7 @@ public class CraftingSystem : MonoBehaviour
                 result.itemImage = Resources.Load<Sprite>("thread1");//临时图片
                 result.itemSpeciality = Item.ItemSpeciality.Dexterity;
                 result.specialityCount = 30;//特性固定，需修改在这写公式即可
-                result.itemInfo = "风织线 极其轻柔，放在手中好似不存在一般，但如果用力拉扯会发现怎样都不会断。";
+                result.itemInfo = "风织线\n极其轻柔，放在手中好似不存在一般，但如果用力拉扯会发现怎样都不会断。";
                 StartCoroutine(WorkOneWorking(result, BagManager.instance.WorkTwoBag, BagManager.instance.WorkTwoBagItems));
 
             }
@@ -417,7 +417,7 @@ public class CraftingSystem : MonoBehaviour
                 result.itemImage = Resources.Load<Sprite>("thread2");//临时图片
                 result.itemSpeciality = Item.ItemSpeciality.Shine;
                 result.specialityCount = 50;//特性固定，需修改在这写公式即可
-                result.itemInfo = "星绒线 发出淡淡的光芒，在夜晚尤其明显。";
+                result.itemInfo = "星绒线\n发出淡淡的光芒，在夜晚尤其明显。";
                 StartCoroutine(WorkOneWorking(result, BagManager.instance.WorkTwoBag, BagManager.instance.WorkTwoBagItems));
 
             }
@@ -430,7 +430,7 @@ public class CraftingSystem : MonoBehaviour
                 result.itemImage = Resources.Load<Sprite>("thread3");//临时图片
                 result.itemSpeciality = Item.ItemSpeciality.Ice;
                 result.specialityCount = 30;//特性固定，需修改在这写公式即可
-                result.itemInfo = "霜晶莲线 握在手中冰冰凉凉，晶莹剔透。";
+                result.itemInfo = "霜晶莲线\n握在手中冰冰凉凉，晶莹剔透。";
                 StartCoroutine(WorkOneWorking(result, BagManager.instance.WorkTwoBag, BagManager.instance.WorkTwoBagItems));
 
             }
@@ -443,7 +443,7 @@ public class CraftingSystem : MonoBehaviour
                 result.itemImage = Resources.Load<Sprite>("thread4");//临时图片
                 result.itemSpeciality = Item.ItemSpeciality.Fire;
                 result.specialityCount = 30;//特性固定，需修改在这写公式即可
-                result.itemInfo = "炽鳞线 质感硬硬的，温度比一般的线要高不少，就像在燃烧一样。";
+                result.itemInfo = "炽鳞线\n质感硬硬的，温度比一般的线要高不少，就像在燃烧一样。";
                 StartCoroutine(WorkOneWorking(result, BagManager.instance.WorkTwoBag, BagManager.instance.WorkTwoBagItems));
 
             }
@@ -514,7 +514,7 @@ public class CraftingSystem : MonoBehaviour
                 result.itemImage = Resources.Load<Sprite>("dye1");//临时图片
                 result.itemColor = Item.ItemColor.Red;
                 result.fashion = 25;
-                result.itemInfo = "红色染剂 能够将衣物染成红色。";
+                result.itemInfo = "红色染剂\n能够将衣物染成红色。";
                 StartCoroutine(WorkOneWorking(result, BagManager.instance.WorkTwoBag, BagManager.instance.WorkTwoBagItems));
 
             }
@@ -527,7 +527,7 @@ public class CraftingSystem : MonoBehaviour
                 result.itemImage = result.itemImage = Resources.Load<Sprite>("dye2");//临时图片
                 result.itemColor = Item.ItemColor.Bule;
                 result.fashion = 30;
-                result.itemInfo = "蓝色染剂 能够将衣物染成蓝色。";
+                result.itemInfo = "蓝色染剂\n能够将衣物染成蓝色。";
                 StartCoroutine(WorkOneWorking(result, BagManager.instance.WorkTwoBag, BagManager.instance.WorkTwoBagItems));
 
             }
@@ -540,7 +540,7 @@ public class CraftingSystem : MonoBehaviour
                 result.itemImage = result.itemImage = Resources.Load<Sprite>("dye3");//临时图片
                 result.itemColor = Item.ItemColor.Yellow;
                 result.fashion = 20;
-                result.itemInfo = "黄色染剂 能够将衣物染成黄色。";
+                result.itemInfo = "黄色染剂\n能够将衣物染成黄色。";
                 StartCoroutine(WorkOneWorking(result, BagManager.instance.WorkTwoBag, BagManager.instance.WorkTwoBagItems));
 
             }
@@ -553,7 +553,7 @@ public class CraftingSystem : MonoBehaviour
                 result.itemImage = result.itemImage = Resources.Load<Sprite>("dye4");//临时图片
                 result.itemColor = Item.ItemColor.Black;
                 result.fashion = 40;
-                result.itemInfo = "黑色染剂 能够将衣物染成黑色。";
+                result.itemInfo = "黑色染剂\n能够将衣物染成黑色。";
                 StartCoroutine(WorkOneWorking(result, BagManager.instance.WorkTwoBag, BagManager.instance.WorkTwoBagItems));
 
             }
@@ -566,7 +566,7 @@ public class CraftingSystem : MonoBehaviour
                 result.itemImage = result.itemImage = Resources.Load<Sprite>("dye5");//临时图片
                 result.itemColor = Item.ItemColor.Colors;
                 result.fashion = 60;
-                result.itemInfo = "炫彩染剂 能够将衣物染成彩色。";
+                result.itemInfo = "炫彩染剂\n能够将衣物染成彩色。";
                 StartCoroutine(WorkOneWorking(result, BagManager.instance.WorkTwoBag, BagManager.instance.WorkTwoBagItems));
 
             }
@@ -737,7 +737,7 @@ public class CraftingSystem : MonoBehaviour
             yield return new WaitForSeconds(letterDelay); // 等待一段时间
         }
         TEXT.text = ""; // 清空文本
-        text = "总计获得了【】金币，大家对你的评价是：【功能性很棒，喜欢这个剪裁设计，这个月买到最棒的东西】";
+        text = "总计获得了【";
         foreach (char letter in text)
         {
             TEXT.text += letter; // 逐字添加到文本中
@@ -804,7 +804,7 @@ public class CraftingSystem : MonoBehaviour
         Dia.GetComponent<Animator>().enabled = false;
         
         TEXT.text = ""; // 清空文本
-        string text = "首发结束啦——来了好多客人，大家都很【热情】~！不愧是你！";
+        string text = "首发结束啦——\n来了好多客人，大家都很【热情】~！\n不愧是你！";
         foreach (char letter in text)
         {
             TEXT.text += letter; // 逐字添加到文本中
@@ -825,7 +825,7 @@ public class CraftingSystem : MonoBehaviour
             TEXT.text += letter; // 逐字添加到文本中
             yield return new WaitForSeconds(letterDelay); // 等待一段时间
         }
-        text = "】金币，大家对你的评价是：【功能性很棒，喜欢这个剪裁设计，这个月买到最棒的东西】";
+        text = "】金币,\n大家对你的评价是：\n【功能性很棒，喜欢这个剪裁设计，这个月买到最棒的东西】";
         foreach (char letter in text)
         {
             TEXT.text += letter; // 逐字添加到文本中
@@ -976,7 +976,7 @@ public class CraftingSystem : MonoBehaviour
         {
             if (bagItems.ContainsKey(thisItem.itemName))
             {
-                //bagItems[thisItem.itemName].itemHeld += 1;
+                bagItems[thisItem.itemName].itemHeld += 1;
             }
             else
             {
@@ -1021,7 +1021,7 @@ public class CraftingSystem : MonoBehaviour
         {
             if (bagItems.ContainsKey(thisItem.itemName))
             {
-                //bagItems[thisItem.itemName].itemHeld +=1;
+                bagItems[thisItem.itemName].itemHeld +=1;
             }
             else
             {

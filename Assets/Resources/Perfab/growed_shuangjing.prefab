@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: -9143404139414251493}
   - component: {fileID: -1081619898881599881}
   - component: {fileID: 6407658111210820755}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: growed_shuangjing
   m_TagString: Untagged
   m_Icon: {fileID: 0}
